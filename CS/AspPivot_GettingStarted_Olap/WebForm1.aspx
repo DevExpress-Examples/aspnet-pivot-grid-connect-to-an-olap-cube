@@ -17,19 +17,19 @@
                 OLAPConnectionString="provider=MSOLAP;data source=https://demos.devexpress.com/Services/OLAP/msmdpump.dll;initial catalog=&quot;Adventure Works DW Standard Edition&quot;;cube name=&quot;Adventure Works&quot;">
                 <Fields>
                     <dx:PivotGridField ID="fieldCity" Area="RowArea" AreaIndex="1" Caption="City" DisplayFolder="Location" 
-                        FieldName="[Customer].[City].[City]" Name="fieldCity">
+                        FieldName="[Customer].[City].[City]">
                     </dx:PivotGridField>
                     <dx:PivotGridField ID="fieldCountry" Area="RowArea" AreaIndex="0" Caption="Country" DisplayFolder="Location" 
-                        FieldName="[Customer].[Country].[Country]" Name="fieldCountry">
+                        FieldName="[Customer].[Country].[Country]">
                     </dx:PivotGridField>
                     <dx:PivotGridField ID="fieldFiscalQuarter" Area="ColumnArea" AreaIndex="1" Caption="Fiscal Quarter" DisplayFolder="Fiscal" 
-                        FieldName="[Date].[Fiscal].[Fiscal Quarter]" GroupIndex="0" InnerGroupIndex="1" Name="fieldFiscalQuarter">
+                        FieldName="[Date].[Fiscal].[Fiscal Quarter]" GroupIndex="0" InnerGroupIndex="1">
                     </dx:PivotGridField>
                     <dx:PivotGridField ID="fieldFiscalYear" Area="ColumnArea" AreaIndex="0" Caption="Fiscal Year" DisplayFolder="Fiscal" 
-                        FieldName="[Date].[Fiscal].[Fiscal Year]" GroupIndex="0" InnerGroupIndex="0" Name="fieldFiscalYear">
+                        FieldName="[Date].[Fiscal].[Fiscal Year]" GroupIndex="0" InnerGroupIndex="0">
                     </dx:PivotGridField>
                     <dx:PivotGridField ID="fieldInternetSalesAmount" Area="DataArea" AreaIndex="0" Caption="Internet Sales Amount" DisplayFolder="Internet Sales" 
-                        FieldName="[Measures].[Internet Sales Amount]" Name="fieldInternetSalesAmount">
+                        FieldName="[Measures].[Internet Sales Amount]">
                     </dx:PivotGridField>
                 </Fields>
                 <OptionsData DataProcessingEngine="LegacyOptimized" />
