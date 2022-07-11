@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# ASP.NET Pivot Grid - Getting Started - Bind a Pivot Grid to an OLAP Cube (Runtime sample)
+# ASP.NET Pivot Grid - Getting Started - Bind a Pivot Grid to an OLAP Cube at Design Time
 
 
 The example contains the source code of the project created in this step-by-step tutorial: <a href="https://documentation.devexpress.com/AspNet/12009/ASP-NET-WebForms-Controls/Pivot-Grid/Getting-Started/Lesson-2-Bind-a-Pivot-Grid-to-an-OLAP-Cube">Lesson 2 - Bind a Pivot Grid to an OLAP Cube.</a>
