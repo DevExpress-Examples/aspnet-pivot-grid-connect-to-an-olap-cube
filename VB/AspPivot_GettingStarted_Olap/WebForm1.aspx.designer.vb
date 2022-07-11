@@ -6,71 +6,75 @@
 '     the code is regenerated. 
 ' </auto-generated>
 '------------------------------------------------------------------------------
+
+Option Strict On
+Option Explicit On
+
 Namespace AspPivot_GettingStarted_Olap
 
-    Public Partial Class WebForm1
+    Partial Public Class WebForm1
 
-        ''' <summary>
-        ''' form1 control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+        '''<summary>
+        '''form1 control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
-        ''' <summary>
-        ''' ASPxPivotGrid1 control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected ASPxPivotGrid1 As Global.DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid
+        '''<summary>
+        '''ASPxPivotGrid1 control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents ASPxPivotGrid1 As Global.DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid
 
-        ''' <summary>
-        ''' fieldCity control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected fieldCity As Global.DevExpress.Web.ASPxPivotGrid.PivotGridField
+        '''<summary>
+        '''fieldCity control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents fieldCity As Global.DevExpress.Web.ASPxPivotGrid.PivotGridField
 
-        ''' <summary>
-        ''' fieldCountry control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected fieldCountry As Global.DevExpress.Web.ASPxPivotGrid.PivotGridField
+        '''<summary>
+        '''fieldCountry control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents fieldCountry As Global.DevExpress.Web.ASPxPivotGrid.PivotGridField
 
-        ''' <summary>
-        ''' fieldFiscalQuarter control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected fieldFiscalQuarter As Global.DevExpress.Web.ASPxPivotGrid.PivotGridField
+        '''<summary>
+        '''fieldFiscalQuarter control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents fieldFiscalQuarter As Global.DevExpress.Web.ASPxPivotGrid.PivotGridField
 
-        ''' <summary>
-        ''' fieldFiscalYear control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected fieldFiscalYear As Global.DevExpress.Web.ASPxPivotGrid.PivotGridField
+        '''<summary>
+        '''fieldFiscalYear control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents fieldFiscalYear As Global.DevExpress.Web.ASPxPivotGrid.PivotGridField
 
-        ''' <summary>
-        ''' fieldInternetSalesAmount control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected fieldInternetSalesAmount As Global.DevExpress.Web.ASPxPivotGrid.PivotGridField
+        '''<summary>
+        '''fieldInternetSalesAmount control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents fieldInternetSalesAmount As Global.DevExpress.Web.ASPxPivotGrid.PivotGridField
     End Class
 End Namespace

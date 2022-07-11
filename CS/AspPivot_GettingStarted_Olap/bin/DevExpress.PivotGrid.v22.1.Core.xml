@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<doc xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
   <assembly>
     <name>DevExpress.PivotGrid.v22.1.Core</name>
   </assembly>
@@ -25,25 +25,12 @@
       </summary>
       <param name="customObjectConverter">An object that implements the <see cref="T:DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter"/> interface, which is a custom serializer.</param>
     </member>
-    <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.IO.Stream)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PivotGrid.PivotFileDataSource"/> class, and loads pivot grid data from the specified stream.</para>
-      </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object that represents the stream from which to load data.</param>
-    </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.IO.Stream,DevExpress.Utils.OptionsLayoutBase)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PivotGrid.PivotFileDataSource"/> class.</para>
       </summary>
       <param name="stream">A <see cref="T:System.IO.Stream"/> object that represents the stream from which to load data.</param>
       <param name="options">An <see cref="T:DevExpress.Utils.OptionsLayoutBase"/> object containing options that specify how a control layout is stored to, and restored from a storage.</param>
-    </member>
-    <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.IO.Stream,DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PivotGrid.PivotFileDataSource"/> class, and loads pivot grid data from the specified stream.</para>
-      </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object that represents the stream from which to load data.</param>
-      <param name="customObjectConverter">An object that implements the <see cref="T:DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter"/> interface, which is a custom serializer.</param>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.IO.Stream,DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter,DevExpress.Utils.OptionsLayoutBase)">
       <summary>
@@ -53,11 +40,18 @@
       <param name="customObjectConverter">An object that implements the <see cref="T:DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter"/> interface, which is a custom serializer.</param>
       <param name="options">An <see cref="T:DevExpress.Utils.OptionsLayoutBase"/> object containing options that specify how a control layout is stored to, and restored from a storage.</param>
     </member>
-    <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.String)">
+    <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.IO.Stream,DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter)">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PivotGrid.PivotFileDataSource"/> class, and loads pivot grid data from the specified file.</para>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PivotGrid.PivotFileDataSource"/> class, and loads pivot grid data from the specified stream.</para>
       </summary>
-      <param name="fileName">A <see cref="T:System.String"/> that specifies the name of the file from which to load data.</param>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object that represents the stream from which to load data.</param>
+      <param name="customObjectConverter">An object that implements the <see cref="T:DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter"/> interface, which is a custom serializer.</param>
+    </member>
+    <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.IO.Stream)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PivotGrid.PivotFileDataSource"/> class, and loads pivot grid data from the specified stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object that represents the stream from which to load data.</param>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.String,DevExpress.Utils.OptionsLayoutBase)">
       <summary>
@@ -65,13 +59,6 @@
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> object that specifies the name of the file from which to load data.</param>
       <param name="options">An <see cref="T:DevExpress.Utils.OptionsLayoutBase"/> object containing options that specify how a control layout is stored to, and restored from a storage.</param>
-    </member>
-    <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.String,DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PivotGrid.PivotFileDataSource"/> class, and loads pivot grid data from the specified file.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> that specifies the name of the file from which to load data.</param>
-      <param name="customObjectConverter">An object that implements the <see cref="T:DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter"/> interface, which is a custom serializer.</param>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.String,DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter,DevExpress.Utils.OptionsLayoutBase)">
       <summary>
@@ -81,12 +68,23 @@
       <param name="customObjectConverter">An object that implements the <see cref="T:DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter"/> interface, which is a custom serializer.</param>
       <param name="options">An <see cref="T:DevExpress.Utils.OptionsLayoutBase"/> object containing options that specify how a control layout is stored to, and restored from a storage.</param>
     </member>
+    <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.String,DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PivotGrid.PivotFileDataSource"/> class, and loads pivot grid data from the specified file.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> that specifies the name of the file from which to load data.</param>
+      <param name="customObjectConverter">An object that implements the <see cref="T:DevExpress.Utils.Serializing.Helpers.ICustomObjectConverter"/> interface, which is a custom serializer.</param>
+    </member>
+    <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.#ctor(System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PivotGrid.PivotFileDataSource"/> class, and loads pivot grid data from the specified file.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> that specifies the name of the file from which to load data.</param>
+    </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.Add(System.Object)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="value"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.Clear">
       <summary>
@@ -97,116 +95,91 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="value"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.CopyTo(System.Array,System.Int32)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="array"></param>
-      <param name="index"></param>
     </member>
     <member name="P:DevExpress.Data.PivotGrid.PivotFileDataSource.Count">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Data.PivotGrid.PivotFileDataSource.CreatedFromStream">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Data.PivotGrid.PivotFileDataSource.FileName">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.GetEnumerator">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.GetItemProperties(System.ComponentModel.PropertyDescriptor[])">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="listAccessors"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.GetListName(System.ComponentModel.PropertyDescriptor[])">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="listAccessors"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.IndexOf(System.Object)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="value"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.Insert(System.Int32,System.Object)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="index"></param>
-      <param name="value"></param>
     </member>
     <member name="P:DevExpress.Data.PivotGrid.PivotFileDataSource.IsFixedSize">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Data.PivotGrid.PivotFileDataSource.IsReadOnly">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Data.PivotGrid.PivotFileDataSource.IsSynchronized">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Data.PivotGrid.PivotFileDataSource.Item(System.Int32)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="index"></param>
-      <value></value>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.Remove(System.Object)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="value"></param>
     </member>
     <member name="M:DevExpress.Data.PivotGrid.PivotFileDataSource.RemoveAt(System.Int32)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="index"></param>
     </member>
     <member name="P:DevExpress.Data.PivotGrid.PivotFileDataSource.Stream">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Data.PivotGrid.PivotFileDataSource.SyncRoot">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.Data.PivotGrid.PivotSummaryDisplayType">
       <summary>
@@ -226,7 +199,7 @@
     <member name="F:DevExpress.Data.PivotGrid.PivotSummaryDisplayType.Index">
       <summary>
         <para>An index value that reflects the summary value’s importance in its row and column context. This value is calculated as follows:</para>
-        <para></para>
+        <para />
         <para>((value in cell) x (Grand Total of Grand Totals)) / ((Grand Row Total) x (Grand Column Total))</para>
       </summary>
     </member>
@@ -288,7 +261,7 @@
     <member name="F:DevExpress.Data.PivotGrid.PivotSummaryType.Average">
       <summary>
         <para>The average of the values.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.Data.PivotGrid.PivotSummaryType.Count">
@@ -305,7 +278,7 @@
     <member name="F:DevExpress.Data.PivotGrid.PivotSummaryType.Custom">
       <summary>
         <para>Specifies whether calculations should be performed manually, by handling the CustomSummary event.</para>
-        <para></para>
+        <para />
         <para>Not supported in OLAP and server mode.</para>
       </summary>
     </member>
@@ -334,31 +307,31 @@
     <member name="F:DevExpress.Data.PivotGrid.PivotSummaryType.StdDev">
       <summary>
         <para>An estimate of the standard deviation of a population, where the sample is a subset of the entire population.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.Data.PivotGrid.PivotSummaryType.StdDevp">
       <summary>
         <para>The standard deviation of a population, where the population is all of the data to be summarized.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.Data.PivotGrid.PivotSummaryType.Sum">
       <summary>
         <para>The sum of the values.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.Data.PivotGrid.PivotSummaryType.Var">
       <summary>
         <para>An estimate of the variance of a population, where the sample is a subset of the entire population.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.Data.PivotGrid.PivotSummaryType.Varp">
       <summary>
         <para>The variance of a population, where the population is all of the data to be summarized.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="T:DevExpress.Data.PivotGrid.PivotSummaryValue">
@@ -370,8 +343,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Data.PivotGrid.PivotSummaryValue"/> class with specified settings.</para>
       </summary>
-      <param name="origin"></param>
-      <param name="field"></param>
     </member>
     <member name="P:DevExpress.Data.PivotGrid.PivotSummaryValue.Average">
       <summary>
@@ -465,20 +436,10 @@
         <para>Contains classes that incorporate connection parameters of various data providers.</para>
       </summary>
     </member>
-    <member name="T:DevExpress.DataAccess.ConnectionParameters.OLAP">
-      <summary />
-    </member>
     <member name="M:DevExpress.DataAccess.ConnectionParameters.OLAP.#ctor">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.DataAccess.ConnectionParameters.OLAP"/> class.</para>
       </summary>
-    </member>
-    <member name="P:DevExpress.DataAccess.ConnectionParameters.OLAP.AdomdClientAssembly">
-      <summary />
-      <value></value>
-    </member>
-    <member name="N:DevExpress.DataProcessing.Criteria">
-      <summary />
     </member>
     <member name="T:DevExpress.DataProcessing.Criteria.ICustomAggregateFunction">
       <summary>
@@ -543,11 +504,13 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase"/> class.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase.#ctor(System.String)">
+    <member name="M:DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase.#ctor(System.String,DevExpress.XtraPivotGrid.PivotGroupInterval,System.Int32)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase"/> class with specified settings.</para>
       </summary>
       <param name="fieldName">The data source column name.</param>
+      <param name="groupInterval">A <see cref="T:DevExpress.XtraPivotGrid.PivotGroupInterval"/> enumeration that specifies how the values are combined into groups.</param>
+      <param name="groupIntervalNumericRange">The length of group intervals.</param>
     </member>
     <member name="M:DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase.#ctor(System.String,DevExpress.XtraPivotGrid.PivotGroupInterval)">
       <summary>
@@ -556,13 +519,11 @@
       <param name="fieldName">The data source column name.</param>
       <param name="groupInterval">A <see cref="T:DevExpress.XtraPivotGrid.PivotGroupInterval"/> enumeration that specifies how the values are combined into groups.</param>
     </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase.#ctor(System.String,DevExpress.XtraPivotGrid.PivotGroupInterval,System.Int32)">
+    <member name="M:DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase.#ctor(System.String)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase"/> class with specified settings.</para>
       </summary>
       <param name="fieldName">The data source column name.</param>
-      <param name="groupInterval">A <see cref="T:DevExpress.XtraPivotGrid.PivotGroupInterval"/> enumeration that specifies how the values are combined into groups.</param>
-      <param name="groupIntervalNumericRange">The length of group intervals.</param>
     </member>
     <member name="P:DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase.ColumnName">
       <summary>
@@ -581,10 +542,6 @@
         <para>Gets or sets the length of group intervals for certain group types.</para>
       </summary>
       <value>An integer that specifies the length of group intervals.</value>
-    </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase.ToString">
-      <summary />
-      <returns></returns>
     </member>
     <member name="T:DevExpress.PivotGrid.DataBinding.DifferenceBindingBase">
       <summary>
@@ -627,10 +584,6 @@
       </summary>
       <value>A <see cref="T:DevExpress.XtraPivotGrid.DifferenceTarget"/> enumeration member that specifies the location of a value in a window.</value>
     </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.DifferenceBindingBase.ToString">
-      <summary />
-      <returns></returns>
-    </member>
     <member name="T:DevExpress.PivotGrid.DataBinding.DirectedCalculationBindingBase">
       <summary>
         <para>The base class that specifies calculations whose results depend on the direction (along columns vertically or across rows horizontally) of the calculation.DirectedCalculationBindingBase serves as a Pivot Grid’s field calculation data binding in Optimized mode.</para>
@@ -656,7 +609,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.DataBinding.ExpressionBindingBase"/> class with specified settings.</para>
       </summary>
-      <param name="criteria"></param>
     </member>
     <member name="M:DevExpress.PivotGrid.DataBinding.ExpressionBindingBase.#ctor(System.String)">
       <summary>
@@ -669,10 +621,6 @@
         <para>Gets or sets a string expression to calculate.</para>
       </summary>
       <value>A string expression.</value>
-    </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.ExpressionBindingBase.ToString">
-      <summary />
-      <returns></returns>
     </member>
     <member name="T:DevExpress.PivotGrid.DataBinding.MovingCalculationBindingBase">
       <summary>
@@ -723,10 +671,6 @@
       </summary>
       <value>A <see cref="T:DevExpress.Data.PivotGrid.PivotSummaryType"/> enumeration member that specifies the aggregation type.</value>
     </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.MovingCalculationBindingBase.ToString">
-      <summary />
-      <returns></returns>
-    </member>
     <member name="T:DevExpress.PivotGrid.DataBinding.OLAPExpressionBindingBase">
       <summary>
         <para>The base class that sets the Pivot Grid field’s data binding to an expression in OLAP mode.</para>
@@ -741,17 +685,12 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.DataBinding.OLAPExpressionBindingBase"/> class with specified settings.</para>
       </summary>
-      <param name="expression"></param>
     </member>
     <member name="P:DevExpress.PivotGrid.DataBinding.OLAPExpressionBindingBase.Expression">
       <summary>
         <para>Specifies a string expression for a Pivot Grid field.</para>
       </summary>
       <value>A string expression.</value>
-    </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.OLAPExpressionBindingBase.ToString">
-      <summary />
-      <returns></returns>
     </member>
     <member name="T:DevExpress.PivotGrid.DataBinding.PercentOfTotalBindingBase">
       <summary>
@@ -769,10 +708,6 @@
       </summary>
       <param name="source">A <see cref="T:DevExpress.XtraPivotGrid.DataBindingBase"/> descendant that provides the source data.</param>
       <param name="mode">A <see cref="T:DevExpress.XtraPivotGrid.CalculationPartitioningCriteria"/> enumeration member that specifies a window in a window calculation.</param>
-    </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.PercentOfTotalBindingBase.ToString">
-      <summary />
-      <returns></returns>
     </member>
     <member name="T:DevExpress.PivotGrid.DataBinding.RankBindingBase">
       <summary>
@@ -804,10 +739,6 @@
         <para>Gets or sets the rank type.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraPivotGrid.RankType"/> enumeration member that specifies the rank type.</value>
-    </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.RankBindingBase.ToString">
-      <summary />
-      <returns></returns>
     </member>
     <member name="T:DevExpress.PivotGrid.DataBinding.RunningTotalBindingBase">
       <summary>
@@ -842,10 +773,6 @@
       </summary>
       <value>A <see cref="T:DevExpress.Data.PivotGrid.PivotSummaryType"/> enumeration value that specifies the type of aggregation.</value>
     </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.RunningTotalBindingBase.ToString">
-      <summary />
-      <returns></returns>
-    </member>
     <member name="T:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase">
       <summary>
         <para>The base class that uses a custom string expression with window functions to calculate values. WindowExpressionBindingBase serves as a calculation binding of a Pivot Grid’s field in Optimized mode.</para>
@@ -856,27 +783,15 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase"/> class.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase.#ctor(DevExpress.Data.Filtering.CriteriaOperator,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase"/> class with specified settings.</para>
-      </summary>
-      <param name="criteria"></param>
-      <param name="mode"></param>
-    </member>
     <member name="M:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase.#ctor(DevExpress.Data.Filtering.CriteriaOperator,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.XtraPivotGrid.CalculationDirection)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase"/> class with specified settings.</para>
       </summary>
-      <param name="criteria"></param>
-      <param name="mode"></param>
-      <param name="direction"></param>
     </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase.#ctor(System.String,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria)">
+    <member name="M:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase.#ctor(DevExpress.Data.Filtering.CriteriaOperator,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase"/> class with specified settings.</para>
       </summary>
-      <param name="expression">The string expression to calculate.</param>
-      <param name="mode">A <see cref="T:DevExpress.XtraPivotGrid.CalculationPartitioningCriteria"/> enumeration member that specifies a window in a window calculation.</param>
     </member>
     <member name="M:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase.#ctor(System.String,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.XtraPivotGrid.CalculationDirection)">
       <summary>
@@ -885,6 +800,13 @@
       <param name="expression">The string expression to calculate.</param>
       <param name="mode">A <see cref="T:DevExpress.XtraPivotGrid.CalculationPartitioningCriteria"/> enumeration member that specifies a window in a window calculation.</param>
       <param name="direction">A <see cref="T:DevExpress.XtraPivotGrid.CalculationDirection"/> enumeration member that specifies the direction in which the table partition is traversed.</param>
+    </member>
+    <member name="M:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase.#ctor(System.String,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase"/> class with specified settings.</para>
+      </summary>
+      <param name="expression">The string expression to calculate.</param>
+      <param name="mode">A <see cref="T:DevExpress.XtraPivotGrid.CalculationPartitioningCriteria"/> enumeration member that specifies a window in a window calculation.</param>
     </member>
     <member name="P:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase.Expression">
       <summary>
@@ -897,10 +819,6 @@
         <para>Gets or sets a data binding object that provides the data to calculate.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraPivotGrid.DataBindingBase"/> descendant that provides the source data.</value>
-    </member>
-    <member name="M:DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase.ToString">
-      <summary />
-      <returns></returns>
     </member>
     <member name="N:DevExpress.PivotGrid.Printing">
       <summary>
@@ -916,7 +834,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.PivotGrid.Printing.CustomExportCellEventArgsBase.ColumnIndex">
       <summary>
@@ -943,19 +860,19 @@
       <param name="customColumns">A list of data source columns to return.</param>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains a list of data records.</returns>
     </member>
-    <member name="M:DevExpress.PivotGrid.Printing.CustomExportCellEventArgsBase.CreateDrillDownDataSource(System.Int32)">
-      <summary>
-        <para>Returns data records used to calculate a summary value for the current cell. Allows you to limit the number of returned records.</para>
-      </summary>
-      <param name="maxRowCount">An integer value that specifies the maximum number of data rows to return. Set it to &#0045;1 to retrieve all rows.</param>
-      <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains a list of data records.</returns>
-    </member>
     <member name="M:DevExpress.PivotGrid.Printing.CustomExportCellEventArgsBase.CreateDrillDownDataSource(System.Int32,System.Collections.Generic.List{System.String})">
       <summary>
         <para>Returns data records used to calculate a summary value for the current cell. Allows you to specify the data columns and limit the number of returned records.</para>
       </summary>
       <param name="maxRowCount">An integer value that specifies the maximum number of data rows to return. Set it to &#0045;1 to retrieve all rows.</param>
       <param name="customColumns">A list of data source columns to return.</param>
+      <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains a list of data records.</returns>
+    </member>
+    <member name="M:DevExpress.PivotGrid.Printing.CustomExportCellEventArgsBase.CreateDrillDownDataSource(System.Int32)">
+      <summary>
+        <para>Returns data records used to calculate a summary value for the current cell. Allows you to limit the number of returned records.</para>
+      </summary>
+      <param name="maxRowCount">An integer value that specifies the maximum number of data rows to return. Set it to &#0045;1 to retrieve all rows.</param>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains a list of data records.</returns>
     </member>
     <member name="P:DevExpress.PivotGrid.Printing.CustomExportCellEventArgsBase.FormatType">
@@ -974,7 +891,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.PivotGrid.Printing.CustomExportCellEventArgsBase.RowIndex">
       <summary>
@@ -1004,7 +920,6 @@
       <summary>
         <para>Serves as a base for classes that provide data for the CustomExportFieldValue event.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="M:DevExpress.PivotGrid.Printing.CustomExportFieldValueEventArgsBase`1.ContainsLevel(System.Int32)">
       <summary>
@@ -1101,16 +1016,11 @@
       <summary>
         <para>Serves as a base for classes that provide data for the CustomExportHeader event.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="M:DevExpress.PivotGrid.Printing.CustomExportHeaderEventArgsBase`1.#ctor(DevExpress.XtraPrinting.IVisualBrick,DevExpress.XtraPivotGrid.Data.PivotFieldItemBase,DevExpress.XtraPivotGrid.PivotGridFieldBase,System.Drawing.Rectangle)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.Printing.CustomExportHeaderEventArgsBase`1"/> class.</para>
       </summary>
-      <param name="brick"></param>
-      <param name="fieldItem"></param>
-      <param name="field"></param>
-      <param name="rect"></param>
     </member>
     <member name="P:DevExpress.PivotGrid.Printing.CustomExportHeaderEventArgsBase`1.Caption">
       <summary>
@@ -1133,8 +1043,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.PivotGrid.Printing.CustomPrintEventArgs"/> class.</para>
       </summary>
-      <param name="brick"></param>
-      <param name="rect"></param>
     </member>
     <member name="P:DevExpress.PivotGrid.Printing.CustomPrintEventArgs.ApplyAppearanceToBrickStyle">
       <summary>
@@ -1607,13 +1515,13 @@
     <member name="F:DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.ColumnValue">
       <summary>
         <para>A window is composed of cells with the same column value:</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.ColumnValueAndRowParentValue">
       <summary>
         <para>A window is composed of cells with the same column value and the same value of a parent row:</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.None">
@@ -1624,19 +1532,19 @@
     <member name="F:DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.RowAndColumnParentValues">
       <summary>
         <para>A window is composed of cells with the same value of a parent column and the same value of a parent row:</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.RowValue">
       <summary>
         <para>A window is composed of cells with the same row value:</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.RowValueAndColumnParentValue">
       <summary>
         <para>A window is composed of cells with the same row values and the same values of a parent column:</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.CopyCollapsedValuesMode">
@@ -1647,19 +1555,19 @@
     <member name="F:DevExpress.XtraPivotGrid.CopyCollapsedValuesMode.DuplicateCollapsedValues">
       <summary>
         <para>Collapsed field values are replaced with duplicates of their parent values.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.CopyCollapsedValuesMode.PreserveCollapsedLevels">
       <summary>
         <para>Collapsed field values are not copied but space is reserved for them.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.CopyCollapsedValuesMode.RemoveCollapsedLevels">
       <summary>
         <para>Collapsed field values are not copied and space is not reserved for them.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.CopyMultiSelectionMode">
@@ -1670,13 +1578,13 @@
     <member name="F:DevExpress.XtraPivotGrid.CopyMultiSelectionMode.DiscardIntermediateColumnsAndRows">
       <summary>
         <para>Columns and rows located between the selected cells (blocks of cells) are not copied to the Clipboard.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.CopyMultiSelectionMode.IncludeIntermediateColumnsAndRows">
       <summary>
         <para>Columns and rows located between the selected cells (blocks of cells) are copied to the Clipboard with their cells empty.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.CrossAreaKey">
@@ -1688,13 +1596,11 @@
       <summary>
         <para>The base class for classes that provide arguments for the <see cref="E:DevExpress.XtraPivotGrid.PivotGridControl.CustomCustomizationFormSort"/> and <see cref="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CustomCustomizationFormSort"/> events.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.CustomCustomizationFormSortEventArgsBase`1.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.CustomCustomizationFormSortEventArgsBase`1"/> class.</para>
       </summary>
-      <param name="data"></param>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.CustomCustomizationFormSortEventArgsBase`1.Caption1">
       <summary>
@@ -1730,7 +1636,6 @@
       <summary>
         <para>Serves as a base for classes that provide data for the CustomUnboundFieldData event.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.CustomFieldDataEventArgsBase`1.Field">
       <summary>
@@ -1783,61 +1688,36 @@
     <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormAllowedLayouts.BottomPanelOnly1by4">
       <summary>
         <para>The ‘Areas Section Only (1 by 4)’ layout can be applied to the Customization Form.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormAllowedLayouts.BottomPanelOnly2by2">
       <summary>
         <para>The ‘Areas Section Only (2 by 2)’ layout can be applied to the Customization Form.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormAllowedLayouts.StackedDefault">
       <summary>
         <para>The ‘Fields Section and Areas Section Stacked’ layout can be applied to the Customization Form.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormAllowedLayouts.StackedSideBySide">
       <summary>
         <para>The ‘Fields Section and Areas Section Side-By-Side’ layout can be applied to the Customization Form.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormAllowedLayouts.TopPanelOnly">
       <summary>
         <para>The ‘Fields Section Only’ layout can be applied to the Customization Form.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.Customization.CustomizationFormLayout">
       <summary>
         <para>Lists values that specify the layout of the Customization Form.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormLayout.BottomPanelOnly1by4">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormLayout.BottomPanelOnly2by2">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormLayout.StackedDefault">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormLayout.StackedSideBySide">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormLayout.TopPanelOnly">
-      <summary>
-        <para></para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.Customization.CustomizationFormStyle">
@@ -1848,21 +1728,20 @@
     <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormStyle.Excel2007">
       <summary>
         <para>The Customization Form is represented using the Office 2007 style:</para>
-        <para></para>
+        <para />
         <para>An end-user can move fields between areas by dragging their field headers within the Customization Form. When the Defer Layout Update check box is checked, dragging fields doesn’t immediately update the layout. To update the layout, click the Update button.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Customization.CustomizationFormStyle.Simple">
       <summary>
         <para>The Customization Form is represented using the Simple style:</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.CustomServerModeSortEventArgsBase`1">
       <summary>
         <para>Serves as a base for classes that provide data for the CustomServerModeSort event.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.CustomServerModeSortEventArgsBase`1.GetCellValue1(DevExpress.XtraPivotGrid.CrossAreaKey,DevExpress.XtraPivotGrid.PivotGridFieldBase)">
       <summary>
@@ -1961,26 +1840,6 @@
       </summary>
       <value>true if an end-user can expand/collapse the field value; otherwise, false.</value>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.Data.FieldValueCellBase.CreateDrillDownDataSource">
-      <summary />
-      <returns></returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.Data.FieldValueCellBase.CreateDrillDownDataSource(System.Collections.Generic.List{System.String})">
-      <summary />
-      <param name="customColumns"></param>
-      <returns></returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.Data.FieldValueCellBase.CreateDrillDownDataSource(System.Int32)">
-      <summary />
-      <param name="maxRowCount"></param>
-      <returns></returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.Data.FieldValueCellBase.CreateDrillDownDataSource(System.Int32,System.Collections.Generic.List{System.String})">
-      <summary />
-      <param name="maxRowCount"></param>
-      <param name="customColumns"></param>
-      <returns></returns>
-    </member>
     <member name="P:DevExpress.XtraPivotGrid.Data.FieldValueCellBase.DisplayText">
       <summary>
         <para>Gets the text displayed within the cell.</para>
@@ -2004,10 +1863,6 @@
         <para>Gets whether the cell is a column header.</para>
       </summary>
       <value>true if the cell is a column header; false if the cell is a row header.</value>
-    </member>
-    <member name="P:DevExpress.XtraPivotGrid.Data.FieldValueCellBase.IsRowTreeEmptyElement">
-      <summary />
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.Data.FieldValueCellBase.MaxIndex">
       <summary>
@@ -2071,15 +1926,15 @@
     <member name="F:DevExpress.XtraPivotGrid.Data.GrandTotalLocation.Far">
       <summary>
         <para>Grand Total columns are displayed to the right of the column field values. Grand Total rows are displayed under the row field values.</para>
-        <para></para>
-        <para></para>
+        <para />
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Data.GrandTotalLocation.Near">
       <summary>
         <para>Grand Total columns are displayed to the left of the column field values. Grand Total rows are displayed above the row field values.</para>
-        <para></para>
-        <para></para>
+        <para />
+        <para />
       </summary>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.Data.OLAPDataSourceBase">
@@ -2162,7 +2017,6 @@
       <summary>
         <para>Serves as a base for classes that provide data for summary calculation events.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.Data.PivotGridCustomSummaryEventArgsBase`1.#ctor(DevExpress.Data.PivotGrid.IPivotCustomSummaryInfo,DevExpress.XtraPivotGrid.Data.PivotGridData)">
       <summary>
@@ -2175,10 +2029,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.Data.PivotGridCustomSummaryEventArgsBase`1"/> class with specified settings.</para>
       </summary>
-      <param name="data"></param>
-      <param name="field"></param>
-      <param name="customSummaryInfo"></param>
-      <param name="drillDownHelper"></param>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.Data.PivotGridCustomSummaryEventArgsBase`1.ColumnField">
       <summary>
@@ -2239,14 +2089,6 @@
         <para>Represents a filter item.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.#ctor(System.Object,System.String,System.Nullable{System.Boolean})">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem"/> class.</para>
-      </summary>
-      <param name="value">A field value that corresponds to the current filter value. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.Value"/> property.</param>
-      <param name="text">A <see cref="T:System.String"/> that specifies the item’s caption. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.Text"/> property.</param>
-      <param name="isChecked">true if the item should be checked; false if it should be unchecked; null if its check state should be indeterminate. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.IsChecked"/> property.</param>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.#ctor(System.Object,System.String,System.Nullable{System.Boolean},System.Boolean)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem"/> class.</para>
@@ -2255,6 +2097,14 @@
       <param name="text">A <see cref="T:System.String"/> that specifies the item’s caption. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.Text"/> property.</param>
       <param name="isChecked">true if the item should be checked; false if it should be unchecked; null if its check state should be indeterminate. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.IsChecked"/> property.</param>
       <param name="isVisible">true if the item should be visible; otherwise, false. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.IsVisible"/> property.</param>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.#ctor(System.Object,System.String,System.Nullable{System.Boolean})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem"/> class.</para>
+      </summary>
+      <param name="value">A field value that corresponds to the current filter value. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.Value"/> property.</param>
+      <param name="text">A <see cref="T:System.String"/> that specifies the item’s caption. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.Text"/> property.</param>
+      <param name="isChecked">true if the item should be checked; false if it should be unchecked; null if its check state should be indeterminate. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.IsChecked"/> property.</param>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.Data.PivotGridFilterItem.IsBlank">
       <summary>
@@ -2336,18 +2186,16 @@
     <member name="F:DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.DefaultMaxAllowedPointCountInSeries">
       <summary>
         <para>The default maximum allowed number of points in a series.</para>
-        <para></para>
+        <para />
         <para>Return value: 0 (no limit).</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.DefaultMaxAllowedSeriesCount">
       <summary>
         <para>The default maximum allowed number of series in the chart data source.</para>
-        <para></para>
+        <para />
         <para>Return value: 0 (no limit).</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.FieldValuesProvideMode">
       <summary>
@@ -2407,7 +2255,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ProvideEmptyCells">
       <summary>
@@ -2541,7 +2388,6 @@
       <summary>
         <para>Serves as a base for classes that represent field value cells.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.FieldValueCellBase`1.#ctor(DevExpress.XtraPivotGrid.Data.PivotFieldValueItem)">
       <summary>
@@ -2632,7 +2478,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.FixedFieldValueCollection"/> class with specified settings.</para>
       </summary>
-      <param name="isColumn"></param>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.FixedFieldValueCondition">
       <summary>
@@ -2643,16 +2488,11 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.FixedFieldValueCondition"/> class with specified settings.</para>
       </summary>
-      <param name="field"></param>
-      <param name="value"></param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.FixedFieldValueCondition.#ctor(System.String,DevExpress.XtraPivotGrid.PivotGridFieldBase,System.Object)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.FixedFieldValueCondition"/> class with specified settings.</para>
       </summary>
-      <param name="olapUniqueMemberName"></param>
-      <param name="field"></param>
-      <param name="value"></param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.FixedFieldValueCondition.Equals(System.Object)">
       <summary>
@@ -2716,7 +2556,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.IOLAPMember.Level">
       <summary>
@@ -3043,7 +2882,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.IThreadSafeGroup.Hierarhcy">
       <summary>
@@ -3107,10 +2945,6 @@
         <para>Gets or sets a localizer object providing localization of the PivotGrid’s user interface at runtime.</para>
       </summary>
       <value>An <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> descendant, used to localize the user interface at runtime.</value>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.Localization.PivotGridLocalizer.CreateDefaultLocalizer">
-      <summary />
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.Localization.PivotGridLocalizer.CreateResXLocalizer">
       <summary>
@@ -3616,9 +3450,6 @@
         <para>Default value: Drop Filter Fields Here</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FilterInvalidCriteria">
-      <summary />
-    </member>
     <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FilterInvert">
       <summary>
         <para>The caption of the filter dropdown’s popup menu item used to invert the selection.</para>
@@ -3653,9 +3484,6 @@
       <summary>
         <para>Default value: Aggregate</para>
       </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionCategoryCustomAggregateNames">
-      <summary />
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionCategoryWindow">
       <summary>
@@ -3697,9 +3525,6 @@
         <para>Default value: First()</para>
         <para>Returns the number of rows from the current row to the first row in the window.</para>
       </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionDescriptionFirstValue">
-      <summary />
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionDescriptionGetDateHour">
       <summary>
@@ -3766,9 +3591,6 @@
         <para>Default value: Index()</para>
         <para>Returns the index of the current row in the window.</para>
       </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionDescriptionIsTotal">
-      <summary />
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionDescriptionLast">
       <summary>
@@ -3872,9 +3694,6 @@
         <para>Returns the running count of the specified expression from the first row in the window to the current row.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionDescriptionRunningCustomAggregate">
-      <summary />
-    </member>
     <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionDescriptionRunningMax">
       <summary>
         <para>Default value: RunningMax(SummaryExpression)</para>
@@ -3965,9 +3784,6 @@
         <para>Returns the distinct count of the expression within the window.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionDescriptionWindowCustomAggregate">
-      <summary />
-    </member>
     <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionDescriptionWindowDefinition">
       <summary>
         <para>Default value: w(WindowExpression, partitionByFunction, orderByFunction)</para>
@@ -3997,9 +3813,6 @@
         <para>Default value: partitionBy(column1, column2, …)</para>
         <para>Specifies the columns by which the data rows are partitioned. The window function is applied to each partition separately.</para>
       </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionDescriptionWindowFirstValue">
-      <summary />
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.FunctionDescriptionWindowMax">
       <summary>
@@ -4990,9 +4803,6 @@
       <summary>
         <para>Provides data for events which are invoked for particular cells.</para>
       </summary>
-      <typeparam name="TField"></typeparam>
-      <typeparam name="TData"></typeparam>
-      <typeparam name="TCustomTotal"></typeparam>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.ColumnCustomTotal">
       <summary>
@@ -5010,7 +4820,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.ColumnIndex">
       <summary>
@@ -5037,19 +4846,19 @@
       <param name="customColumns">A list of columns to return.</param>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains the underlying data.</returns>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.CreateDrillDownDataSource(System.Int32)">
-      <summary>
-        <para>Returns data records used to calculate a summary value for the current cell. Allows you to specify the columns and limit the number of records to return.</para>
-      </summary>
-      <param name="maxRowCount">An integer value that specifies the maximum number of data rows to return. Set it to &#0045;1 to retrieve all rows.</param>
-      <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains records used to calculate a summary value for the current cell.</returns>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.CreateDrillDownDataSource(System.Int32,System.Collections.Generic.List{System.String})">
       <summary>
         <para>Returns data records used to calculate a summary value for the current cell. Allows you to specify the columns and limit the number of records to return.</para>
       </summary>
       <param name="maxRowCount">An integer value that specifies the maximum number of data rows to return. Set it to -1 to retrieve all rows.</param>
       <param name="customColumns">A list of columns to return.</param>
+      <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains records used to calculate a summary value for the current cell.</returns>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.CreateDrillDownDataSource(System.Int32)">
+      <summary>
+        <para>Returns data records used to calculate a summary value for the current cell. Allows you to specify the columns and limit the number of records to return.</para>
+      </summary>
+      <param name="maxRowCount">An integer value that specifies the maximum number of data rows to return. Set it to &#0045;1 to retrieve all rows.</param>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains records used to calculate a summary value for the current cell.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.CreateOLAPDrillDownDataSource(System.Collections.Generic.List{System.String})">
@@ -5139,19 +4948,19 @@
       <param name="dataField">A T object that specifies the data field, against which the required Column Grand Total is calculated.</param>
       <returns>A Column Grand Total value.</returns>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.GetFieldValue(`0)">
-      <summary>
-        <para>Returns the value of the specified column or row field which identifies the column/row in which the processed cell resides.</para>
-      </summary>
-      <param name="field">A T object which represents the field whose value is returned.</param>
-      <returns>An object representing the field’s value.</returns>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.GetFieldValue(`0,System.Int32)">
       <summary>
         <para>Returns the specified column or row field’s value for the cell, addressed by its zero-based index in the data area.</para>
       </summary>
       <param name="field">A T object representing a column or row field, whose value is to be obtained.</param>
       <param name="cellIndex">A zero-based index of a cell in the Data Area that identifies the required field value. Indexes are numbered starting from the left edge for column fields, and from the top edge for row fields.</param>
+      <returns>An object representing the field’s value.</returns>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.GetFieldValue(`0)">
+      <summary>
+        <para>Returns the value of the specified column or row field which identifies the column/row in which the processed cell resides.</para>
+      </summary>
+      <param name="field">A T object which represents the field whose value is returned.</param>
       <returns>An object representing the field’s value.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.GetGrandTotal(`0)">
@@ -5247,7 +5056,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotCellEventArgsBase`3.RowIndex">
       <summary>
@@ -5396,8 +5204,6 @@
       <summary>
         <para>Serves as a base for classes that provide data for the CustomFieldValueCells event.</para>
       </summary>
-      <typeparam name="T1"></typeparam>
-      <typeparam name="T2"></typeparam>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotCustomFieldValueCellsEventArgsBase`2.FindAllCells(System.Boolean,System.Predicate{System.Object[]})">
       <summary>
@@ -5461,7 +5267,6 @@
       <summary>
         <para>Serves as a base for classes that provide data for the CustomGroupInterval event.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotCustomGroupIntervalEventArgsBase`1.GroupValue">
       <summary>
@@ -5534,15 +5339,11 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="listAccessors"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotDataSource.GetListName(System.ComponentModel.PropertyDescriptor[])">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="listAccessors"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotDataSource.GetRowIndex(System.Object)">
       <summary>
@@ -5648,21 +5449,16 @@
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotDrillDownDataSource.GetItemProperties(System.ComponentModel.PropertyDescriptor[])">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <param name="listAccessors"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotDrillDownDataSource.GetListName(System.ComponentModel.PropertyDescriptor[])">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <param name="listAccessors"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotDrillDownDataSource.GetRowIndex(System.Object)">
       <summary>
@@ -5761,7 +5557,6 @@
       <summary>
         <para>Provides data for the FieldValueDisplayText event.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotFieldDisplayTextEventArgsBase`1.DisplayText">
       <summary>
@@ -5785,7 +5580,6 @@
       <summary>
         <para>Serves as a base for classes that provide data for all field-related events.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotFieldEventArgsBase`1.Field">
       <summary>
@@ -5837,7 +5631,6 @@
       <summary>
         <para>Serves as a base for classes that provide data for the events which are used to customize column and row headers.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotFieldValueEventArgsBase`1.ChangeExpandedState">
       <summary>
@@ -5857,19 +5650,19 @@
       <param name="customColumns">A list of columns to return.</param>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains records associated with the processed cell.</returns>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotFieldValueEventArgsBase`1.CreateDrillDownDataSource(System.Int32)">
-      <summary>
-        <para>Returns data records that are used to calculate a summary value for the specified cell.</para>
-      </summary>
-      <param name="maxRowCount">An integer value that specifies the maximum number of data rows to return.</param>
-      <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains records associated with the processed cell.</returns>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotFieldValueEventArgsBase`1.CreateDrillDownDataSource(System.Int32,System.Collections.Generic.List{System.String})">
       <summary>
         <para>Returns data records used to calculate a summary value for the specified cell in OLAP and server mode.</para>
       </summary>
       <param name="maxRowCount">An integer value that specifies the maximum number of data rows to return.</param>
       <param name="customColumns">A list of columns to return.</param>
+      <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains records associated with the processed cell.</returns>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotFieldValueEventArgsBase`1.CreateDrillDownDataSource(System.Int32)">
+      <summary>
+        <para>Returns data records that are used to calculate a summary value for the specified cell.</para>
+      </summary>
+      <param name="maxRowCount">An integer value that specifies the maximum number of data rows to return.</param>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains records associated with the processed cell.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotFieldValueEventArgsBase`1.CreateOLAPDrillDownDataSource(System.Int32,System.Collections.Generic.List{System.String})">
@@ -5957,7 +5750,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotFieldValueEventArgsBase`1.MaxIndex">
       <summary>
@@ -5987,11 +5779,6 @@
       <summary>
         <para>Serves as the base for classes that are filters applied to data displayed in the <see cref="T:DevExpress.XtraPivotGrid.PivotGridControl"/>.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotFilterBase.GetCriteria(DevExpress.XtraPivotGrid.PivotGridFieldBase)">
-      <summary />
-      <param name="exceptField"></param>
-      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotFilterBase.Item(DevExpress.XtraPivotGrid.PivotGridFieldBase)">
       <summary>
@@ -6113,13 +5900,11 @@
       <summary>
         <para>Serves as a base for classes that provide data for the CustomFieldSort event.</para>
       </summary>
-      <typeparam name="T"></typeparam>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridCustomFieldSortEventArgsBase`1.Data">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridCustomFieldSortEventArgsBase`1.Field">
       <summary>
@@ -6139,7 +5924,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridCustomFieldSortEventArgsBase`1.Handled">
       <summary>
@@ -6386,7 +6170,6 @@
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.AllowedAreas">
       <summary>
@@ -6446,9 +6229,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="valueType"></param>
-      <param name="isColumn"></param>
-      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.CanSort">
       <summary>
@@ -6531,7 +6311,6 @@
         <para>A default value of the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.MinWidth"/> property, which specifies the minimum allowed width of columns that correspond to the current field.</para>
         <para>Return value: 20</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.DefaultPercentFormat">
       <summary>
@@ -6550,7 +6329,6 @@
         <para>A default value of the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.Width"/> property, which specifies the width of columns that correspond to the current field.</para>
         <para>Return value: 100</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.DisplayFolder">
       <summary>
@@ -6562,7 +6340,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.EmptyCellText">
       <summary>
@@ -6609,7 +6386,6 @@
       <summary>
         <para>Gets the column name mapped to the field in the filter control’s view model. For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.FilterValues">
       <summary>
@@ -6659,10 +6435,6 @@
         <para>Returns an array of the OLAP members for the current field.</para>
       </summary>
       <returns>An array containing OLAP members for the field.</returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldBase.GetOLAPMembersAsync">
-      <summary />
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldBase.GetSummaryInterval">
       <summary>
@@ -6788,7 +6560,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldBase.IsAreaAllowed(DevExpress.XtraPivotGrid.PivotArea)">
       <summary>
@@ -6845,21 +6616,18 @@
         <para>Specifies the maximum height of column field values, in lines.</para>
         <para>Return value: 5</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.PivotGridFieldBase.MaximumRowValueLineCount">
       <summary>
         <para>Specifies the maximum height of row field values, in lines.</para>
         <para>Return value: 5</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.PivotGridFieldBase.MinimumValueLineCount">
       <summary>
         <para>Specifies the minimum height of column/row field values, in lines.</para>
         <para>Return value: 1</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.MinWidth">
       <summary>
@@ -6901,7 +6669,6 @@
       <summary>
         <para>This method supports the control’s internal infrastructure and is not intended to be called directly from your code.</para>
       </summary>
-      <param name="restoredVersion"></param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldBase.OnEndSerializing">
       <summary>
@@ -6912,7 +6679,6 @@
       <summary>
         <para>This method supports the control’s internal infrastructure and is not intended to be called directly from your code.</para>
       </summary>
-      <param name="e"></param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldBase.OnStartSerializing">
       <summary>
@@ -6944,11 +6710,6 @@
       <param name="area">A <see cref="T:DevExpress.XtraPivotGrid.PivotArea"/> value that specifies the area in which the field is placed.</param>
       <param name="areaIndex">A zero-based integer that specifies the field’s index amongst the other fields displayed within the same area.</param>
       <returns>true if the field has been successfully moved to the specified position; otherwise, false.</returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldBase.SetOLAPFilterByUniqueName(DevExpress.Utils.DefaultBoolean)">
-      <summary />
-      <param name="newValue"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldBase.SetSortBySummary(DevExpress.XtraPivotGrid.PivotGridFieldBase,System.Collections.Generic.List{DevExpress.XtraPivotGrid.PivotGridFieldSortCondition},System.Nullable{DevExpress.Data.PivotGrid.PivotSummaryType},System.Boolean)">
       <summary>
@@ -7107,7 +6868,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.UseNativeFormat">
       <summary>
@@ -7162,14 +6922,6 @@
       </summary>
       <param name="columnName">A <see cref="T:System.String"/> that is the data source column name.</param>
       <param name="area">A <see cref="T:DevExpress.XtraPivotGrid.PivotArea"/> enumeration member that specifies the PivotGrid area.</param>
-      <returns></returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldCollectionBase.AddDataSourceColumn(System.String,DevExpress.XtraPivotGrid.PivotArea,DevExpress.XtraPivotGrid.PivotGroupInterval)">
-      <summary />
-      <param name="columnName"></param>
-      <param name="area"></param>
-      <param name="groupInterval"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldCollectionBase.ClearAndDispose">
       <summary>
@@ -7187,7 +6939,6 @@
       <summary>
         <para>This property is intended for internal use only. Normally, you don’t need to use it.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldCollectionBase.DefaultFieldWidth">
       <summary>
@@ -7251,8 +7002,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="field"></param>
-      <param name="oldValue"></param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldCollectionBase.Remove(DevExpress.XtraPivotGrid.PivotGridFieldBase)">
       <summary>
@@ -7299,10 +7048,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="options"></param>
-      <param name="propertyName"></param>
-      <param name="id"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.Assign(DevExpress.XtraPivotGrid.PivotGridFieldFilterValues)">
       <summary>
@@ -7315,20 +7060,17 @@
         <para>Removes all elements from the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.Values"/> array.</para>
       </summary>
     </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.Contains(System.Object,System.Boolean)">
+      <summary>
+        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.Contains(System.Object)">
       <summary>
         <para>Returns whether the current filter condition allows displaying the specified value.</para>
       </summary>
       <param name="value">An object that should be located in the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.Values"/> array.</param>
       <returns>true if the current filter condition allows displaying the specified value; otherwise, false.</returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.Contains(System.Object,System.Boolean)">
-      <summary>
-        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
-      </summary>
-      <param name="value"></param>
-      <param name="invertExcluded"></param>
-      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.Count">
       <summary>
@@ -7340,7 +7082,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.Field">
       <summary>
@@ -7401,21 +7142,12 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="options"></param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.SetFilterType(DevExpress.XtraPivotGrid.PivotFilterType)">
       <summary>
         <para>Sets the filter type to the specified value.</para>
       </summary>
       <param name="newFilterType">A <see cref="T:DevExpress.XtraPivotGrid.PivotFilterType"/> enumeration member that specifies the filter type. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.FilterType"/> property.</param>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.SetValues(System.Collections.Generic.IList{System.Object},DevExpress.XtraPivotGrid.PivotFilterType,System.Boolean)">
-      <summary>
-        <para>Adds the specified values to the collection and sets the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.FilterType"/> and <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.ShowBlanks"/> properties to the specified values.</para>
-      </summary>
-      <param name="values">An array of objects that contains filter values that should be added to the collection.</param>
-      <param name="filterType">A <see cref="T:DevExpress.XtraPivotGrid.PivotFilterType"/> value that specifies the current field’s filter type.</param>
-      <param name="showBlanks">true if the PivotGridControl should process records that contain NULL values in the current field; otherwise, false.</param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.SetValues(System.Collections.Generic.IList{System.Object},DevExpress.XtraPivotGrid.PivotFilterType,System.Boolean,System.Boolean)">
       <summary>
@@ -7427,36 +7159,28 @@
       <param name="allowOnChanged">true to allow raising OnChanged events; otherwise, false.</param>
       <returns>true if the specified values differ from the current ones; otherwise, false.</returns>
     </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.SetValues(System.Collections.Generic.IList{System.Object},DevExpress.XtraPivotGrid.PivotFilterType,System.Boolean)">
+      <summary>
+        <para>Adds the specified values to the collection and sets the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.FilterType"/> and <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.ShowBlanks"/> properties to the specified values.</para>
+      </summary>
+      <param name="values">An array of objects that contains filter values that should be added to the collection.</param>
+      <param name="filterType">A <see cref="T:DevExpress.XtraPivotGrid.PivotFilterType"/> value that specifies the current field’s filter type.</param>
+      <param name="showBlanks">true if the PivotGridControl should process records that contain NULL values in the current field; otherwise, false.</param>
+    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.SetValuesAsync(System.Collections.Generic.IList{System.Object},DevExpress.XtraPivotGrid.PivotFilterType,System.Boolean,DevExpress.XtraPivotGrid.AsyncCompletedHandler)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="values"></param>
-      <param name="filterType"></param>
-      <param name="showBlanks"></param>
-      <param name="handler"></param>
-      <returns></returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.SetValuesAsync(System.Collections.Generic.IList{System.Object},DevExpress.XtraPivotGrid.PivotFilterType,System.Boolean,System.Boolean)">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <param name="values"></param>
-      <param name="filterType"></param>
-      <param name="showBlanks"></param>
-      <param name="allowOnChanged"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.SetValuesAsync(System.Collections.Generic.IList{System.Object},DevExpress.XtraPivotGrid.PivotFilterType,System.Boolean,System.Boolean,DevExpress.XtraPivotGrid.AsyncCompletedHandler)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="values"></param>
-      <param name="filterType"></param>
-      <param name="showBlanks"></param>
-      <param name="allowOnChanged"></param>
-      <param name="handler"></param>
-      <returns></returns>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.SetValuesAsync(System.Collections.Generic.IList{System.Object},DevExpress.XtraPivotGrid.PivotFilterType,System.Boolean,System.Boolean)">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.ShowBlanks">
       <summary>
@@ -7474,7 +7198,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldFilterValues.ValuesExcluded">
       <summary>
@@ -7718,7 +7441,6 @@
       <summary>
         <para>This member supports the infrastructure and cannot be used directly from your code.</para>
       </summary>
-      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.SummaryType">
       <summary>
@@ -7748,13 +7470,6 @@
       </summary>
       <param name="item">A PivotFieldValueItem object.</param>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.#ctor(DevExpress.XtraPivotGrid.PivotGridFieldBase,System.Object)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition"/> class.</para>
-      </summary>
-      <param name="field">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridFieldBase"/> descendant that represents the field to which the condition corresponds. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Field"/> property.</param>
-      <param name="value">An object that specifies the field value represented by the condition. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Value"/> property.</param>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.#ctor(DevExpress.XtraPivotGrid.PivotGridFieldBase,System.Object,System.String)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition"/> class.</para>
@@ -7762,6 +7477,13 @@
       <param name="field">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridFieldBase"/> descendant that represents the field to which the condition corresponds. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Field"/> property.</param>
       <param name="value">An object that specifies the field value represented by the condition. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Value"/> property.</param>
       <param name="olapUniqueName">A <see cref="T:System.String"/> that represents the unique name of the corresponding OLAP member. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.OLAPUniqueMemberName"/> property.</param>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.#ctor(DevExpress.XtraPivotGrid.PivotGridFieldBase,System.Object)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition"/> class.</para>
+      </summary>
+      <param name="field">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridFieldBase"/> descendant that represents the field to which the condition corresponds. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Field"/> property.</param>
+      <param name="value">An object that specifies the field value represented by the condition. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Value"/> property.</param>
     </member>
     <member name="E:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Changed">
       <summary>
@@ -7778,7 +7500,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.IsEqual(DevExpress.XtraPivotGrid.PivotGridFieldSortCondition,System.Comparison{System.Object},System.Boolean)">
       <summary>
@@ -7834,7 +7555,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridFieldSortConditionCollection.IndexOf(DevExpress.XtraPivotGrid.PivotGridFieldBase)">
       <summary>
@@ -7962,27 +7682,12 @@
       </summary>
       <value>A <see cref="T:DevExpress.XtraPivotGrid.PivotGroupFilterValues"/> object that represents the group filter condition.</value>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridGroup.GetOLAPMembers(DevExpress.XtraPivotGrid.IOLAPMember)">
-      <summary />
-      <param name="parent"></param>
-      <returns></returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridGroup.GetOLAPMembersAsync(DevExpress.XtraPivotGrid.IOLAPMember)">
-      <summary />
-      <param name="parent"></param>
-      <returns></returns>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridGroup.GetUniqueValues(System.Object[])">
       <summary>
         <para>Returns the unique child values of the specified group value.</para>
       </summary>
       <param name="parentValues">An array of objects that identifies the group value.</param>
       <returns>A collection of the group value‘s child values.</returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridGroup.GetUniqueValuesAsync(System.Object[])">
-      <summary />
-      <param name="parentValues"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridGroup.GetVisibleFields">
       <summary>
@@ -8100,19 +7805,19 @@
       </summary>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotGridGroup"/> object which represents the group that was added.</returns>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridGroupCollection.Add(DevExpress.XtraPivotGrid.PivotGridFieldBase[])">
-      <summary>
-        <para>Creates a group and adds the specified fields to it.</para>
-      </summary>
-      <param name="fields">An array of fields to be added to the created group.</param>
-      <returns>The created <see cref="T:DevExpress.XtraPivotGrid.PivotGridGroup"/> object.</returns>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridGroupCollection.Add(DevExpress.XtraPivotGrid.PivotGridFieldBase[],System.String)">
       <summary>
         <para>Creates a group with the specified caption, containing the specified fields.</para>
       </summary>
       <param name="fields">An array of fields to be added to the created group.</param>
       <param name="caption">A caption for the group. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGridGroup.Caption"/> property.</param>
+      <returns>The created <see cref="T:DevExpress.XtraPivotGrid.PivotGridGroup"/> object.</returns>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGridGroupCollection.Add(DevExpress.XtraPivotGrid.PivotGridFieldBase[])">
+      <summary>
+        <para>Creates a group and adds the specified fields to it.</para>
+      </summary>
+      <param name="fields">An array of fields to be added to the created group.</param>
       <returns>The created <see cref="T:DevExpress.XtraPivotGrid.PivotGridGroup"/> object.</returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridGroupCollection.Add(DevExpress.XtraPivotGrid.PivotGridGroup)">
@@ -8206,12 +7911,6 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsBase"/> class.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsBase.#ctor(System.EventHandler)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsBase"/> class.</para>
-      </summary>
-      <param name="optionsChanged">A delegate that will receive change notifications.</param>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsBase.#ctor(System.EventHandler,DevExpress.WebUtils.IViewBagOwner,System.String)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsBase"/> class.</para>
@@ -8219,6 +7918,12 @@
       <param name="optionsChanged">A delegate that will receive change notifications.</param>
       <param name="viewBagOwner">An object which implements the IViewBagOwner interface.</param>
       <param name="objectPath">The string value.</param>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsBase.#ctor(System.EventHandler)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsBase"/> class.</para>
+      </summary>
+      <param name="optionsChanged">A delegate that will receive change notifications.</param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsBase.Assign(DevExpress.Utils.Controls.BaseOptions)">
       <summary>
@@ -8276,7 +7981,6 @@
       <summary>
         <para>The default delay between starting an asynchronous operation and displaying the loading panel.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsBehaviorBase.LoadingPanelDelay">
       <summary>
@@ -8312,7 +8016,6 @@
         <para>The default delay between changing the cell focus or selection, and updating the bound Chart control, in milliseconds.</para>
         <para>Return value: 500</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsChartDataSource.SelectionOnly">
       <summary>
@@ -8331,12 +8034,6 @@
         <para>Provides customization options for a PivotGrid control.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.#ctor(System.EventHandler)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsCustomization"/> class.</para>
-      </summary>
-      <param name="optionsChanged">A delegate that will receive change notifications.</param>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.#ctor(System.EventHandler,DevExpress.WebUtils.IViewBagOwner,System.String)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsCustomization"/> class.</para>
@@ -8344,6 +8041,12 @@
       <param name="optionsChanged">A delegate that will receive change notifications.</param>
       <param name="viewBagOwner">An object which implements the IViewBagOwner interface.</param>
       <param name="objectPath">The string value.</param>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.#ctor(System.EventHandler)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsCustomization"/> class.</para>
+      </summary>
+      <param name="optionsChanged">A delegate that will receive change notifications.</param>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowCustomizationForm">
       <summary>
@@ -8531,20 +8234,10 @@
       </summary>
       <param name="value">A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration member that specifies whether field values are expanded or collapsed by default. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGridOptionsData.AutoExpandGroups"/> property.</param>
     </member>
-    <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsData.UseDataBindingAPI">
-      <summary />
-      <value></value>
-    </member>
     <member name="T:DevExpress.XtraPivotGrid.PivotGridOptionsDataField">
       <summary>
         <para>Provides the options which control the presentation of data fields in the XtraPivotGrid.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsDataField.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsDataField"/> class.</para>
-      </summary>
-      <param name="data">A DevExpress.XtraPivotGrid.Data.PivotGridData object that implements data-aware operations on the data source.</param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsDataField.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData,DevExpress.WebUtils.IViewBagOwner,System.String)">
       <summary>
@@ -8554,13 +8247,6 @@
       <param name="owner">An IViewBagOwner object that is used to initialize the created object.</param>
       <param name="objectPath">A string value that is used to initialize the created object.</param>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsDataField.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData,System.EventHandler)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsDataField"/> class with the specified settings.</para>
-      </summary>
-      <param name="data">A PivotGridData object which contains information required to initialize the created <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsDataField"/> object.</param>
-      <param name="optionsChanged">A method that will handle the <see cref="E:DevExpress.XtraPivotGrid.PivotGridOptionsBase.OptionsChanged"/> event.</param>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsDataField.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData,System.EventHandler,DevExpress.WebUtils.IViewBagOwner,System.String)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsDataField"/> class with the specified settings.</para>
@@ -8569,6 +8255,19 @@
       <param name="optionsChanged">A method that will handle the <see cref="E:DevExpress.XtraPivotGrid.PivotGridOptionsBase.OptionsChanged"/> event.</param>
       <param name="owner">An IViewBagOwner object used to initialize the created object.</param>
       <param name="objectPath">A string value used to initialize the created object.</param>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsDataField.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData,System.EventHandler)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsDataField"/> class with the specified settings.</para>
+      </summary>
+      <param name="data">A PivotGridData object which contains information required to initialize the created <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsDataField"/> object.</param>
+      <param name="optionsChanged">A method that will handle the <see cref="E:DevExpress.XtraPivotGrid.PivotGridOptionsBase.OptionsChanged"/> event.</param>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsDataField.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsDataField"/> class.</para>
+      </summary>
+      <param name="data">A DevExpress.XtraPivotGrid.Data.PivotGridData object that implements data-aware operations on the data source.</param>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsDataField.Area">
       <summary>
@@ -8657,18 +8356,11 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <returns></returns>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.PivotGridOptionsFilterBase">
       <summary>
         <para>Serves as the base class for classes that represent options affecting data filtering.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsFilterBase.#ctor(DevExpress.XtraPivotGrid.PivotOptionsFilterEventHandler)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsFilterBase"/> class.</para>
-      </summary>
-      <param name="optionsChanged">The <see cref="E:DevExpress.XtraPivotGrid.PivotGridOptionsFilterBase.OptionsChanged"/> event handler.</param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsFilterBase.#ctor(DevExpress.XtraPivotGrid.PivotOptionsFilterEventHandler,DevExpress.WebUtils.IViewBagOwner,System.String)">
       <summary>
@@ -8677,6 +8369,12 @@
       <param name="optionsChanged">The <see cref="E:DevExpress.XtraPivotGrid.PivotGridOptionsFilterBase.OptionsChanged"/> event handler.</param>
       <param name="viewBagOwner">An object that implements the IViewBagOwner interface.</param>
       <param name="projectPath">The string value.</param>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsFilterBase.#ctor(DevExpress.XtraPivotGrid.PivotOptionsFilterEventHandler)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsFilterBase"/> class.</para>
+      </summary>
+      <param name="optionsChanged">The <see cref="E:DevExpress.XtraPivotGrid.PivotGridOptionsFilterBase.OptionsChanged"/> event handler.</param>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsFilterBase.AutoFilterType">
       <summary>
@@ -8750,13 +8448,11 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGridOptionsOLAP"/> class. For internal use.</para>
       </summary>
-      <param name="optionsChanged"></param>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.AllowDuplicatedMeasures">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.AllowTopNDrillDown">
       <summary>
@@ -8775,10 +8471,6 @@
         <para>Gets or sets whether PivotGridControl should take into account OLAP member values or unique names when filtering data in the OLAP mode.</para>
       </summary>
       <value>true to take into account unique names when filtering data in the OLAP mode; false to take into account values instead.</value>
-    </member>
-    <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.FilterUsingWhereClause">
-      <summary />
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.ModificationCheckInterval">
       <summary>
@@ -8826,11 +8518,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.UseFilter">
-      <summary />
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.PivotGridOptionsPrint">
       <summary>
@@ -9056,7 +8743,6 @@
       <summary>
         <para>Specifies the default value for the <see cref="P:DevExpress.XtraPivotGrid.PivotGridOptionsViewBase.RowTreeOffset"/> property.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsViewBase.DrawFocusedCellRect">
       <summary>
@@ -9098,9 +8784,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <param name="isColumn"></param>
-      <param name="valueType"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGridOptionsViewBase.Reset">
       <summary>
@@ -9433,16 +9116,6 @@
         <para>Lists values that specify the filtering mode used for grouped fields.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotGroupFilterMode.List">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotGroupFilterMode.Tree">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraPivotGrid.PivotGroupFilterValue">
       <summary>
         <para>Represents a group filter value.</para>
@@ -9493,12 +9166,6 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGroupFilterValues"/> class.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.#ctor(DevExpress.XtraPivotGrid.PivotGridGroup)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGroupFilterValues"/> class.</para>
-      </summary>
-      <param name="group">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridGroup"/> object, representing the owner field group. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGroupFilterValues.Group"/> property.</param>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.#ctor(DevExpress.XtraPivotGrid.PivotGridGroup,DevExpress.XtraPivotGrid.PivotFilterType)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGroupFilterValues"/> class.</para>
@@ -9506,14 +9173,16 @@
       <param name="group">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridGroup"/> object that represents the owner field group. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGroupFilterValues.Group"/> property.</param>
       <param name="filterType">A <see cref="T:DevExpress.XtraPivotGrid.PivotFilterType"/> enumeration member that specifies the filter type. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGroupFilterValues.FilterType"/> property.</param>
     </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.#ctor(DevExpress.XtraPivotGrid.PivotGridGroup)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PivotGroupFilterValues"/> class.</para>
+      </summary>
+      <param name="group">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridGroup"/> object, representing the owner field group. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotGroupFilterValues.Group"/> property.</param>
+    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.AllowProperty(DevExpress.Utils.OptionsLayoutBase,System.String,System.Int32)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="options"></param>
-      <param name="propertyName"></param>
-      <param name="id"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.Assign(DevExpress.XtraPivotGrid.PivotGroupFilterValues)">
       <summary>
@@ -9537,6 +9206,11 @@
       </summary>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotGroupFilterValues"/> object that represents the copy of the current object.</returns>
     </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.Contains(System.Object,System.Object[],System.Boolean)">
+      <summary>
+        <para>For internal use.</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.Contains(System.Object,System.Object[])">
       <summary>
         <para>Returns whether the current filter condition allows processing the specified group value.</para>
@@ -9544,15 +9218,6 @@
       <param name="value">The field value.</param>
       <param name="parentValues">Parent values of the field value specified by the value parameter.</param>
       <returns>true if the current filter condition allows processing the specified group value with all its child values; null (Nothing in Visual Basic) if some of the child values are processed, while others are not; false if the specified group value is not processed.</returns>
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.Contains(System.Object,System.Object[],System.Boolean)">
-      <summary>
-        <para>For internal use.</para>
-      </summary>
-      <param name="value"></param>
-      <param name="parentValues"></param>
-      <param name="invertExcluded"></param>
-      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGroupFilterValues.Count">
       <summary>
@@ -9564,7 +9229,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.EndUpdate">
       <summary>
@@ -9607,7 +9271,6 @@
         <para>Returns whether the group filter values of the specified objects match.</para>
       </summary>
       <param name="values">The object to be compared.</param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.Reset">
       <summary>
@@ -9618,7 +9281,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="options"></param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.SetValues(DevExpress.XtraPivotGrid.PivotGroupFilterValuesCollection,DevExpress.XtraPivotGrid.PivotFilterType,System.Boolean)">
       <summary>
@@ -9633,27 +9295,16 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="values"></param>
-      <param name="filterType"></param>
-      <param name="handler"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.SetValuesAsync(DevExpress.XtraPivotGrid.PivotGroupFilterValuesCollection,DevExpress.XtraPivotGrid.PivotFilterType,System.Boolean)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="values"></param>
-      <param name="filterType"></param>
-      <param name="allowOnChanged"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValues.SetValuesAsync(DevExpress.XtraPivotGrid.PivotGroupFilterValuesCollection,System.Boolean)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="values"></param>
-      <param name="allowOnChanged"></param>
-      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGroupFilterValues.Values">
       <summary>
@@ -9694,15 +9345,11 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="propertyName"></param>
-      <param name="e"></param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValuesCollection.BeforeDeserializeCollection(System.String,DevExpress.Utils.Serializing.XtraItemEventArgs)">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="propertyName"></param>
-      <param name="e"></param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValuesCollection.Clear">
       <summary>
@@ -9713,9 +9360,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="propertyName"></param>
-      <param name="e"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValuesCollection.Clone(DevExpress.XtraPivotGrid.PivotGroupFilterValuesCollection,DevExpress.XtraPivotGrid.PivotGroupFilterValuesCollection)">
       <summary>
@@ -9741,9 +9385,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="propertyName"></param>
-      <param name="e"></param>
-      <returns></returns>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGroupFilterValuesCollection.IsEmpty">
       <summary>
@@ -9770,7 +9411,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValuesCollection.Remove(DevExpress.XtraPivotGrid.PivotGroupFilterValue)">
       <summary>
@@ -9788,8 +9428,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="propertyName"></param>
-      <param name="e"></param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotGroupFilterValuesCollection.ToList">
       <summary>
@@ -9822,7 +9460,7 @@
     <member name="F:DevExpress.XtraPivotGrid.PivotGroupInterval.Date">
       <summary>
         <para>This option is in effect only for fields that store date/time values.</para>
-        <para></para>
+        <para />
         <para>Field values are grouped by the date part. The time part of the values is ignored.</para>
       </summary>
     </member>
@@ -9841,14 +9479,14 @@
     <member name="F:DevExpress.XtraPivotGrid.PivotGroupInterval.DateDayOfYear">
       <summary>
         <para>This option is in effect only for fields that store date/time values.</para>
-        <para></para>
+        <para />
         <para>Field values are grouped by the number of the day in which they occur in a year. The following groups can be created: 1, 2, 3,…,365 (,366 in a leap year).</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.PivotGroupInterval.DateHour">
       <summary>
         <para>This option is in effect only for fields that store date/time values.</para>
-        <para></para>
+        <para />
         <para>Field values are grouped by the date part with the hour value. Examples of such groups: 3/4/2012 0:00, 3/4/2012 1:00, 3/4/2012 2:00, …</para>
       </summary>
     </member>
@@ -9861,7 +9499,7 @@
     <member name="F:DevExpress.XtraPivotGrid.PivotGroupInterval.DateHourMinuteSecond">
       <summary>
         <para>This option is in effect only for fields that store date/time values.</para>
-        <para></para>
+        <para />
         <para>Field values are grouped by the date part with the hour, minute and second values. Examples of groups: 3/4/2012 0:00:00, 3/4/2012 0:00:01, 3/4/2012 0:00:02, …</para>
       </summary>
     </member>
@@ -9898,9 +9536,9 @@
     <member name="F:DevExpress.XtraPivotGrid.PivotGroupInterval.DateWeekOfYear">
       <summary>
         <para>This option is in effect only for fields that store date/time values.</para>
-        <para></para>
+        <para />
         <para>Field values are grouped by the number of the week in a year in which they occur. The following groups can be created: 1, 2, 3,…,52, 53.</para>
-        <para></para>
+        <para />
         <para>Week numbers are calculated based on the following current culture’s settings: the  <see cref="P:System.Globalization.DateTimeFormatInfo.CalendarWeekRule"/> and  <see cref="P:System.Globalization.DateTimeFormatInfo.FirstDayOfWeek"/> properties.</para>
       </summary>
     </member>
@@ -9930,14 +9568,14 @@
     <member name="F:DevExpress.XtraPivotGrid.PivotGroupInterval.Hour">
       <summary>
         <para>This option is in effect only for fields that store date/time values.</para>
-        <para></para>
+        <para />
         <para>Field values are grouped by the hour part, regardless of the date to which the current date/time value belongs.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.PivotGroupInterval.Minute">
       <summary>
         <para>This option is in effect only for fields that store date/time values.</para>
-        <para></para>
+        <para />
         <para>Field values are grouped by the minute part, regardless of the date to which the current date/time value belongs.</para>
       </summary>
     </member>
@@ -9956,7 +9594,7 @@
     <member name="F:DevExpress.XtraPivotGrid.PivotGroupInterval.Second">
       <summary>
         <para>This option is in effect only for fields that store date/time values.</para>
-        <para></para>
+        <para />
         <para>Field values are grouped by the second part, regardless of the date to which the current date/time value belongs.</para>
       </summary>
     </member>
@@ -9977,84 +9615,14 @@
         <para>Lists values that specify the graphic set used to indicate KPI values.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.Cylinder">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.Faces">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.Gauge">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.None">
       <summary>
         <para>No image is displayed.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedCylinder">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedGauge">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedStatusArrow">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedThermometer">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.RoadSigns">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.ServerDefined">
       <summary>
         <para>The KPI graphic type is defined by the server.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.Shapes">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.StandardArrow">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.StatusArrow">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.Thermometer">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.TrafficLights">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotKPIGraphic.VarianceArrow">
-      <summary>
-        <para></para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.PivotKPIType">
@@ -10162,7 +9730,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="writer"></param>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.StatusMeasure">
       <summary>
@@ -10289,19 +9856,19 @@
     <member name="F:DevExpress.XtraPivotGrid.PivotRowTotalsLocation.Far">
       <summary>
         <para>Row Totals are displayed under the row field values.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.PivotRowTotalsLocation.Near">
       <summary>
         <para>Row Totals and Grand Totals are displayed above the row field values.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.PivotRowTotalsLocation.Tree">
       <summary>
         <para>Row Totals are displayed in a compact tree&#0045;like layout view.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.PivotSortBySummaryOrder">
@@ -10362,13 +9929,6 @@
     <member name="F:DevExpress.XtraPivotGrid.PivotSortMode.DimensionAttribute">
       <summary>
         <para>Sorts the field’s data by the OLAP member property (in OLAP mode). Set the <see cref="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.SortByAttribute"/> property to specify the dimension attribute.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.PivotSortMode.DisplayText">
-      <summary>
-        <para></para>
-        <para></para>
-        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.PivotSortMode.ID">
@@ -10532,15 +10092,11 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="listAccessors"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotSummaryDataSource.GetListName(System.ComponentModel.PropertyDescriptor[])">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <param name="listAccessors"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotSummaryDataSource.GetRowIndex(System.Object)">
       <summary>
@@ -10603,13 +10159,6 @@
       </summary>
       <param name="filter">A <see cref="T:DevExpress.XtraPivotGrid.PivotSummaryFilter"/> object that contains summary filter settings that should be applied to the current data field.</param>
     </member>
-    <member name="M:DevExpress.XtraPivotGrid.PivotSummaryFilter.Apply(System.Object,System.Object)">
-      <summary>
-        <para>Applies the summary filter with the specified range of values to be displayed.</para>
-      </summary>
-      <param name="startValue">The minimum value to be displayed. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotSummaryFilter.StartValue"/> property.</param>
-      <param name="endValue">The maximum value to be displayed. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotSummaryFilter.EndValue"/> property.</param>
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotSummaryFilter.Apply(System.Object,System.Object,DevExpress.XtraPivotGrid.PivotGridFieldBase,DevExpress.XtraPivotGrid.PivotGridFieldBase)">
       <summary>
         <para>Applies the summary filter with the specified range of values to be displayed. The filter is applied to cells that belong to the specified detail level.</para>
@@ -10618,6 +10167,13 @@
       <param name="endValue">The maximum value to be displayed. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotSummaryFilter.EndValue"/> property.</param>
       <param name="rowField">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridFieldBase"/> descendant that specifies the row field used to identify the target detail level. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotSummaryFilter.RowField"/> property.</param>
       <param name="columnField">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridFieldBase"/> descendant that specifies the column field used to identify the target detail level. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotSummaryFilter.ColumnField"/> property.</param>
+    </member>
+    <member name="M:DevExpress.XtraPivotGrid.PivotSummaryFilter.Apply(System.Object,System.Object)">
+      <summary>
+        <para>Applies the summary filter with the specified range of values to be displayed.</para>
+      </summary>
+      <param name="startValue">The minimum value to be displayed. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotSummaryFilter.StartValue"/> property.</param>
+      <param name="endValue">The maximum value to be displayed. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotSummaryFilter.EndValue"/> property.</param>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.PivotSummaryFilter.Clear">
       <summary>
@@ -10634,7 +10190,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotSummaryFilter.EndValue">
       <summary>
@@ -10664,7 +10219,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotSummaryFilter.StartValue">
       <summary>
@@ -10739,7 +10293,6 @@
       <summary>
         <para>An empty range of summary values.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotSummaryInterval.EndValue">
       <summary>
@@ -10795,13 +10348,13 @@
     <member name="F:DevExpress.XtraPivotGrid.PivotTotalsLocation.Far">
       <summary>
         <para>Column Totals are displayed to the right of the column field values.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.PivotTotalsLocation.Near">
       <summary>
         <para>Column Totals are displayed to the left of the column field values.</para>
-        <para></para>
+        <para />
       </summary>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.PivotTotalsVisibility">
@@ -10894,22 +10447,10 @@
       </summary>
       <value>True, to export column field headers; otherwise, False.</value>
     </member>
-    <member name="T:DevExpress.XtraPivotGrid.PrefilterBase">
-      <summary />
-    </member>
     <member name="M:DevExpress.XtraPivotGrid.PrefilterBase.#ctor(DevExpress.PivotGrid.Filtering.IFilterOwnerBase)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraPivotGrid.PrefilterBase"/> class with specified settings.</para>
       </summary>
-      <param name="owner"></param>
-    </member>
-    <member name="P:DevExpress.XtraPivotGrid.PrefilterBase.PrefilterColumnNames">
-      <summary />
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraPivotGrid.PrefilterBase.State">
-      <summary />
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraPivotGrid.RankType">
       <summary>
@@ -11003,7 +10544,6 @@
       <summary>
         <para>An empty collection of cells.</para>
       </summary>
-      <value></value>
     </member>
     <member name="M:DevExpress.XtraPivotGrid.Selection.ReadOnlyCells.GetEnumerator">
       <summary>

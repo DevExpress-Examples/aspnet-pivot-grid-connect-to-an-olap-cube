@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<doc xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
   <assembly>
     <name>DevExpress.Pdf.v22.1.Core</name>
   </assembly>
@@ -49,18 +49,18 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.Office.DigitalSignatures.CrlClient"/> class.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Office.DigitalSignatures.CrlClient.#ctor(System.Collections.Generic.IList{System.Uri})">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Office.DigitalSignatures.CrlClient"/> class with specified settings.</para>
-      </summary>
-      <param name="uriList">A list of OCSP server Uri’s.</param>
-    </member>
     <member name="M:DevExpress.Office.DigitalSignatures.CrlClient.#ctor(System.Collections.Generic.IList{System.Uri},System.Boolean)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Office.DigitalSignatures.CrlClient"/> class with specified settings.</para>
       </summary>
       <param name="uriList">A list of OCSP server Uri’s.</param>
       <param name="throwOnFail">true to throw a WebException when the response failed; otherwise, false.</param>
+    </member>
+    <member name="M:DevExpress.Office.DigitalSignatures.CrlClient.#ctor(System.Collections.Generic.IList{System.Uri})">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Office.DigitalSignatures.CrlClient"/> class with specified settings.</para>
+      </summary>
+      <param name="uriList">A list of OCSP server Uri’s.</param>
     </member>
     <member name="M:DevExpress.Office.DigitalSignatures.CrlClient.GetEncoded(System.Collections.Generic.IList{System.Byte[]})">
       <summary>
@@ -195,18 +195,18 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.Office.DigitalSignatures.OcspClient"/> class.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Office.DigitalSignatures.OcspClient.#ctor(System.Uri)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Office.DigitalSignatures.OcspClient"/> class with specified settings.</para>
-      </summary>
-      <param name="uri">An OCSP server URI.</param>
-    </member>
     <member name="M:DevExpress.Office.DigitalSignatures.OcspClient.#ctor(System.Uri,DevExpress.Office.DigitalSignatures.HashAlgorithmType)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Office.DigitalSignatures.OcspClient"/> class with specified settings.</para>
       </summary>
       <param name="uri">An OCSP server URI.</param>
       <param name="hashAlgorithm">The hashing algorithm used to hash the issuer name and issuer public key. Default value is <see cref="F:DevExpress.Office.DigitalSignatures.HashAlgorithmType.SHA1"/>.</param>
+    </member>
+    <member name="M:DevExpress.Office.DigitalSignatures.OcspClient.#ctor(System.Uri)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Office.DigitalSignatures.OcspClient"/> class with specified settings.</para>
+      </summary>
+      <param name="uri">An OCSP server URI.</param>
     </member>
     <member name="M:DevExpress.Office.DigitalSignatures.OcspClient.GetEncoded(System.Byte[],System.Byte[])">
       <summary>
@@ -257,13 +257,6 @@
         <para>Allows you to generate timestamps.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Office.Tsp.TsaClient.#ctor(System.Uri,DevExpress.Office.DigitalSignatures.HashAlgorithmType)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Office.Tsp.TsaClient"/> class with specified settings.</para>
-      </summary>
-      <param name="tsaServerURI">A URI of a timestamp server.</param>
-      <param name="algorithm">A timestamp’s hashing algorithm.</param>
-    </member>
     <member name="M:DevExpress.Office.Tsp.TsaClient.#ctor(System.Uri,DevExpress.Office.DigitalSignatures.HashAlgorithmType,System.String,System.String)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Office.Tsp.TsaClient"/> class with specified settings.</para>
@@ -273,12 +266,12 @@
       <param name="userName">A username to log into the server.</param>
       <param name="password">A password to log into the server.</param>
     </member>
-    <member name="M:DevExpress.Office.Tsp.TsaClient.#ctor(System.Uri,DevExpress.Office.DigitalSignatures.IDigestCalculator)">
+    <member name="M:DevExpress.Office.Tsp.TsaClient.#ctor(System.Uri,DevExpress.Office.DigitalSignatures.HashAlgorithmType)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Office.Tsp.TsaClient"/> class with specified settings.</para>
       </summary>
       <param name="tsaServerURI">A URI of a timestamp server.</param>
-      <param name="digestCalculator">An objects used to calculate the digest value.</param>
+      <param name="algorithm">A timestamp’s hashing algorithm.</param>
     </member>
     <member name="M:DevExpress.Office.Tsp.TsaClient.#ctor(System.Uri,DevExpress.Office.DigitalSignatures.IDigestCalculator,System.String,System.String)">
       <summary>
@@ -288,6 +281,13 @@
       <param name="digestCalculator">An objects used to calculate the digest value.</param>
       <param name="userName">A username to log in to the server.</param>
       <param name="password">A password to log in to the server.</param>
+    </member>
+    <member name="M:DevExpress.Office.Tsp.TsaClient.#ctor(System.Uri,DevExpress.Office.DigitalSignatures.IDigestCalculator)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Office.Tsp.TsaClient"/> class with specified settings.</para>
+      </summary>
+      <param name="tsaServerURI">A URI of a timestamp server.</param>
+      <param name="digestCalculator">An objects used to calculate the digest value.</param>
     </member>
     <member name="M:DevExpress.Office.Tsp.TsaClient.GenerateTimeStamp(System.Byte[],System.String)">
       <summary>
@@ -1351,18 +1351,18 @@
         <para>Represents the base class for combo box and list box fields.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Pdf.PdfAcroFormChoiceField.AddValue(System.String)">
-      <summary>
-        <para>Adds an item to a combo box and list box by their display value.</para>
-      </summary>
-      <param name="displayValue">A <see cref="T:System.String"/> that is a value to be added to a combo box and list box.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfAcroFormChoiceField.AddValue(System.String,System.String)">
       <summary>
         <para>Adds an item to a combo box and list box using their display and export values.</para>
       </summary>
       <param name="displayValue">A <see cref="T:System.String"/> that is a value to be added to a combo box and list box.</param>
       <param name="exportValue">A <see cref="T:System.String"/> that is an export value.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfAcroFormChoiceField.AddValue(System.String)">
+      <summary>
+        <para>Adds an item to a combo box and list box by their display value.</para>
+      </summary>
+      <param name="displayValue">A <see cref="T:System.String"/> that is a value to be added to a combo box and list box.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfAcroFormChoiceField.AddWidget(DevExpress.Pdf.PdfRectangle)">
       <summary>
@@ -2050,14 +2050,6 @@
       <param name="format">Specifies the date and time format.</param>
       <returns>An object that contains the date and time format.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.PdfAcroFormValueFormat.CreateNumberFormat(System.Int32,DevExpress.Pdf.PdfAcroFormNumberSeparatorStyle)">
-      <summary>
-        <para>Creates a number format for a form field value.</para>
-      </summary>
-      <param name="decimalPlaces">A number of decimal places.</param>
-      <param name="separatorStyle">An enumeration value that indicates the number separator style.</param>
-      <returns>An object that contains the number format.</returns>
-    </member>
     <member name="M:DevExpress.Pdf.PdfAcroFormValueFormat.CreateNumberFormat(System.Int32,DevExpress.Pdf.PdfAcroFormNumberSeparatorStyle,System.String,DevExpress.Pdf.PdfAcroFormCurrencyStyle,DevExpress.Pdf.PdfAcroFormNegativeNumberStyle)">
       <summary>
         <para>Creates a number format for a form field value.</para>
@@ -2067,6 +2059,14 @@
       <param name="currencySymbol">A currency symbol.</param>
       <param name="currencyStyle">An enumeration value that indicates the currency style.</param>
       <param name="negativeNumberStyle">An enumeration value that indicates the negative number style.</param>
+      <returns>An object that contains the number format.</returns>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfAcroFormValueFormat.CreateNumberFormat(System.Int32,DevExpress.Pdf.PdfAcroFormNumberSeparatorStyle)">
+      <summary>
+        <para>Creates a number format for a form field value.</para>
+      </summary>
+      <param name="decimalPlaces">A number of decimal places.</param>
+      <param name="separatorStyle">An enumeration value that indicates the number separator style.</param>
       <returns>An object that contains the number format.</returns>
     </member>
     <member name="M:DevExpress.Pdf.PdfAcroFormValueFormat.CreatePercentFormat(System.Int32,DevExpress.Pdf.PdfAcroFormNumberSeparatorStyle)">
@@ -3392,7 +3392,7 @@
       <summary>
         <para>Contains properties that apply to list box an combo box form fields.</para>
       </summary>
-      <typeparam name="T"></typeparam>
+      <typeparam name="T" />
     </member>
     <member name="P:DevExpress.Pdf.PdfChoiceFormFieldFacade`1.CommitOnSelectionChange">
       <summary>
@@ -3461,12 +3461,6 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfClearContentRegions"/> class.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Pdf.PdfClearContentRegions.Add(DevExpress.Pdf.PdfOrientedRectangle)">
-      <summary>
-        <para>Adds a page region to the collection.</para>
-      </summary>
-      <param name="rectangle">A page region.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfClearContentRegions.Add(DevExpress.Pdf.PdfOrientedRectangle,System.Boolean)">
       <summary>
         <para>Adds a page region to the collection.</para>
@@ -3474,7 +3468,7 @@
       <param name="rectangle">A page region.</param>
       <param name="usePageCoordinateSystem">true to use page coordinate system; otherwise, false.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfClearContentRegions.Add(DevExpress.Pdf.PdfRectangle)">
+    <member name="M:DevExpress.Pdf.PdfClearContentRegions.Add(DevExpress.Pdf.PdfOrientedRectangle)">
       <summary>
         <para>Adds a page region to the collection.</para>
       </summary>
@@ -3487,11 +3481,11 @@
       <param name="rectangle">A page region.</param>
       <param name="usePageCoordinateSystem">true to use page coordinate system; otherwise, false.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfClearContentRegions.Add(System.Collections.Generic.IEnumerable{DevExpress.Pdf.PdfOrientedRectangle})">
+    <member name="M:DevExpress.Pdf.PdfClearContentRegions.Add(DevExpress.Pdf.PdfRectangle)">
       <summary>
-        <para>Adds a list of page regions to the collection.</para>
+        <para>Adds a page region to the collection.</para>
       </summary>
-      <param name="rectangles">A list of page regions.</param>
+      <param name="rectangle">A page region.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfClearContentRegions.Add(System.Collections.Generic.IEnumerable{DevExpress.Pdf.PdfOrientedRectangle},System.Boolean)">
       <summary>
@@ -3500,7 +3494,7 @@
       <param name="rectangles">A list of page regions.</param>
       <param name="usePageCoordinateSystem">true to use page coordinate system; otherwise, false.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfClearContentRegions.Add(System.Collections.Generic.IEnumerable{DevExpress.Pdf.PdfRectangle})">
+    <member name="M:DevExpress.Pdf.PdfClearContentRegions.Add(System.Collections.Generic.IEnumerable{DevExpress.Pdf.PdfOrientedRectangle})">
       <summary>
         <para>Adds a list of page regions to the collection.</para>
       </summary>
@@ -3512,6 +3506,12 @@
       </summary>
       <param name="rectangles">A list of page regions.</param>
       <param name="usePageCoordinateSystem">true to use page coordinate system; otherwise, false.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfClearContentRegions.Add(System.Collections.Generic.IEnumerable{DevExpress.Pdf.PdfRectangle})">
+      <summary>
+        <para>Adds a list of page regions to the collection.</para>
+      </summary>
+      <param name="rectangles">A list of page regions.</param>
     </member>
     <member name="T:DevExpress.Pdf.PdfColor">
       <summary>
@@ -3733,12 +3733,6 @@
         <para>Allows you to build a signature for a document hash.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Pdf.PdfDeferredSignatureBuilder.#ctor(DevExpress.Pdf.ExternalSignerInfo)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfDeferredSignatureBuilder"/> class with specified settings.</para>
-      </summary>
-      <param name="signerInfo">An object that contains information about the external signature.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfDeferredSignatureBuilder.#ctor(DevExpress.Pdf.ExternalSignerInfo,DevExpress.Pdf.PdfSignatureFieldInfo)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfDeferredSignatureBuilder"/> class with specified settings.</para>
@@ -3752,6 +3746,12 @@
       </summary>
       <param name="signerInfo">An object that contains information about the external signature.</param>
       <param name="formFieldName">The name of the signature form field to apply an external signature.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfDeferredSignatureBuilder.#ctor(DevExpress.Pdf.ExternalSignerInfo)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfDeferredSignatureBuilder"/> class with specified settings.</para>
+      </summary>
+      <param name="signerInfo">An object that contains information about the external signature.</param>
     </member>
     <member name="T:DevExpress.Pdf.PdfDestination">
       <summary>
@@ -3850,12 +3850,6 @@
       </summary>
       <value>true, if document printing is allowed; otherwise false.</value>
     </member>
-    <member name="M:DevExpress.Pdf.PdfDocument.AttachZugferdInvoice(System.Byte[])">
-      <summary>
-        <para>Attaches a ZUGFeRD XML to the document.</para>
-      </summary>
-      <param name="invoiceData">A byte array that contains ZUGFeRD XML data.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfDocument.AttachZugferdInvoice(System.Byte[],DevExpress.Pdf.PdfZugferdVersion,DevExpress.Pdf.PdfZugferdConformanceLevel)">
       <summary>
         <para>Attaches a ZUGFeRD XML to the document.</para>
@@ -3864,11 +3858,11 @@
       <param name="version">An enumeration value that specifies the ZUGFeRD version.</param>
       <param name="conformanceLevel">An enumeration value that indicates the ZUGFeRD conformance level.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfDocument.AttachZugferdInvoice(System.IO.Stream)">
+    <member name="M:DevExpress.Pdf.PdfDocument.AttachZugferdInvoice(System.Byte[])">
       <summary>
         <para>Attaches a ZUGFeRD XML to the document.</para>
       </summary>
-      <param name="invoiceStream">A stream that contains the ZUGFeRD XML data.</param>
+      <param name="invoiceData">A byte array that contains ZUGFeRD XML data.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfDocument.AttachZugferdInvoice(System.IO.Stream,DevExpress.Pdf.PdfZugferdVersion,DevExpress.Pdf.PdfZugferdConformanceLevel)">
       <summary>
@@ -3877,6 +3871,12 @@
       <param name="invoiceStream">A stream that contains the ZUGFeRD XML data.</param>
       <param name="version">An enumeration value that specifies the ZUGFeRD version.</param>
       <param name="conformanceLevel">An enumeration value that indicates the ZUGFeRD conformance level.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfDocument.AttachZugferdInvoice(System.IO.Stream)">
+      <summary>
+        <para>Attaches a ZUGFeRD XML to the document.</para>
+      </summary>
+      <param name="invoiceStream">A stream that contains the ZUGFeRD XML data.</param>
     </member>
     <member name="P:DevExpress.Pdf.PdfDocument.Author">
       <summary>
@@ -5171,12 +5171,6 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfFormData"/> class with the default settings.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.IO.Stream)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfFormData"/> class with the predefined stream.</para>
-      </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> class descendant containing a file with the interactive form data (Fdf, Txt, Xfdf or Xml format).</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.IO.Stream,DevExpress.Pdf.PdfFormDataFormat)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfFormData"/> class with the predefined stream and data format.</para>
@@ -5184,11 +5178,11 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> class descendant containing a file with the form data (Fdf, Txt, Xfdf or Xml format).</param>
       <param name="format">A <see cref="T:DevExpress.Pdf.PdfFormDataFormat"/> enumeration value specifying the format in which interactive form values are stored.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.String)">
+    <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.IO.Stream)">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfFormData"/> class with the predefined file name.</para>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfFormData"/> class with the predefined stream.</para>
       </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the path to a file with the interactive form data (Fdf, Txt, Xfdf or Xml format).</param>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> class descendant containing a file with the interactive form data (Fdf, Txt, Xfdf or Xml format).</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.String,DevExpress.Pdf.PdfFormDataFormat)">
       <summary>
@@ -5196,6 +5190,12 @@
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the path to a file with the interactive form data (Fdf, Txt, Xfdf or Xml format).</param>
       <param name="format">A <see cref="T:DevExpress.Pdf.PdfFormDataFormat"/> enumeration value specifying the format in which interactive form values are stored.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfFormData"/> class with the predefined file name.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the path to a file with the interactive form data (Fdf, Txt, Xfdf or Xml format).</param>
     </member>
     <member name="P:DevExpress.Pdf.PdfFormData.FormFieldType">
       <summary>
@@ -5482,13 +5482,6 @@
       </summary>
       <value>The annotation border color.</value>
     </member>
-    <member name="M:DevExpress.Pdf.PdfFreeTextAnnotationFacade.SetCallout(DevExpress.Pdf.PdfAnnotationLineEndingStyle,DevExpress.Pdf.PdfPoint)">
-      <summary>
-        <para>Adds a callout line to the free text annotation.</para>
-      </summary>
-      <param name="calloutLineEndingStyle">Indicates the ending style of the callout line.</param>
-      <param name="startPoint">The start point of the callout line.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfFreeTextAnnotationFacade.SetCallout(DevExpress.Pdf.PdfAnnotationLineEndingStyle,DevExpress.Pdf.PdfPoint,System.Nullable{DevExpress.Pdf.PdfPoint},DevExpress.Pdf.PdfPoint)">
       <summary>
         <para>Adds a callout line to the free text annotation.</para>
@@ -5497,6 +5490,13 @@
       <param name="startPoint">The start point of the callout line.</param>
       <param name="kneePoint">The knee point of the line curve.</param>
       <param name="endPoint">The end point of the callout line.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfFreeTextAnnotationFacade.SetCallout(DevExpress.Pdf.PdfAnnotationLineEndingStyle,DevExpress.Pdf.PdfPoint)">
+      <summary>
+        <para>Adds a callout line to the free text annotation.</para>
+      </summary>
+      <param name="calloutLineEndingStyle">Indicates the ending style of the callout line.</param>
+      <param name="startPoint">The start point of the callout line.</param>
     </member>
     <member name="P:DevExpress.Pdf.PdfFreeTextAnnotationFacade.TextJustification">
       <summary>
@@ -7031,14 +7031,6 @@
         <para>A rectangle that delimits a page area around a specific document element.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Pdf.PdfOrientedRectangle.#ctor(DevExpress.Pdf.PdfPoint,System.Double,System.Double)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfOrientedRectangle"/> class with the specified location and size.</para>
-      </summary>
-      <param name="topLeft">A <see cref="T:DevExpress.Pdf.PdfPoint"/> object that represents the top left corner of the rectangular region.</param>
-      <param name="width">A <see cref="T:System.Double"/> value that represents the width of the rectangular region.</param>
-      <param name="height">A <see cref="T:System.Double"/> value that represents the height of the rectangular region.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfOrientedRectangle.#ctor(DevExpress.Pdf.PdfPoint,System.Double,System.Double,System.Double)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfOrientedRectangle"/> class with the specified location, size, and angle.</para>
@@ -7047,6 +7039,14 @@
       <param name="width">A <see cref="T:System.Double"/> value that specifies the width of the rectangular region.</param>
       <param name="height">A <see cref="T:System.Double"/> value that specifies the height of the rectangular region.</param>
       <param name="angle">A <see cref="T:System.Double"/> value that specifies the rotation angle of the rectangle (in radians). A positive value indicates counterclockwise rotation; a negative value indicates clockwise rotation.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfOrientedRectangle.#ctor(DevExpress.Pdf.PdfPoint,System.Double,System.Double)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfOrientedRectangle"/> class with the specified location and size.</para>
+      </summary>
+      <param name="topLeft">A <see cref="T:DevExpress.Pdf.PdfPoint"/> object that represents the top left corner of the rectangular region.</param>
+      <param name="width">A <see cref="T:System.Double"/> value that represents the width of the rectangular region.</param>
+      <param name="height">A <see cref="T:System.Double"/> value that represents the height of the rectangular region.</param>
     </member>
     <member name="P:DevExpress.Pdf.PdfOrientedRectangle.Angle">
       <summary>
@@ -7306,7 +7306,7 @@
         <para>Rotates the page content relative to the specified point. Document annotations are not rotated.</para>
       </summary>
       <param name="x">The point’s X coordinate in the page coordinate system.</param>
-      <param name="y">The point’s Y coordinate in the page coordinate system..</param>
+      <param name="y">The point’s Y coordinate in the page coordinate system.</param>
       <param name="degree">The degree of rotation (from 0 to 360).</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfPage.ScaleContent(System.Double,System.Double)">
@@ -7371,14 +7371,6 @@
       <param name="rect">The page area to create the circle annotation.</param>
       <returns>An object that contains circle annotation properties.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.AddFileAttachmentAnnotation(DevExpress.Pdf.PdfPoint,DevExpress.Pdf.PdfFileAttachment)">
-      <summary>
-        <para>Creates a file attachment annotation at the specified point on the page.</para>
-      </summary>
-      <param name="point">The point on the page to position the annotation.</param>
-      <param name="file">The file associated with this annotation.</param>
-      <returns>An object that contains file attachment annotation properties.</returns>
-    </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.AddFileAttachmentAnnotation(DevExpress.Pdf.PdfPoint,DevExpress.Pdf.PdfFileAttachment,System.String)">
       <summary>
         <para>Creates a file attachment annotation at the specified point on the page.</para>
@@ -7388,11 +7380,11 @@
       <param name="iconName">The name of the annotation icon. Use the PdfFileAttachmentAnnotationIconName class fields to specify a built-in icon.</param>
       <returns>An object that contains file attachment annotation properties.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.AddFileAttachmentAnnotation(DevExpress.Pdf.PdfRectangle,DevExpress.Pdf.PdfFileAttachment)">
+    <member name="M:DevExpress.Pdf.PdfPageFacade.AddFileAttachmentAnnotation(DevExpress.Pdf.PdfPoint,DevExpress.Pdf.PdfFileAttachment)">
       <summary>
-        <para>Adds a file attachment annotation in the specified page rectangle.</para>
+        <para>Creates a file attachment annotation at the specified point on the page.</para>
       </summary>
-      <param name="rect">A page area to add the annotation.</param>
+      <param name="point">The point on the page to position the annotation.</param>
       <param name="file">The file associated with this annotation.</param>
       <returns>An object that contains file attachment annotation properties.</returns>
     </member>
@@ -7403,6 +7395,14 @@
       <param name="rect">A page area to add the annotation.</param>
       <param name="file">The file associated with this annotation.</param>
       <param name="iconName">The annotation icon name.</param>
+      <returns>An object that contains file attachment annotation properties.</returns>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfPageFacade.AddFileAttachmentAnnotation(DevExpress.Pdf.PdfRectangle,DevExpress.Pdf.PdfFileAttachment)">
+      <summary>
+        <para>Adds a file attachment annotation in the specified page rectangle.</para>
+      </summary>
+      <param name="rect">A page area to add the annotation.</param>
+      <param name="file">The file associated with this annotation.</param>
       <returns>An object that contains file attachment annotation properties.</returns>
     </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.AddFreeTextAnnotation(DevExpress.Pdf.PdfRectangle,System.String)">
@@ -7466,15 +7466,6 @@
       <param name="iconName">The name of the annotation icon. Use the PdfRubberStampAnnotationIconName fields to specify a built-in annotation icon.</param>
       <returns>An object that contains rubber stamp annotation properties.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.AddRubberStampAnnotation(DevExpress.Pdf.PdfRectangle,System.IO.Stream,System.Int32)">
-      <summary>
-        <para>Creates a rubber stamp annotation in the specified page rectangle.</para>
-      </summary>
-      <param name="rect">A page area to add the rubber stamp annotation.</param>
-      <param name="pdfStream">A stream that contains a document used to generate a stamp.</param>
-      <param name="pageNumber">The number of the document page used to generate a stamp.</param>
-      <returns>An object that contains rubber stamp annotation properties.</returns>
-    </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.AddRubberStampAnnotation(DevExpress.Pdf.PdfRectangle,System.IO.Stream,System.Int32,System.Boolean)">
       <summary>
         <para>Creates a rubber stamp annotation in the specified page rectangle.</para>
@@ -7485,12 +7476,13 @@
       <param name="keepAspectRatio">true to make the stamp aspect ratio fit the specified rectangle; otherwise, false.</param>
       <returns>An object that contains rubber stamp annotation properties.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.AddRubberStampAnnotation(DevExpress.Pdf.PdfRectangle,System.String)">
+    <member name="M:DevExpress.Pdf.PdfPageFacade.AddRubberStampAnnotation(DevExpress.Pdf.PdfRectangle,System.IO.Stream,System.Int32)">
       <summary>
         <para>Creates a rubber stamp annotation in the specified page rectangle.</para>
       </summary>
       <param name="rect">A page area to add the rubber stamp annotation.</param>
-      <param name="iconName">The name of the annotation icon. Use the PdfRubberStampAnnotationIconName fields to specify a built-in annotation icon.</param>
+      <param name="pdfStream">A stream that contains a document used to generate a stamp.</param>
+      <param name="pageNumber">The number of the document page used to generate a stamp.</param>
       <returns>An object that contains rubber stamp annotation properties.</returns>
     </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.AddRubberStampAnnotation(DevExpress.Pdf.PdfRectangle,System.String,System.Boolean)">
@@ -7500,15 +7492,6 @@
       <param name="rect">A page area to add the rubber stamp annotation.</param>
       <param name="iconName">The name of the annotation icon. Use the PdfRubberStampAnnotationIconName fields to specify a built-in annotation icon.</param>
       <param name="keepAspectRatio">true to make the stamp aspect ratio fit the specified rectangle; otherwise, false.</param>
-      <returns>An object that contains rubber stamp annotation properties.</returns>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.AddRubberStampAnnotation(DevExpress.Pdf.PdfRectangle,System.String,System.Int32)">
-      <summary>
-        <para>Creates a rubber stamp annotation in the specified page rectangle.</para>
-      </summary>
-      <param name="rect">A page area to add the rubber stamp annotation.</param>
-      <param name="pdfFileName">The name of the document file used to generate a stamp (including the full path).</param>
-      <param name="pageNumber">The number of the document page used to generate a stamp.</param>
       <returns>An object that contains rubber stamp annotation properties.</returns>
     </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.AddRubberStampAnnotation(DevExpress.Pdf.PdfRectangle,System.String,System.Int32,System.Boolean)">
@@ -7521,19 +7504,29 @@
       <param name="keepAspectRatio">true to make the stamp aspect ratio fit the specified rectangle; otherwise, false.</param>
       <returns>An object that contains rubber stamp annotation properties.</returns>
     </member>
+    <member name="M:DevExpress.Pdf.PdfPageFacade.AddRubberStampAnnotation(DevExpress.Pdf.PdfRectangle,System.String,System.Int32)">
+      <summary>
+        <para>Creates a rubber stamp annotation in the specified page rectangle.</para>
+      </summary>
+      <param name="rect">A page area to add the rubber stamp annotation.</param>
+      <param name="pdfFileName">The name of the document file used to generate a stamp (including the full path).</param>
+      <param name="pageNumber">The number of the document page used to generate a stamp.</param>
+      <returns>An object that contains rubber stamp annotation properties.</returns>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfPageFacade.AddRubberStampAnnotation(DevExpress.Pdf.PdfRectangle,System.String)">
+      <summary>
+        <para>Creates a rubber stamp annotation in the specified page rectangle.</para>
+      </summary>
+      <param name="rect">A page area to add the rubber stamp annotation.</param>
+      <param name="iconName">The name of the annotation icon. Use the PdfRubberStampAnnotationIconName fields to specify a built-in annotation icon.</param>
+      <returns>An object that contains rubber stamp annotation properties.</returns>
+    </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.AddSquareAnnotation(DevExpress.Pdf.PdfRectangle)">
       <summary>
         <para>Creates a square annotation in the specified page rectangle.</para>
       </summary>
       <param name="rect">The page area to create the square annotation.</param>
       <returns>An object that contains square annotation properties.</returns>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.AddTextAnnotation(DevExpress.Pdf.PdfPoint)">
-      <summary>
-        <para>Adds a text annotation at the specified point on the page.</para>
-      </summary>
-      <param name="point">The point on the page to position the text annotation.</param>
-      <returns>An object that contains text annotation properties.</returns>
     </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.AddTextAnnotation(DevExpress.Pdf.PdfPoint,System.String)">
       <summary>
@@ -7543,11 +7536,11 @@
       <param name="iconName">The name of the annotation icon.</param>
       <returns>An object that contains text annotation properties.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.AddTextAnnotation(DevExpress.Pdf.PdfRectangle)">
+    <member name="M:DevExpress.Pdf.PdfPageFacade.AddTextAnnotation(DevExpress.Pdf.PdfPoint)">
       <summary>
-        <para>Adds a text annotation to the specified area on the page.</para>
+        <para>Adds a text annotation at the specified point on the page.</para>
       </summary>
-      <param name="rect">A page area to add the text annotation.</param>
+      <param name="point">The point on the page to position the text annotation.</param>
       <returns>An object that contains text annotation properties.</returns>
     </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.AddTextAnnotation(DevExpress.Pdf.PdfRectangle,System.String)">
@@ -7557,6 +7550,13 @@
       <param name="rect">A page area to add the text annotation.</param>
       <param name="iconName">The name of the annotation icon.</param>
       <returns>An object that contain text annotation properties.</returns>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfPageFacade.AddTextAnnotation(DevExpress.Pdf.PdfRectangle)">
+      <summary>
+        <para>Adds a text annotation to the specified area on the page.</para>
+      </summary>
+      <param name="rect">A page area to add the text annotation.</param>
+      <returns>An object that contains text annotation properties.</returns>
     </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.AddTextMarkupAnnotation(DevExpress.Pdf.PdfOrientedRectangle,DevExpress.Pdf.PdfTextMarkupAnnotationType)">
       <summary>
@@ -7596,12 +7596,6 @@
       </summary>
       <value>A list of objects that contain annotation properties.</value>
     </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfClearContentRegions)">
-      <summary>
-        <para>Clears the document content located in the specified regions.</para>
-      </summary>
-      <param name="regions">Page regions to clear.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfClearContentRegions,DevExpress.Pdf.PdfClearContentOptions)">
       <summary>
         <para>Clears the document content located in the specified regions. Allows you to set what content type to keep in these regions.</para>
@@ -7609,11 +7603,11 @@
       <param name="regions">Page regions to clear.</param>
       <param name="options">Options that specify what content type to keep in target regions.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfOrientedRectangle)">
+    <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfClearContentRegions)">
       <summary>
-        <para>Clears the document content located in the specified rectangle.</para>
+        <para>Clears the document content located in the specified regions.</para>
       </summary>
-      <param name="rect">A page rectangle to clear.</param>
+      <param name="regions">Page regions to clear.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfOrientedRectangle,DevExpress.Pdf.PdfClearContentOptions)">
       <summary>
@@ -7621,13 +7615,6 @@
       </summary>
       <param name="rect">A page rectangle to clear.</param>
       <param name="options">Options that specify what content type to keep in the target rectangle.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfOrientedRectangle,System.Boolean)">
-      <summary>
-        <para>Clears the document content located in the specified rectangle. Allows you to specify whether to use the page coordinate system.</para>
-      </summary>
-      <param name="rect">A page rectangle to clear.</param>
-      <param name="usePageCoordinateSystem">true to use the page coordinate system; otherwise, false.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfOrientedRectangle,System.Boolean,DevExpress.Pdf.PdfClearContentOptions)">
       <summary>
@@ -7637,9 +7624,16 @@
       <param name="usePageCoordinateSystem">true to use the page coordinate system; otherwise, false.</param>
       <param name="options">Options that specify what content type to keep in the target rectangle.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfRectangle)">
+    <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfOrientedRectangle,System.Boolean)">
       <summary>
-        <para>Clears the document content in the specified rectangle.</para>
+        <para>Clears the document content located in the specified rectangle. Allows you to specify whether to use the page coordinate system.</para>
+      </summary>
+      <param name="rect">A page rectangle to clear.</param>
+      <param name="usePageCoordinateSystem">true to use the page coordinate system; otherwise, false.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfOrientedRectangle)">
+      <summary>
+        <para>Clears the document content located in the specified rectangle.</para>
       </summary>
       <param name="rect">A page rectangle to clear.</param>
     </member>
@@ -7650,13 +7644,6 @@
       <param name="rect">A page rectangle to clear.</param>
       <param name="options">Options that specify what content type to keep in the target rectangle.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfRectangle,System.Boolean)">
-      <summary>
-        <para>Clears the document content located in the specified rectangle. Allows you to specify whether to use the page coordinate system.</para>
-      </summary>
-      <param name="rect">A page rectangle to clear.</param>
-      <param name="usePageCoordinateSystem">true to use the page coordinate system; otherwise, false.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfRectangle,System.Boolean,DevExpress.Pdf.PdfClearContentOptions)">
       <summary>
         <para>Clears the document content located in the specified rectangle. Allows you to specify whether to use the page coordinate system, and what content type to keep.</para>
@@ -7664,6 +7651,19 @@
       <param name="rect">A page rectangle to clear.</param>
       <param name="usePageCoordinateSystem">true to use the page coordinate system; otherwise, false.</param>
       <param name="options">An object that contains clear content options.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfRectangle,System.Boolean)">
+      <summary>
+        <para>Clears the document content located in the specified rectangle. Allows you to specify whether to use the page coordinate system.</para>
+      </summary>
+      <param name="rect">A page rectangle to clear.</param>
+      <param name="usePageCoordinateSystem">true to use the page coordinate system; otherwise, false.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfPageFacade.ClearContent(DevExpress.Pdf.PdfRectangle)">
+      <summary>
+        <para>Clears the document content in the specified rectangle.</para>
+      </summary>
+      <param name="rect">A page rectangle to clear.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfPageFacade.CreateFitBBoxDestination">
       <summary>
@@ -7742,10 +7742,12 @@
       </summary>
       <returns>The XYZ destination.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.CreateXYZDestination(System.Single)">
+    <member name="M:DevExpress.Pdf.PdfPageFacade.CreateXYZDestination(System.Single,System.Single,System.Single)">
       <summary>
-        <para>Creates an XYZ destination. The page coordinate of the document window’s top left corner is retained from the previous view.</para>
+        <para>Creates an XYZ destination.</para>
       </summary>
+      <param name="destinationX">The X page coordinate in user coordinate system.</param>
+      <param name="destinationY">The Y page coordinate in user coordinate system.</param>
       <param name="zoom">The zoom factor.</param>
       <returns>The XYZ destination.</returns>
     </member>
@@ -7757,12 +7759,10 @@
       <param name="destinationY">The Y page coordinate in user coordinate system.</param>
       <returns>The XYZ destination.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.PdfPageFacade.CreateXYZDestination(System.Single,System.Single,System.Single)">
+    <member name="M:DevExpress.Pdf.PdfPageFacade.CreateXYZDestination(System.Single)">
       <summary>
-        <para>Creates an XYZ destination.</para>
+        <para>Creates an XYZ destination. The page coordinate of the document window’s top left corner is retained from the previous view.</para>
       </summary>
-      <param name="destinationX">The X page coordinate in user coordinate system.</param>
-      <param name="destinationY">The Y page coordinate in user coordinate system.</param>
       <param name="zoom">The zoom factor.</param>
       <returns>The XYZ destination.</returns>
     </member>
@@ -7794,6 +7794,28 @@
         <para>Returns the page number.</para>
       </summary>
       <value>The page number.</value>
+    </member>
+    <member name="T:DevExpress.Pdf.PdfPageInfo">
+      <summary>
+        <para>Contains information about a page of a document opened in PDF Viewer.</para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfPageInfo.#ctor(DevExpress.Pdf.PdfRectangle,System.Int32)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfPageInfo"/> class with specified settings.</para>
+      </summary>
+    </member>
+    <member name="P:DevExpress.Pdf.PdfPageInfo.CropBox">
+      <summary>
+        <para>Gets the page’s crop box – the region to which the contents of the page shall be clipped (cropped) when displayed or printed.</para>
+      </summary>
+      <value>The page’s crop box in the user coordinate system.</value>
+    </member>
+    <member name="P:DevExpress.Pdf.PdfPageInfo.RotationAngle">
+      <summary>
+        <para>Obtains a page’s rotation angle.</para>
+      </summary>
+      <value>The page rotation angle (in degrees).</value>
     </member>
     <member name="T:DevExpress.Pdf.PdfPageLayout">
       <summary>
@@ -9096,7 +9118,7 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
+      <value />
     </member>
     <member name="P:DevExpress.Pdf.PdfRenderingSettings.UseExternalDctDecoder">
       <summary>
@@ -9192,12 +9214,6 @@
       </summary>
       <value>true to keep aspect ratio; otherwise, false.</value>
     </member>
-    <member name="M:DevExpress.Pdf.PdfRubberStampAnnotationFacade.SetCustomIcon(System.IO.Stream)">
-      <summary>
-        <para>Creates a custom rubber stamp icon from a page in another document.</para>
-      </summary>
-      <param name="pdfStream">A stream that contains a document used to generate a stamp.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfRubberStampAnnotationFacade.SetCustomIcon(System.IO.Stream,System.Int32)">
       <summary>
         <para>Creates a custom rubber stamp icon from a page in another document.</para>
@@ -9205,11 +9221,11 @@
       <param name="pdfStream">A stream that contains a document used to generate a stamp.</param>
       <param name="pageNumber">The target page number.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfRubberStampAnnotationFacade.SetCustomIcon(System.String)">
+    <member name="M:DevExpress.Pdf.PdfRubberStampAnnotationFacade.SetCustomIcon(System.IO.Stream)">
       <summary>
         <para>Creates a custom rubber stamp icon from a page in another document.</para>
       </summary>
-      <param name="pdfFileName">The name of a document (including full path) used to generate a stamp.</param>
+      <param name="pdfStream">A stream that contains a document used to generate a stamp.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfRubberStampAnnotationFacade.SetCustomIcon(System.String,System.Int32)">
       <summary>
@@ -9217,6 +9233,12 @@
       </summary>
       <param name="pdfFileName">The name of a document (including a full path) used to generate a stamp.</param>
       <param name="pageNumber">The target page number.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfRubberStampAnnotationFacade.SetCustomIcon(System.String)">
+      <summary>
+        <para>Creates a custom rubber stamp icon from a page in another document.</para>
+      </summary>
+      <param name="pdfFileName">The name of a document (including full path) used to generate a stamp.</param>
     </member>
     <member name="T:DevExpress.Pdf.PdfRubberStampAnnotationIconName">
       <summary>
@@ -9424,12 +9446,6 @@
         <para>An electronic signature used to sign a PDF file.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.IExternalSigner)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignature"/> class with specified settings.</para>
-      </summary>
-      <param name="signer">An object used to generate a signature.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.IExternalSigner,System.Byte[],System.Int32,DevExpress.Pdf.PdfOrientedRectangle)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignature"/> class with specified settings.</para>
@@ -9466,11 +9482,11 @@
       <param name="pageNumber">An integer value that specifies the page number where the signature should be added.</param>
       <param name="signatureBounds">A <see cref="T:DevExpress.Pdf.PdfRectangle"/> object that represents the signature bounds in the default user space.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)">
+    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(DevExpress.Pdf.IExternalSigner)">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignature"/> class with the specified certificate.</para>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignature"/> class with specified settings.</para>
       </summary>
-      <param name="certificate">A <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> object that is an X.509 certificate.</param>
+      <param name="signer">An object used to generate a signature.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfSignature.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Byte[],System.Int32,DevExpress.Pdf.PdfOrientedRectangle)">
       <summary>
@@ -9507,6 +9523,12 @@
       <param name="imageData">A System.IO.Stream class descendant, specifying the stream with the image data.</param>
       <param name="pageNumber">An integer value that specifies the page number where the signature should be added.</param>
       <param name="signatureBounds">A <see cref="T:DevExpress.Pdf.PdfRectangle"/> object that represents the signature bounds in the default user space.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfSignature.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignature"/> class with the specified certificate.</para>
+      </summary>
+      <param name="certificate">A <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> object that is an X.509 certificate.</param>
     </member>
     <member name="P:DevExpress.Pdf.PdfSignature.AnnotationFlags">
       <summary>
@@ -9687,12 +9709,6 @@
         <para>Allows you to build a signature.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Pdf.PdfSignatureBuilder.#ctor(DevExpress.Pdf.IExternalSigner)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignatureBuilder"/> class with specified settings.</para>
-      </summary>
-      <param name="signer">An object used to generate a signature.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfSignatureBuilder.#ctor(DevExpress.Pdf.IExternalSigner,DevExpress.Pdf.PdfSignatureFieldInfo)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignatureBuilder"/> class with specified settings.</para>
@@ -9706,6 +9722,12 @@
       </summary>
       <param name="signer">An object used to generate a signature.</param>
       <param name="formFieldName">The name of the signature form field to sign.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfSignatureBuilder.#ctor(DevExpress.Pdf.IExternalSigner)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.PdfSignatureBuilder"/> class with specified settings.</para>
+      </summary>
+      <param name="signer">An object used to generate a signature.</param>
     </member>
     <member name="P:DevExpress.Pdf.PdfSignatureBuilder.ApplicationName">
       <summary>
@@ -11511,30 +11533,6 @@
         <para>Allows you to create PKCS#7 signatures.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.IO.Stream,System.String)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
-      </summary>
-      <param name="stream">A stream containing signature certificate (.pfx file format).</param>
-      <param name="password">A password for a certificate.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.IO.Stream,System.String,DevExpress.Office.DigitalSignatures.HashAlgorithmType)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
-      </summary>
-      <param name="stream">A stream that contains signature certificate (.pfx file format).</param>
-      <param name="password">A password for a certificate.</param>
-      <param name="hashAlgorithm">Signature’s hash algorithm.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.IO.Stream,System.String,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
-      </summary>
-      <param name="stream">A stream that contains signature certificate (.pfx file format).</param>
-      <param name="password">A password for a certificate.</param>
-      <param name="hashAlgorithm">Signature’s hash algorithm.</param>
-      <param name="tsaClient">An object that provides a timestamp.</param>
-    </member>
     <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.IO.Stream,System.String,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient,DevExpress.Office.DigitalSignatures.IOcspClient,DevExpress.Office.DigitalSignatures.ICrlClient,DevExpress.Pdf.PdfSignatureProfile)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
@@ -11546,6 +11544,23 @@
       <param name="ocspClient">An object that performs Online Certificate Status Protocol (OCSP) request for a certificate.</param>
       <param name="crlClient">An object that performs a Certificate Revocation List (CRL) request for a certificate.</param>
       <param name="profile">An enumeration value type that specifies the signature’s baseline profile type.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.IO.Stream,System.String,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
+      </summary>
+      <param name="stream">A stream that contains signature certificate (.pfx file format).</param>
+      <param name="password">A password for a certificate.</param>
+      <param name="hashAlgorithm">Signature’s hash algorithm.</param>
+      <param name="tsaClient">An object that provides a timestamp.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.IO.Stream,System.String,DevExpress.Office.DigitalSignatures.HashAlgorithmType)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
+      </summary>
+      <param name="stream">A stream that contains signature certificate (.pfx file format).</param>
+      <param name="password">A password for a certificate.</param>
+      <param name="hashAlgorithm">Signature’s hash algorithm.</param>
     </member>
     <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.IO.Stream,System.String,DevExpress.Office.DigitalSignatures.ICertificateStoreProvider,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient,DevExpress.Office.DigitalSignatures.IOcspClient,DevExpress.Office.DigitalSignatures.ICrlClient,DevExpress.Pdf.PdfSignatureProfile)">
       <summary>
@@ -11560,26 +11575,12 @@
       <param name="crlClient">An object that performs a Certificate Revocation List (CRL) request for a certificate.</param>
       <param name="profile">An enumeration value type that specifies the signature’s baseline profile type.</param>
     </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)">
+    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.IO.Stream,System.String)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
       </summary>
-      <param name="certificate">An X.509 signature certificate.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,DevExpress.Office.DigitalSignatures.HashAlgorithmType)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
-      </summary>
-      <param name="certificate">An X.509 signature certificate.</param>
-      <param name="hashAlgorithm">A signature’s hash algorithm.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
-      </summary>
-      <param name="certificate">An X.509 signature certificate.</param>
-      <param name="hashAlgorithm">Signature’s hash algorithm.</param>
-      <param name="tsaClient">An object that provides a timestamp.</param>
+      <param name="stream">A stream containing signature certificate (.pfx file format).</param>
+      <param name="password">A password for a certificate.</param>
     </member>
     <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient,DevExpress.Office.DigitalSignatures.IOcspClient,DevExpress.Office.DigitalSignatures.ICrlClient,DevExpress.Pdf.PdfSignatureProfile)">
       <summary>
@@ -11591,6 +11592,21 @@
       <param name="ocspClient">An object that performs Online Certificate Status Protocol (OCSP) request for a certificate.</param>
       <param name="crlClient">An object that performs a Certificate Revocation List (CRL) request for a certificate.</param>
       <param name="profile">An enumeration value type that specifies the signature’s baseline profile type.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
+      </summary>
+      <param name="certificate">An X.509 signature certificate.</param>
+      <param name="hashAlgorithm">Signature’s hash algorithm.</param>
+      <param name="tsaClient">An object that provides a timestamp.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,DevExpress.Office.DigitalSignatures.HashAlgorithmType)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
+      </summary>
+      <param name="certificate">An X.509 signature certificate.</param>
+      <param name="hashAlgorithm">A signature’s hash algorithm.</param>
     </member>
     <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,DevExpress.Office.DigitalSignatures.ICertificateStoreProvider,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient,DevExpress.Office.DigitalSignatures.IOcspClient,DevExpress.Office.DigitalSignatures.ICrlClient,DevExpress.Pdf.PdfSignatureProfile)">
       <summary>
@@ -11604,29 +11620,11 @@
       <param name="crlClient">An object that performs a Certificate Revocation List (CRL) request for a certificate.</param>
       <param name="profile">An enumeration value type that specifies the signature’s baseline profile type.</param>
     </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.String,System.String)">
+    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
       </summary>
-      <param name="fileName">A path to a signature certificate file (.pfx file format).</param>
-      <param name="password">A password for a certificate.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.String,System.String,DevExpress.Office.DigitalSignatures.HashAlgorithmType)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
-      </summary>
-      <param name="fileName">A path to a signature certificate file (.pfx file format).</param>
-      <param name="password">A password for a certificate.</param>
-      <param name="hashAlgorithm">A signature’s hash algorithm.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.String,System.String,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
-      </summary>
-      <param name="fileName">A path to a signature certificate file (.pfx file format).</param>
-      <param name="password">A password for a certificate.</param>
-      <param name="hashAlgorithm">Signature’s hash algorithm.</param>
-      <param name="tsaClient">An object that provides a timestamp.</param>
+      <param name="certificate">An X.509 signature certificate.</param>
     </member>
     <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.String,System.String,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient,DevExpress.Office.DigitalSignatures.IOcspClient,DevExpress.Office.DigitalSignatures.ICrlClient,DevExpress.Pdf.PdfSignatureProfile)">
       <summary>
@@ -11640,6 +11638,23 @@
       <param name="crlClient">An object that performs a Certificate Revocation List (CRL) request for a certificate.</param>
       <param name="profile">An enumeration value type that specifies the signature’s baseline profile type.</param>
     </member>
+    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.String,System.String,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
+      </summary>
+      <param name="fileName">A path to a signature certificate file (.pfx file format).</param>
+      <param name="password">A password for a certificate.</param>
+      <param name="hashAlgorithm">Signature’s hash algorithm.</param>
+      <param name="tsaClient">An object that provides a timestamp.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.String,System.String,DevExpress.Office.DigitalSignatures.HashAlgorithmType)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
+      </summary>
+      <param name="fileName">A path to a signature certificate file (.pfx file format).</param>
+      <param name="password">A password for a certificate.</param>
+      <param name="hashAlgorithm">A signature’s hash algorithm.</param>
+    </member>
     <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.String,System.String,DevExpress.Office.DigitalSignatures.ICertificateStoreProvider,DevExpress.Office.DigitalSignatures.HashAlgorithmType,DevExpress.Office.Tsp.ITsaClient,DevExpress.Office.DigitalSignatures.IOcspClient,DevExpress.Office.DigitalSignatures.ICrlClient,DevExpress.Pdf.PdfSignatureProfile)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
@@ -11652,6 +11667,13 @@
       <param name="ocspClient">An object that performs Online Certificate Status Protocol (OCSP) request for a certificate.</param>
       <param name="crlClient">An object that performs a Certificate Revocation List (CRL) request for a certificate.</param>
       <param name="profile">An enumeration value type that specifies the signature’s baseline profile type.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.Pkcs7Signer.#ctor(System.String,System.String)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Pdf.Pkcs7Signer"/> class with specified settings.</para>
+      </summary>
+      <param name="fileName">A path to a signature certificate file (.pfx file format).</param>
+      <param name="password">A password for a certificate.</param>
     </member>
     <member name="T:DevExpress.Pdf.Pkcs7SignerBase">
       <summary>
@@ -12157,13 +12179,6 @@
       </summary>
       <value>The number of elements.</value>
     </member>
-    <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateArray(DevExpress.Pdf.Xmp.XmpName)">
-      <summary>
-        <para>Adds an array at the end of the packet.</para>
-      </summary>
-      <param name="name">The array name.</param>
-      <returns>An empty XMP array.</returns>
-    </member>
     <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateArray(DevExpress.Pdf.Xmp.XmpName,DevExpress.Pdf.Xmp.XmpArrayType)">
       <summary>
         <para>Adds an array at the end of the packet.</para>
@@ -12172,11 +12187,11 @@
       <param name="arrayType">The array type.</param>
       <returns>An empty XMP array.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateArray(System.String)">
+    <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateArray(DevExpress.Pdf.Xmp.XmpName)">
       <summary>
         <para>Adds an array at the end of the packet.</para>
       </summary>
-      <param name="qualifiedName">The array’s qualified name (prefix:local format).</param>
+      <param name="name">The array name.</param>
       <returns>An empty XMP array.</returns>
     </member>
     <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateArray(System.String,DevExpress.Pdf.Xmp.XmpArrayType)">
@@ -12187,13 +12202,12 @@
       <param name="arrayType">The array type.</param>
       <returns>An empty XMP array.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateSimpleValue(DevExpress.Pdf.Xmp.XmpName,System.String)">
+    <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateArray(System.String)">
       <summary>
-        <para>Adds a simple value node at the end of the packet.</para>
+        <para>Adds an array at the end of the packet.</para>
       </summary>
-      <param name="name">The node name.</param>
-      <param name="value">The node value.</param>
-      <returns>The simple value node.</returns>
+      <param name="qualifiedName">The array’s qualified name (prefix:local format).</param>
+      <returns>An empty XMP array.</returns>
     </member>
     <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateSimpleValue(DevExpress.Pdf.Xmp.XmpName,System.String,System.Boolean)">
       <summary>
@@ -12204,11 +12218,11 @@
       <param name="isUri">true if the node value is a URI string; false if the node value is a regular string.</param>
       <returns>The simple value node.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateSimpleValue(System.String,System.String)">
+    <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateSimpleValue(DevExpress.Pdf.Xmp.XmpName,System.String)">
       <summary>
         <para>Adds a simple value node at the end of the packet.</para>
       </summary>
-      <param name="qualifiedName">The node’s qualified name (prefix:local format).</param>
+      <param name="name">The node name.</param>
       <param name="value">The node value.</param>
       <returns>The simple value node.</returns>
     </member>
@@ -12219,6 +12233,14 @@
       <param name="qualifiedName">The node’s qualified name (prefix:local format).</param>
       <param name="value">The node value.</param>
       <param name="isUri">true if the node value is a URI string; false if the node value is a regular string.</param>
+      <returns>The simple value node.</returns>
+    </member>
+    <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateSimpleValue(System.String,System.String)">
+      <summary>
+        <para>Adds a simple value node at the end of the packet.</para>
+      </summary>
+      <param name="qualifiedName">The node’s qualified name (prefix:local format).</param>
+      <param name="value">The node value.</param>
       <returns>The simple value node.</returns>
     </member>
     <member name="M:DevExpress.Pdf.Xmp.XmpDocument.CreateStructure(DevExpress.Pdf.Xmp.XmpName)">
@@ -12427,18 +12449,18 @@
       </summary>
       <value>An object that contains Rights Management namespace properties.</value>
     </member>
-    <member name="M:DevExpress.Pdf.Xmp.XmpDocument.Serialize(System.IO.Stream)">
-      <summary>
-        <para>Serializes an XMP packet to a stream.</para>
-      </summary>
-      <param name="stream">The output stream.</param>
-    </member>
     <member name="M:DevExpress.Pdf.Xmp.XmpDocument.Serialize(System.IO.Stream,DevExpress.Pdf.Xmp.XmpSerializationOptions)">
       <summary>
         <para>Serializes an XMP packet to a stream.</para>
       </summary>
       <param name="stream">The output stream.</param>
       <param name="options">An object that contains serialization options.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.Xmp.XmpDocument.Serialize(System.IO.Stream)">
+      <summary>
+        <para>Serializes an XMP packet to a stream.</para>
+      </summary>
+      <param name="stream">The output stream.</param>
     </member>
     <member name="M:DevExpress.Pdf.Xmp.XmpDocument.ToString">
       <summary>
@@ -12865,13 +12887,6 @@
       </summary>
       <value>The number of items in the structure.</value>
     </member>
-    <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateArray(DevExpress.Pdf.Xmp.XmpName)">
-      <summary>
-        <para>Adds an array at the end of the structure.</para>
-      </summary>
-      <param name="name">The array name.</param>
-      <returns>An empty XMP array.</returns>
-    </member>
     <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateArray(DevExpress.Pdf.Xmp.XmpName,DevExpress.Pdf.Xmp.XmpArrayType)">
       <summary>
         <para>Adds an array at the end of the structure.</para>
@@ -12880,11 +12895,11 @@
       <param name="arrayType">The array type.</param>
       <returns>An empty XMP array.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateArray(System.String)">
+    <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateArray(DevExpress.Pdf.Xmp.XmpName)">
       <summary>
         <para>Adds an array at the end of the structure.</para>
       </summary>
-      <param name="qualifiedName">The array’s qualified name (prefix:local format).</param>
+      <param name="name">The array name.</param>
       <returns>An empty XMP array.</returns>
     </member>
     <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateArray(System.String,DevExpress.Pdf.Xmp.XmpArrayType)">
@@ -12895,13 +12910,12 @@
       <param name="arrayType">The array type.</param>
       <returns>An empty XMP array.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateSimpleValue(DevExpress.Pdf.Xmp.XmpName,System.String)">
+    <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateArray(System.String)">
       <summary>
-        <para>Adds a simple value node at the end of the structure.</para>
+        <para>Adds an array at the end of the structure.</para>
       </summary>
-      <param name="name">The node name.</param>
-      <param name="value">The node value.</param>
-      <returns>The simple value node.</returns>
+      <param name="qualifiedName">The array’s qualified name (prefix:local format).</param>
+      <returns>An empty XMP array.</returns>
     </member>
     <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateSimpleValue(DevExpress.Pdf.Xmp.XmpName,System.String,System.Boolean)">
       <summary>
@@ -12912,11 +12926,11 @@
       <param name="isUri">true if the node value is a URI string; false if the node value is a regular string.</param>
       <returns>The simple value node.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateSimpleValue(System.String,System.String)">
+    <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateSimpleValue(DevExpress.Pdf.Xmp.XmpName,System.String)">
       <summary>
         <para>Adds a simple value node at the end of the structure.</para>
       </summary>
-      <param name="qualifiedName">The node’s qualified name (prefix:local format).</param>
+      <param name="name">The node name.</param>
       <param name="value">The node value.</param>
       <returns>The simple value node.</returns>
     </member>
@@ -12927,6 +12941,14 @@
       <param name="qualifiedName">The node’s qualified name (prefix:local format).</param>
       <param name="value">The node value.</param>
       <param name="isUri">true if the node value is a URI string; false if the node value is a regular string.</param>
+      <returns>The simple value node.</returns>
+    </member>
+    <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateSimpleValue(System.String,System.String)">
+      <summary>
+        <para>Adds a simple value node at the end of the structure.</para>
+      </summary>
+      <param name="qualifiedName">The node’s qualified name (prefix:local format).</param>
+      <param name="value">The node value.</param>
       <returns>The simple value node.</returns>
     </member>
     <member name="M:DevExpress.Pdf.Xmp.XmpStructure.CreateStructure(DevExpress.Pdf.Xmp.XmpName)">

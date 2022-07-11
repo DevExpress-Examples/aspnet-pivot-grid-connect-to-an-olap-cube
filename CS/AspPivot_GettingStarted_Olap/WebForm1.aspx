@@ -42,7 +42,6 @@
                         </DataBindingSerializable>
                     </dx:PivotGridField>
                 </Fields>
-                <OptionsData DataProcessingEngine="LegacyOptimized" />
                 <Groups>
                     <dx:PivotGridWebGroup Caption="Date.Fiscal" Hierarchy="[Date].[Fiscal]" ShowNewValues="True" />
                 </Groups>

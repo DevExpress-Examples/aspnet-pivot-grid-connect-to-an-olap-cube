@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<doc xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
   <assembly>
     <name>DevExpress.Web.ASPxPivotGrid.v22.1</name>
   </assembly>
@@ -198,14 +198,6 @@
       </summary>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains the underlying data records.</returns>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CreateDrillDownDataSource(System.Int32,System.Int32)">
-      <summary>
-        <para>Returns data records associated with the specified cell.</para>
-      </summary>
-      <param name="columnIndex">An integer value that is the zero-based column index. Set it to &#0045;1 to obtain the column’s Grand Total.</param>
-      <param name="rowIndex">An integer value that is the absolute (not the visible) zero-based row index. Set it to &#0045;1 to obtain the row’s Grand Total. To obtain the absolute row index by the visible row index within the current page, use the <see cref="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetAbsoluteRowIndex(System.Int32)"/> method.</param>
-      <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object containing data records associated with the specified cell.</returns>
-    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CreateDrillDownDataSource(System.Int32,System.Int32,System.Collections.Generic.List{System.String})">
       <summary>
         <para>Returns data records used to calculate a summary value for the specified cell in OLAP and server mode. Allows you to specify the columns to return.</para>
@@ -213,6 +205,16 @@
       <param name="columnIndex">A zero-based visible column’s index. Set it to &#0045;1 to obtain the column’s Grand Total.</param>
       <param name="rowIndex">A zero-based absolute row’s index. Set it to &#0045;1 to obtain the row’s Grand Total. To get the absolute row index by its visible index in the current page, use the <see cref="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetAbsoluteRowIndex(System.Int32)"/> method.</param>
       <param name="customColumns">A list of columns in a data source to return.</param>
+      <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains the underlying data.</returns>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CreateDrillDownDataSource(System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{System.String})">
+      <summary>
+        <para>Returns data records used to calculate a summary value for the specified cell in OLAP and server mode. Allows you to specify the columns, and limit the number of records to return.</para>
+      </summary>
+      <param name="columnIndex">A zero-based visible column’s index. Set it to &#0045;1 to obtain the column’s Grand Total.</param>
+      <param name="rowIndex">A zero-based integer which identifies the absolute index of the row. Pass &#0045;1 as a row index to obtain the row’s Grand Total. Pass -1 as a column index to obtain the column’s Grand Total. To obtain the absolute row index by its index within the current page, use the <see cref="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetAbsoluteRowIndex(System.Int32)"/> method.</param>
+      <param name="maxRowCount">An integer value that is the maximum number of data rows to return. Set it to &#0045;1 to retrieve all rows.</param>
+      <param name="customColumns">A list of columns to return.</param>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains the underlying data.</returns>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CreateDrillDownDataSource(System.Int32,System.Int32,System.Int32)">
@@ -224,15 +226,13 @@
       <param name="dataIndex">An integer value that identifies the data field by its index.</param>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object which contains records associated with the specified cell.</returns>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CreateDrillDownDataSource(System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{System.String})">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CreateDrillDownDataSource(System.Int32,System.Int32)">
       <summary>
-        <para>Returns data records used to calculate a summary value for the specified cell in OLAP and server mode. Allows you to specify the columns, and limit the number of records to return.</para>
+        <para>Returns data records associated with the specified cell.</para>
       </summary>
-      <param name="columnIndex">A zero-based visible column’s index. Set it to &#0045;1 to obtain the column’s Grand Total.</param>
-      <param name="rowIndex">A zero-based integer which identifies the absolute index of the row. Pass &#0045;1 as a row index to obtain the row’s Grand Total. Pass -1 as a column index to obtain the column’s Grand Total. To obtain the absolute row index by its index within the current page, use the <see cref="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetAbsoluteRowIndex(System.Int32)"/> method.</param>
-      <param name="maxRowCount">An integer value that is the maximum number of data rows to return. Set it to &#0045;1 to retrieve all rows.</param>
-      <param name="customColumns">A list of columns to return.</param>
-      <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object that contains the underlying data.</returns>
+      <param name="columnIndex">An integer value that is the zero-based column index. Set it to &#0045;1 to obtain the column’s Grand Total.</param>
+      <param name="rowIndex">An integer value that is the absolute (not the visible) zero-based row index. Set it to &#0045;1 to obtain the row’s Grand Total. To obtain the absolute row index by the visible row index within the current page, use the <see cref="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetAbsoluteRowIndex(System.Int32)"/> method.</param>
+      <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotDrillDownDataSource"/> object containing data records associated with the specified cell.</returns>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.CreateOLAPDrillDownDataSource(System.Int32,System.Int32,System.Collections.Generic.List{System.String})">
       <summary>
@@ -687,19 +687,19 @@
       <param name="dataField">A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that specifies the data field, against which the required cell value is calculated.</param>
       <returns>A summary value calculated for the specified column and row field values, against the specified data field.</returns>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetColumnIndex(System.Object[])">
-      <summary>
-        <para>Returns the index of the specified column.</para>
-      </summary>
-      <param name="values">An array of column field values that identify the column.</param>
-      <returns>An integer value that specifies the column index. &#0045;1 if the specified column has not been not found.</returns>
-    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetColumnIndex(System.Object[],DevExpress.Web.ASPxPivotGrid.PivotGridField)">
       <summary>
         <para>Returns the index of the specified column.</para>
       </summary>
       <param name="values">An array of column field values that identify the column.</param>
       <param name="field">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridField"/> object.</param>
+      <returns>An integer value that specifies the column index. &#0045;1 if the specified column has not been not found.</returns>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetColumnIndex(System.Object[])">
+      <summary>
+        <para>Returns the index of the specified column.</para>
+      </summary>
+      <param name="values">An array of column field values that identify the column.</param>
       <returns>An integer value that specifies the column index. &#0045;1 if the specified column has not been not found.</returns>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetFieldByArea(DevExpress.XtraPivotGrid.PivotArea,System.Int32)">
@@ -823,13 +823,6 @@
       <param name="kpiName">A string value that specifies the KPI’s name.</param>
       <returns>A <see cref="T:DevExpress.XtraPivotGrid.PivotOLAPKPIValue"/> object that represents the specified KPI’s value.</returns>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetRowIndex(System.Object[])">
-      <summary>
-        <para>Returns the absolute index of the specified row.</para>
-      </summary>
-      <param name="values">An array of row field values that identify the row.</param>
-      <returns>An integer value that specifies the absolute row index. &#0045;1 if the specified row has not been not found.</returns>
-    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetRowIndex(System.Object[],DevExpress.Web.ASPxPivotGrid.PivotGridField)">
       <summary>
         <para>Returns the index of the specified row.</para>
@@ -837,6 +830,13 @@
       <param name="values">An array of row field values that identify the column.</param>
       <param name="field">A <see cref="T:DevExpress.XtraPivotGrid.PivotGridField"/> object.</param>
       <returns>An integer value that specifies the row index. &#0045;1 if the specified row has not been not found.</returns>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GetRowIndex(System.Object[])">
+      <summary>
+        <para>Returns the absolute index of the specified row.</para>
+      </summary>
+      <param name="values">An array of row field values that identify the row.</param>
+      <returns>An integer value that specifies the absolute row index. &#0045;1 if the specified row has not been not found.</returns>
     </member>
     <member name="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.GridLayout">
       <summary>
@@ -956,12 +956,6 @@
       </summary>
       <param name="collapsedState">A <see cref="T:System.String"/> from which the collapsed state of field values is read.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.LoadLayoutFromStream(System.IO.Stream)">
-      <summary>
-        <para>Restores the pivot grid layout from the specified stream.</para>
-      </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant from which pivot grid settings are read. If null (Nothing in Visual Basic), an exception is raised.</param>
-    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.LoadLayoutFromStream(System.IO.Stream,DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsLayout)">
       <summary>
         <para>Restores the pivot grid layout from the specified stream, using the specified settings.</para>
@@ -969,11 +963,11 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> descendant which contains the layout settings. If null (Nothing in Visual Basic), an exception is raised.</param>
       <param name="optionsLayout">A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsLayout"/> object that specifies whose options should be restored.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.LoadLayoutFromString(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.LoadLayoutFromStream(System.IO.Stream)">
       <summary>
-        <para>Restores the pivot grid layout from the specified string.</para>
+        <para>Restores the pivot grid layout from the specified stream.</para>
       </summary>
-      <param name="layoutState">A <see cref="T:System.String"/> from which pivot grid settings are read.</param>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant from which pivot grid settings are read. If null (Nothing in Visual Basic), an exception is raised.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.LoadLayoutFromString(System.String,DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsLayout)">
       <summary>
@@ -981,6 +975,12 @@
       </summary>
       <param name="layoutState">A <see cref="T:System.String"/> from which pivot grid settings are read.</param>
       <param name="optionsLayout">A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsLayout"/> object that specifies which options should be restored.</param>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.LoadLayoutFromString(System.String)">
+      <summary>
+        <para>Restores the pivot grid layout from the specified string.</para>
+      </summary>
+      <param name="layoutState">A <see cref="T:System.String"/> from which pivot grid settings are read.</param>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.LockDataRefreshOnCustomCallback">
       <summary>
@@ -1095,7 +1095,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.QueryException">
       <summary>
@@ -1137,18 +1136,18 @@
       </summary>
       <returns>A string to which the collapsed state of field values is saved.</returns>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.SaveLayoutToStream(System.IO.Stream)">
-      <summary>
-        <para>Saves the pivot grid layout to the specified stream.</para>
-      </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant to which the pivot grid layout is written.</param>
-    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.SaveLayoutToStream(System.IO.Stream,DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsLayout)">
       <summary>
         <para>Saves the pivot grid layout to the specified stream, using the specified settings.</para>
       </summary>
       <param name="stream">A <see cref="T:System.IO.Stream"/> descendant to which the pivot grid layout is written.</param>
       <param name="optionsLayout">A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsLayout"/> object that specifies which options should be saved.</param>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.SaveLayoutToStream(System.IO.Stream)">
+      <summary>
+        <para>Saves the pivot grid layout to the specified stream.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> descendant to which the pivot grid layout is written.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid.SaveLayoutToString">
       <summary>
@@ -1265,19 +1264,6 @@
         <para>Releases all resources used by the current object.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportCsvToResponse(System.String)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in CSV format, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportCsvToResponse(System.String,DevExpress.XtraPrinting.CsvExportOptions)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in CSV format with the specified export settings, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="options">A <see cref="T:DevExpress.XtraPrinting.CsvExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
-    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportCsvToResponse(System.String,DevExpress.XtraPrinting.CsvExportOptions,System.Boolean)">
       <summary>
         <para>Exports the ASPxPivotGrid’s data to the specified file in CSV format with the specified export settings, and writes it to the response in the binary format.</para>
@@ -1286,6 +1272,13 @@
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.CsvExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportCsvToResponse(System.String,DevExpress.XtraPrinting.CsvExportOptions)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in CSV format with the specified export settings, and writes it to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+      <param name="options">A <see cref="T:DevExpress.XtraPrinting.CsvExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
+    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportCsvToResponse(System.String,System.Boolean)">
       <summary>
         <para>Exports the ASPxPivotGrid’s data to the specified file in CSV format with the specified settings, and writes it to the response in the binary format.</para>
@@ -1293,9 +1286,9 @@
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportDocxToResponse(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportCsvToResponse(System.String)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in DOCX format, and writes it to the response in the binary format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in CSV format, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
     </member>
@@ -1306,23 +1299,16 @@
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportDocxToResponse(System.String)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in DOCX format, and writes it to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+    </member>
     <member name="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportFinished">
       <summary>
         <para>Occurs after the ASPxPivotGrid’s export has been completed.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportHtmlToResponse(System.String)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in HTML format, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportHtmlToResponse(System.String,DevExpress.XtraPrinting.HtmlExportOptions)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in HTML format with the specified export settings, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="options">A <see cref="T:DevExpress.XtraPrinting.HtmlExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportHtmlToResponse(System.String,DevExpress.XtraPrinting.HtmlExportOptions,System.Boolean)">
       <summary>
@@ -1332,21 +1318,19 @@
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.HtmlExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportHtmlToResponse(System.String,DevExpress.XtraPrinting.HtmlExportOptions)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in HTML format with the specified export settings, and writes it to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+      <param name="options">A <see cref="T:DevExpress.XtraPrinting.HtmlExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
+    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportHtmlToResponse(System.String,System.Boolean)">
       <summary>
         <para>Exports the ASPxPivotGrid’s data to the specified file in HTML format with the specified setting, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportHtmlToResponse(System.String,System.String,System.String,System.Boolean)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in HTML format with the specified export settings, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="htmlCharSet">A <see cref="T:System.String"/> representing the encoding name set in the exported file (e.g. “UTF-8”).</param>
-      <param name="title">A <see cref="T:System.String"/> containing the name shown as the title of the created document.</param>
-      <param name="compressed">true if the exported data is compressed (secondary characters e.g. spaces are removed); otherwise, false.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportHtmlToResponse(System.String,System.String,System.String,System.Boolean,System.Boolean)">
       <summary>
@@ -1358,18 +1342,20 @@
       <param name="compressed">true if the exported data is compressed (secondary characters e.g. spaces are removed); otherwise, false.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportImageToResponse(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportHtmlToResponse(System.String,System.String,System.String,System.Boolean)">
       <summary>
-        <para>Exports the pivot grid to the specified file in PNG format, and writes it to the response in the binary format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in HTML format with the specified export settings, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+      <param name="htmlCharSet">A <see cref="T:System.String"/> representing the encoding name set in the exported file (e.g. “UTF-8”).</param>
+      <param name="title">A <see cref="T:System.String"/> containing the name shown as the title of the created document.</param>
+      <param name="compressed">true if the exported data is compressed (secondary characters e.g. spaces are removed); otherwise, false.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportImageToResponse(System.String,DevExpress.XtraPrinting.ImageExportOptions)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportHtmlToResponse(System.String)">
       <summary>
-        <para>Exports the pivot grid to the specified file in an image format using the specified options, and writes the file to the response in the binary format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in HTML format, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="options">A <see cref="T:DevExpress.XtraPrinting.ImageExportOptions"/> object that specifies export options to be applied when the control’s data is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportImageToResponse(System.String,DevExpress.XtraPrinting.ImageExportOptions,System.Boolean)">
       <summary>
@@ -1379,6 +1365,13 @@
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.ImageExportOptions"/> object that specifies export options to be applied when the control’s data is exported.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportImageToResponse(System.String,DevExpress.XtraPrinting.ImageExportOptions)">
+      <summary>
+        <para>Exports the pivot grid to the specified file in an image format using the specified options, and writes the file to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+      <param name="options">A <see cref="T:DevExpress.XtraPrinting.ImageExportOptions"/> object that specifies export options to be applied when the control’s data is exported.</param>
+    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportImageToResponse(System.String,System.Boolean)">
       <summary>
         <para>Exports the pivot grid to the specified file in PNG format, and writes it to the response in the binary format. Allows you to specify whether to display the Save As dialog.</para>
@@ -1386,12 +1379,11 @@
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportMhtToResponse(System.String,DevExpress.XtraPrinting.MhtExportOptions)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportImageToResponse(System.String)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in MHT format with the specified export settings, and writes it to the response in the binary format.</para>
+        <para>Exports the pivot grid to the specified file in PNG format, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="options">A <see cref="T:DevExpress.XtraPrinting.MhtExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportMhtToResponse(System.String,DevExpress.XtraPrinting.MhtExportOptions,System.Boolean)">
       <summary>
@@ -1401,21 +1393,19 @@
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.MhtExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportMhtToResponse(System.String,DevExpress.XtraPrinting.MhtExportOptions)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in MHT format with the specified export settings, and writes it to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+      <param name="options">A <see cref="T:DevExpress.XtraPrinting.MhtExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
+    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportMhtToResponse(System.String,System.Boolean)">
       <summary>
         <para>Exports the ASPxPivotGrid’s data to the specified file in MHT format with the specified setting, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportMhtToResponse(System.String,System.String,System.String,System.Boolean)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in MHT format with the specified export settings, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="htmlCharSet">A <see cref="T:System.String"/> representing the encoding name set in the exported file (e.g. “UTF-8”).</param>
-      <param name="title">A <see cref="T:System.String"/> containing the name shown as the title of the created document.</param>
-      <param name="compressed">true if the exported data is compressed (secondary characters e.g. spaces are removed); otherwise, false.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportMhtToResponse(System.String,System.String,System.String,System.Boolean,System.Boolean)">
       <summary>
@@ -1427,18 +1417,14 @@
       <param name="compressed">true if the exported data is compressed (secondary characters e.g. spaces are removed); otherwise, false.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportPdfToResponse(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportMhtToResponse(System.String,System.String,System.String,System.Boolean)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in PDF format, and writes it to the response in the binary format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in MHT format with the specified export settings, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportPdfToResponse(System.String,DevExpress.XtraPrinting.PdfExportOptions)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in PDF format with the specified export settings, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="options">A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
+      <param name="htmlCharSet">A <see cref="T:System.String"/> representing the encoding name set in the exported file (e.g. “UTF-8”).</param>
+      <param name="title">A <see cref="T:System.String"/> containing the name shown as the title of the created document.</param>
+      <param name="compressed">true if the exported data is compressed (secondary characters e.g. spaces are removed); otherwise, false.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportPdfToResponse(System.String,DevExpress.XtraPrinting.PdfExportOptions,System.Boolean)">
       <summary>
@@ -1448,6 +1434,13 @@
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportPdfToResponse(System.String,DevExpress.XtraPrinting.PdfExportOptions)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in PDF format with the specified export settings, and writes it to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+      <param name="options">A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
+    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportPdfToResponse(System.String,System.Boolean)">
       <summary>
         <para>Exports the ASPxPivotGrid’s data to the specified file in PDF format with the specified setting, and writes it to the response in the binary format.</para>
@@ -1455,9 +1448,9 @@
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportRtfToResponse(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportPdfToResponse(System.String)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in RTF format, and writes it to the response in the binary format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in PDF format, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
     </member>
@@ -1468,23 +1461,16 @@
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportRtfToResponse(System.String)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in RTF format, and writes it to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+    </member>
     <member name="E:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportStarted">
       <summary>
         <para>Occurs after the ASPxPivotGrid’s export has been started.</para>
       </summary>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportTextToResponse(System.String)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in TXT format, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportTextToResponse(System.String,DevExpress.XtraPrinting.TextExportOptions)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in TXT format with the specified export settings, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="options">A <see cref="T:DevExpress.XtraPrinting.TextExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportTextToResponse(System.String,DevExpress.XtraPrinting.TextExportOptions,System.Boolean)">
       <summary>
@@ -1494,19 +1480,19 @@
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.TextExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportTextToResponse(System.String,DevExpress.XtraPrinting.TextExportOptions)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in TXT format with the specified export settings, and writes it to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+      <param name="options">A <see cref="T:DevExpress.XtraPrinting.TextExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
+    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportTextToResponse(System.String,System.Boolean)">
       <summary>
         <para>Exports the ASPxPivotGrid’s data to the specified file in TXT format with the specified setting, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportTextToResponse(System.String,System.String)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in TXT format with the specified separator, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="separator">A <see cref="T:System.String"/> containing symbols which will be used to separate the document’s text elements in the created text file.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportTextToResponse(System.String,System.String,System.Boolean)">
       <summary>
@@ -1516,11 +1502,18 @@
       <param name="separator">A <see cref="T:System.String"/> containing symbols which will be used to separate the document’s text elements in the created text file.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToCsv(System.IO.Stream)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportTextToResponse(System.String,System.String)">
       <summary>
-        <para>Exports the control’s data to the specified stream in CSV format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in TXT format with the specified separator, and writes it to the response in the binary format.</para>
       </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+      <param name="separator">A <see cref="T:System.String"/> containing symbols which will be used to separate the document’s text elements in the created text file.</param>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportTextToResponse(System.String)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in TXT format, and writes it to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToCsv(System.IO.Stream,DevExpress.XtraPrinting.CsvExportOptions)">
       <summary>
@@ -1529,11 +1522,11 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.CsvExportOptions"/> object which specifies the export options to be applied when the control is exported.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToCsv(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToCsv(System.IO.Stream)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in CSV format.</para>
+        <para>Exports the control’s data to the specified stream in CSV format.</para>
       </summary>
-      <param name="filePath">A <see cref="T:System.String"/> that specifies the full path to the file the grid’s data will be exported to.</param>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToCsv(System.String,DevExpress.XtraPrinting.CsvExportOptions)">
       <summary>
@@ -1542,11 +1535,11 @@
       <param name="filePath">A <see cref="T:System.String"/> which specifies the name (including the full path) of the file to which the control is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.CsvExportOptions"/> object which specifies the export options to be applied when the control is exported.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToDocx(System.IO.Stream)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToCsv(System.String)">
       <summary>
-        <para>Exports the control’s data to the specified stream in DOCX format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in CSV format.</para>
       </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
+      <param name="filePath">A <see cref="T:System.String"/> that specifies the full path to the file the grid’s data will be exported to.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToDocx(System.IO.Stream,DevExpress.XtraPrinting.DocxExportOptions)">
       <summary>
@@ -1555,17 +1548,17 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.DocxExportOptions"/> object which specifies the export options to be applied when the control is exported.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToDocx(System.IO.Stream)">
+      <summary>
+        <para>Exports the control’s data to the specified stream in DOCX format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
+    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToDocx(System.String)">
       <summary>
         <para>Exports the ASPxPivotGrid’s data to the specified file in DOCX format.</para>
       </summary>
       <param name="filePath">A <see cref="T:System.String"/> that specifies the full path to the file the grid’s data will be exported to.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToHtml(System.IO.Stream)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified stream in HTML format.</para>
-      </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the grid’s data is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToHtml(System.IO.Stream,DevExpress.XtraPrinting.HtmlExportOptions)">
       <summary>
@@ -1583,11 +1576,11 @@
       <param name="title">A <see cref="T:System.String"/> containing the name shown as the title of the created HTML document.</param>
       <param name="compressed">true if the HTML code is compressed (secondary characters e.g. spaces are removed); otherwise, false.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToHtml(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToHtml(System.IO.Stream)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in HTML format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified stream in HTML format.</para>
       </summary>
-      <param name="filePath">A <see cref="T:System.String"/> that specifies the path to the file, to which the grid’s data is exported.</param>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the grid’s data is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToHtml(System.String,DevExpress.XtraPrinting.HtmlExportOptions)">
       <summary>
@@ -1595,13 +1588,6 @@
       </summary>
       <param name="filePath">A <see cref="T:System.String"/> which specifies the name (including the full path) of the file to which the control is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.HtmlExportOptions"/> object which specifies the export options to be applied when the control is exported.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToHtml(System.String,System.String)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in HTML format using the specified character encoding.</para>
-      </summary>
-      <param name="filePath">A <see cref="T:System.String"/> that specifies the path to the file, to which the grid’s data is exported.</param>
-      <param name="htmlCharSet">A <see cref="T:System.String"/> representing the name of the character encoding (e.g. “UTF-8”).</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToHtml(System.String,System.String,System.String,System.Boolean)">
       <summary>
@@ -1612,11 +1598,18 @@
       <param name="title">A <see cref="T:System.String"/> containing the name shown as the title of the created HTML document.</param>
       <param name="compressed">true if the HTML code is compressed (secondary characters e.g. spaces are removed); otherwise, false.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToImage(System.IO.Stream)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToHtml(System.String,System.String)">
       <summary>
-        <para>Exports the pivot grid to the specified stream in PNG format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in HTML format using the specified character encoding.</para>
       </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
+      <param name="filePath">A <see cref="T:System.String"/> that specifies the path to the file, to which the grid’s data is exported.</param>
+      <param name="htmlCharSet">A <see cref="T:System.String"/> representing the name of the character encoding (e.g. “UTF-8”).</param>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToHtml(System.String)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in HTML format.</para>
+      </summary>
+      <param name="filePath">A <see cref="T:System.String"/> that specifies the path to the file, to which the grid’s data is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToImage(System.IO.Stream,DevExpress.XtraPrinting.ImageExportOptions)">
       <summary>
@@ -1625,11 +1618,11 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.ImageExportOptions"/> object that specifies export options to be applied when the control’s data is exported.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToImage(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToImage(System.IO.Stream)">
       <summary>
-        <para>Exports the pivot grid to the specified file in PNG format.</para>
+        <para>Exports the pivot grid to the specified stream in PNG format.</para>
       </summary>
-      <param name="filePath">A <see cref="T:System.String"/> that specifies the path to the file, to which the grid’s data is exported.</param>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToImage(System.String,DevExpress.XtraPrinting.ImageExportOptions)">
       <summary>
@@ -1638,11 +1631,11 @@
       <param name="filePath">A <see cref="T:System.String"/> that specifies the path to the file, to which the grid’s data is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.ImageExportOptions"/> object that specifies export options to be applied when the control’s data is exported.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToMht(System.IO.Stream)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToImage(System.String)">
       <summary>
-        <para>Exports the control’s data to the specified stream in MHT format.</para>
+        <para>Exports the pivot grid to the specified file in PNG format.</para>
       </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
+      <param name="filePath">A <see cref="T:System.String"/> that specifies the path to the file, to which the grid’s data is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToMht(System.IO.Stream,DevExpress.XtraPrinting.MhtExportOptions)">
       <summary>
@@ -1660,11 +1653,11 @@
       <param name="title">A <see cref="T:System.String"/> containing the name shown as the title of the created MHT document.</param>
       <param name="compressed">true if the MHT code is compressed (secondary characters e.g. spaces are removed); otherwise, false.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToMht(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToMht(System.IO.Stream)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in MHT format.</para>
+        <para>Exports the control’s data to the specified stream in MHT format.</para>
       </summary>
-      <param name="filePath">A string that specifies the full path to the file the grid’s data will be exported to.</param>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToMht(System.String,DevExpress.XtraPrinting.MhtExportOptions)">
       <summary>
@@ -1672,13 +1665,6 @@
       </summary>
       <param name="filePath">A <see cref="T:System.String"/> which specifies the name (including the full path) of the file to which the control is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.MhtExportOptions"/> object which specifies the export options to be applied when the control is exported.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToMht(System.String,System.String)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in MHT format using the specified character encoding.</para>
-      </summary>
-      <param name="filePath">A string that specifies the full path to the file the grid’s data will be exported to.</param>
-      <param name="htmlCharSet">A <see cref="T:System.String"/> representing the encoding name set in the MHT file (e.g. “UTF-8”).</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToMht(System.String,System.String,System.String,System.Boolean)">
       <summary>
@@ -1689,11 +1675,18 @@
       <param name="title">A <see cref="T:System.String"/> containing the name shown as the title of the created MHT document.</param>
       <param name="compressed">true if the MHT code is compressed (secondary characters e.g. spaces are removed); otherwise, false.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToPdf(System.IO.Stream)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToMht(System.String,System.String)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to a stream in PDF format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in MHT format using the specified character encoding.</para>
       </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object, which the data is exported to.</param>
+      <param name="filePath">A string that specifies the full path to the file the grid’s data will be exported to.</param>
+      <param name="htmlCharSet">A <see cref="T:System.String"/> representing the encoding name set in the MHT file (e.g. “UTF-8”).</param>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToMht(System.String)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in MHT format.</para>
+      </summary>
+      <param name="filePath">A string that specifies the full path to the file the grid’s data will be exported to.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToPdf(System.IO.Stream,DevExpress.XtraPrinting.PdfExportOptions)">
       <summary>
@@ -1702,11 +1695,11 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object which specifies the export options to be applied when the control is exported.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToPdf(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToPdf(System.IO.Stream)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in PDF format.</para>
+        <para>Exports the ASPxPivotGrid’s data to a stream in PDF format.</para>
       </summary>
-      <param name="filePath">A string that specifies the full path to the file the grid’s data will be exported to.</param>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object, which the data is exported to.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToPdf(System.String,DevExpress.XtraPrinting.PdfExportOptions)">
       <summary>
@@ -1715,11 +1708,11 @@
       <param name="filePath">A <see cref="T:System.String"/> which specifies the name (including the full path) of the file to which the control is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.PdfExportOptions"/> object which specifies the export options to be applied when the control is exported.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToRtf(System.IO.Stream)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToPdf(System.String)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to a stream in RTF format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in PDF format.</para>
       </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the data is exported.</param>
+      <param name="filePath">A string that specifies the full path to the file the grid’s data will be exported to.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToRtf(System.IO.Stream,DevExpress.XtraPrinting.RtfExportOptions)">
       <summary>
@@ -1728,17 +1721,17 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which data is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.RtfExportOptions"/> object which specifies the export options to be applied when the control is exported.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToRtf(System.IO.Stream)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to a stream in RTF format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the data is exported.</param>
+    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToRtf(System.String)">
       <summary>
         <para>Exports the ASPxPivotGrid’s data to a file in RTF format.</para>
       </summary>
       <param name="filePath">A string that specifies the full path to the file the grid’s data will be exported to.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.IO.Stream)">
-      <summary>
-        <para>Exports the default ASPxPivotGrid’s data to a stream in TXT format.</para>
-      </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created text file should be sent.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.IO.Stream,DevExpress.XtraPrinting.TextExportOptions)">
       <summary>
@@ -1746,13 +1739,6 @@
       </summary>
       <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created text file should be sent.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.TextExportOptions"/> object which specifies the export options to be applied when the control is exported.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.IO.Stream,System.String)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to a stream in TXT format using the specified separator string.</para>
-      </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created text file should be sent.</param>
-      <param name="separator">A <see cref="T:System.String"/> containing symbols which will be used to separate the document’s text elements in the created text file.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.IO.Stream,System.String,System.Text.Encoding)">
       <summary>
@@ -1762,11 +1748,18 @@
       <param name="separator">A <see cref="T:System.String"/> containing symbols which will be used to separate the document’s text elements in the created text file.</param>
       <param name="encoding">A <see cref="T:System.Text.Encoding"/> descendant which encodes the created text document.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.IO.Stream,System.String)">
       <summary>
-        <para>Exports the default ASPxPivotGrid’s data to the specified file in TXT format.</para>
+        <para>Exports the ASPxPivotGrid’s data to a stream in TXT format using the specified separator string.</para>
       </summary>
-      <param name="filePath">A string that specifies the full path to the file to which the grid’s data will be exported.</param>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created text file should be sent.</param>
+      <param name="separator">A <see cref="T:System.String"/> containing symbols which will be used to separate the document’s text elements in the created text file.</param>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.IO.Stream)">
+      <summary>
+        <para>Exports the default ASPxPivotGrid’s data to a stream in TXT format.</para>
+      </summary>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which the created text file should be sent.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.String,DevExpress.XtraPrinting.TextExportOptions)">
       <summary>
@@ -1774,13 +1767,6 @@
       </summary>
       <param name="filePath">A <see cref="T:System.String"/> which specifies the name (including the full path) of the file to which the control is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.TextExportOptions"/> object which specifies the export options to be applied when the control is exported.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.String,System.String)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to a file in TXT format using the specified separator string.</para>
-      </summary>
-      <param name="filePath">A string that specifies the full path to the file to which the grid’s data will be exported.</param>
-      <param name="separator">A <see cref="T:System.String"/> containing symbols which will be used to separate the document’s text elements in the created text file.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.String,System.String,System.Text.Encoding)">
       <summary>
@@ -1790,11 +1776,18 @@
       <param name="separator">A <see cref="T:System.String"/> containing symbols which will be used to separate the document’s text elements in the created text file.</param>
       <param name="encoding">A <see cref="T:System.Text.Encoding"/> descendant which encodes the created text document.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXls(System.IO.Stream)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.String,System.String)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to a stream in XLS format.</para>
+        <para>Exports the ASPxPivotGrid’s data to a file in TXT format using the specified separator string.</para>
       </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
+      <param name="filePath">A string that specifies the full path to the file to which the grid’s data will be exported.</param>
+      <param name="separator">A <see cref="T:System.String"/> containing symbols which will be used to separate the document’s text elements in the created text file.</param>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToText(System.String)">
+      <summary>
+        <para>Exports the default ASPxPivotGrid’s data to the specified file in TXT format.</para>
+      </summary>
+      <param name="filePath">A string that specifies the full path to the file to which the grid’s data will be exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXls(System.IO.Stream,DevExpress.XtraPrinting.TextExportMode)">
       <summary>
@@ -1810,11 +1803,11 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object which specifies the XLS export options to be applied when the control is exported.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXls(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXls(System.IO.Stream)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to a file in XLS format.</para>
+        <para>Exports the ASPxPivotGrid’s data to a stream in XLS format.</para>
       </summary>
-      <param name="filePath">A <see cref="T:System.String"/> which specifies the name (including the full path) of the file to which the control is exported.</param>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object, to which the created document is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXls(System.String,DevExpress.XtraPrinting.TextExportMode)">
       <summary>
@@ -1830,11 +1823,11 @@
       <param name="filePath">A <see cref="T:System.String"/> which specifies the name (including the full path) of the file to which the control is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object which specifies the XLS export options to be applied when the control is exported.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXlsx(System.IO.Stream)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXls(System.String)">
       <summary>
-        <para>Exports the control’s data to the specified stream in XLSX (MS Excel 2007) format.</para>
+        <para>Exports the ASPxPivotGrid’s data to a file in XLS format.</para>
       </summary>
-      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which data is exported.</param>
+      <param name="filePath">A <see cref="T:System.String"/> which specifies the name (including the full path) of the file to which the control is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXlsx(System.IO.Stream,DevExpress.XtraPrinting.TextExportMode)">
       <summary>
@@ -1850,11 +1843,11 @@
       <param name="stream">A <see cref="T:System.IO.Stream"/> object to which data is exported.</param>
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object which specifies the XLSX export options to be applied when the control is exported.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXlsx(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXlsx(System.IO.Stream)">
       <summary>
-        <para>Exports the control’s data to the specified file in XLSX (MS Excel 2007) format.</para>
+        <para>Exports the control’s data to the specified stream in XLSX (MS Excel 2007) format.</para>
       </summary>
-      <param name="filePath">A string that specifies the full path to the file to which the data is exported.</param>
+      <param name="stream">A <see cref="T:System.IO.Stream"/> object to which data is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXlsx(System.String,DevExpress.XtraPrinting.TextExportMode)">
       <summary>
@@ -1870,18 +1863,11 @@
       <param name="filePath">A string that specifies the full path to the file to which the data is exported.</param>
       <param name="options">An <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object that contains export options.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsToResponse(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportToXlsx(System.String)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in XLS format, and writes it to the response in the binary format.</para>
+        <para>Exports the control’s data to the specified file in XLSX (MS Excel 2007) format.</para>
       </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsToResponse(System.String,DevExpress.XtraPrinting.TextExportMode)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in XLS format with the specified export setting, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="textExportMode">A <see cref="T:DevExpress.XtraPrinting.TextExportMode"/> object that specifies whether to use the formatting of the data fields in the bound dataset for the cells in the exported XLS document.</param>
+      <param name="filePath">A string that specifies the full path to the file to which the data is exported.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsToResponse(System.String,DevExpress.XtraPrinting.TextExportMode,System.Boolean)">
       <summary>
@@ -1891,12 +1877,12 @@
       <param name="textExportMode">A <see cref="T:DevExpress.XtraPrinting.TextExportMode"/> object that specifies whether to use the formatting of the data fields in the bound dataset for the cells in the exported XLS document.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsToResponse(System.String,DevExpress.XtraPrinting.XlsExportOptions)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsToResponse(System.String,DevExpress.XtraPrinting.TextExportMode)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in XLS format with the specified export settings, and writes it to the response in the binary format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in XLS format with the specified export setting, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="options">A <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
+      <param name="textExportMode">A <see cref="T:DevExpress.XtraPrinting.TextExportMode"/> object that specifies whether to use the formatting of the data fields in the bound dataset for the cells in the exported XLS document.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsToResponse(System.String,DevExpress.XtraPrinting.XlsExportOptions,System.Boolean)">
       <summary>
@@ -1906,6 +1892,13 @@
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsToResponse(System.String,DevExpress.XtraPrinting.XlsExportOptions)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in XLS format with the specified export settings, and writes it to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+      <param name="options">A <see cref="T:DevExpress.XtraPrinting.XlsExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
+    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsToResponse(System.String,System.Boolean)">
       <summary>
         <para>Exports the ASPxPivotGrid’s data to the specified file in XLS format with the specified setting, and writes it to the response in the binary format.</para>
@@ -1913,18 +1906,11 @@
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsxToResponse(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsToResponse(System.String)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in XLSX format, and writes it to the response in the binary format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in XLS format, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-    </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsxToResponse(System.String,DevExpress.XtraPrinting.TextExportMode)">
-      <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in XLSX format with the specified export setting, and writes it to the response in the binary format.</para>
-      </summary>
-      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="textExportMode">A <see cref="T:DevExpress.XtraPrinting.TextExportMode"/> object that specifies whether to use the formatting of the data fields in the bound dataset for the cells in the exported XLS document.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsxToResponse(System.String,DevExpress.XtraPrinting.TextExportMode,System.Boolean)">
       <summary>
@@ -1934,12 +1920,12 @@
       <param name="textExportMode">A <see cref="T:DevExpress.XtraPrinting.TextExportMode"/> object that specifies whether to use the formatting of the data fields in the bound dataset for the cells in the exported XLS document.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsxToResponse(System.String,DevExpress.XtraPrinting.XlsxExportOptions)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsxToResponse(System.String,DevExpress.XtraPrinting.TextExportMode)">
       <summary>
-        <para>Exports the ASPxPivotGrid’s data to the specified file in XLSX format with the specified export settings, and writes it to the response in the binary format.</para>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in XLSX format with the specified export setting, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
-      <param name="options">A <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
+      <param name="textExportMode">A <see cref="T:DevExpress.XtraPrinting.TextExportMode"/> object that specifies whether to use the formatting of the data fields in the bound dataset for the cells in the exported XLS document.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsxToResponse(System.String,DevExpress.XtraPrinting.XlsxExportOptions,System.Boolean)">
       <summary>
@@ -1949,12 +1935,25 @@
       <param name="options">A <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
     </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsxToResponse(System.String,DevExpress.XtraPrinting.XlsxExportOptions)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in XLSX format with the specified export settings, and writes it to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
+      <param name="options">A <see cref="T:DevExpress.XtraPrinting.XlsxExportOptions"/> object which specifies the export options to be applied when the control’s data is exported.</param>
+    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsxToResponse(System.String,System.Boolean)">
       <summary>
         <para>Exports the ASPxPivotGrid’s data to the specified file in XLSX format with the specified setting, and writes it to the response in the binary format.</para>
       </summary>
       <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
       <param name="saveAsFile">true to display the Save As dialog; false to display the file with exported data within a page.</param>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.ExportXlsxToResponse(System.String)">
+      <summary>
+        <para>Exports the ASPxPivotGrid’s data to the specified file in XLSX format, and writes it to the response in the binary format.</para>
+      </summary>
+      <param name="fileName">A <see cref="T:System.String"/> containing the full path (including the file name and extension) specifying the target file name.</param>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter.OptionsPrint">
       <summary>
@@ -1983,20 +1982,16 @@
       <summary>
         <para>This member supports the .NET Framework infrastructure and cannot be used directly from your code.</para>
       </summary>
-      <param name="htmlTable"></param>
-      <param name="pivotGrid"></param>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPager.ItemCount">
       <summary>
         <para>This member supports the .NET Framework infrastructure and cannot be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPager.ItemsPerPage">
       <summary>
         <para>This member supports the .NET Framework infrastructure and cannot be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPager.PageCount">
       <summary>
@@ -2008,7 +2003,6 @@
       <summary>
         <para>This member supports the .NET Framework infrastructure and cannot be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu">
       <summary>
@@ -2026,43 +2020,36 @@
       <summary>
         <para>Identifies the ‘Clear Sorting’ field header context menu item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.CollapseAllID">
       <summary>
         <para>Identifies the ‘Collapse All’ field value context menu item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.CollapseValueID">
       <summary>
         <para>Identifies the ‘Collapse’ field value context menu item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.ExpandAllID">
       <summary>
         <para>Identifies the ‘Expand All’ field value context menu item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.ExpandValueID">
       <summary>
         <para>Identifies the ‘Expand’ field value context menu item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.HideFieldID">
       <summary>
         <para>Identifies the ‘Hide’ field header context menu item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.HideFieldListID">
       <summary>
         <para>Identifies the ‘Hide Field List’ header area context menu item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.MenuType">
       <summary>
@@ -2074,41 +2061,31 @@
       <summary>
         <para>Identifies the ‘Reload Data’ header area context menu item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.ShowFieldListID">
       <summary>
         <para>Identifies the ‘Show Field List’ header area context menu item.</para>
       </summary>
-      <value></value>
-    </member>
-    <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.ShowFilterEditorID">
-      <summary />
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.SortAZID">
       <summary>
         <para>Identifies the ‘Sort A-Z’ field header context menu item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.SortByID">
       <summary>
         <para>Identifies the field value context menu item used to apply Sorting by Summary.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.SortGroupID">
       <summary>
         <para>Identifies a context menu group that includes items used to sort field values in the OLAP mode.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridPopupMenu.SortZAID">
       <summary>
         <para>Identifies the ‘Sort Z-A’ field header context menu item.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.Web.ASPxPivotGrid.ASPxPivotGridResLocalizer">
       <summary>
@@ -2129,7 +2106,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.CustomCustomizationFormSortEventArgs"/> class.</para>
       </summary>
-      <param name="data"></param>
     </member>
     <member name="T:DevExpress.Web.ASPxPivotGrid.CustomFieldDataEventArgs">
       <summary>
@@ -2205,10 +2181,6 @@
       </summary>
       <value>true if the event is handled; otherwise, false</value>
     </member>
-    <member name="P:DevExpress.Web.ASPxPivotGrid.CustomizePivotCellEventArgs.Hyperlink">
-      <summary />
-      <value></value>
-    </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.CustomizePivotCellEventArgs.RowType">
       <summary>
         <para>Gets a value that identifies the row containing the cell in the exported document.</para>
@@ -2252,7 +2224,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.Data.WebFilter"/> class with specified settings.</para>
       </summary>
-      <param name="owner"></param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.Data.WebFilter.Assign(DevExpress.XtraPivotGrid.BaseFilter)">
       <summary>
@@ -2283,11 +2254,13 @@
         <para>Defines a data binding to a source data column.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.DataSourceColumnBinding.#ctor(System.String)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.DataSourceColumnBinding.#ctor(System.String,DevExpress.XtraPivotGrid.PivotGroupInterval,System.Int32)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.DataSourceColumnBinding"/> class with specified settings.</para>
       </summary>
       <param name="columnName">The data source column name.</param>
+      <param name="groupInterval">A <see cref="T:DevExpress.XtraPivotGrid.PivotGroupInterval"/> enumeration that specifies how the values are combined into groups.</param>
+      <param name="groupIntervalNumericRange">The length of group intervals.</param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.DataSourceColumnBinding.#ctor(System.String,DevExpress.XtraPivotGrid.PivotGroupInterval)">
       <summary>
@@ -2296,13 +2269,11 @@
       <param name="columnName">The data source column name.</param>
       <param name="groupInterval">The length of group intervals.</param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.DataSourceColumnBinding.#ctor(System.String,DevExpress.XtraPivotGrid.PivotGroupInterval,System.Int32)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.DataSourceColumnBinding.#ctor(System.String)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.DataSourceColumnBinding"/> class with specified settings.</para>
       </summary>
       <param name="columnName">The data source column name.</param>
-      <param name="groupInterval">A <see cref="T:DevExpress.XtraPivotGrid.PivotGroupInterval"/> enumeration that specifies how the values are combined into groups.</param>
-      <param name="groupIntervalNumericRange">The length of group intervals.</param>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.DataSourceColumnBinding.ColumnName">
       <summary>
@@ -2387,7 +2358,7 @@
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.FilterPanelMode.Default">
       <summary>
-        <para>A default mode. For v<span class="macro" data-macro-template="xx.x">22.1</span>, the default mode is Prefilter.</para>
+        <para>A default mode. For v22.1, the default mode is Prefilter.</para>
       </summary>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.FilterPanelMode.Filter">
@@ -2548,8 +2519,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PercentOfTotalBinding"/> class with specified settings.</para>
       </summary>
-      <param name="source"></param>
-      <param name="mode"></param>
     </member>
     <member name="T:DevExpress.Web.ASPxPivotGrid.PivotAddPopupMenuItemEventArgs">
       <summary>
@@ -3075,8 +3044,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotFieldDisplayTextEventArgs"/> class with specified settings.</para>
       </summary>
-      <param name="formattable"></param>
-      <param name="defaultText"></param>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldDisplayTextEventArgs.DisplayText">
       <summary>
@@ -3361,7 +3328,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs"/> class with specified settings.</para>
       </summary>
-      <param name="item"></param>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventArgs.CustomTotal">
       <summary>
@@ -3373,7 +3339,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.Web.ASPxPivotGrid.PivotFieldValueEventHandler">
       <summary>
@@ -3652,8 +3617,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <param name="field"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridCellTemplateItem.IsOthersFieldValue(DevExpress.Web.ASPxPivotGrid.PivotGridField)">
       <summary>
@@ -4021,7 +3984,6 @@
       <summary>
         <para>This member supports the .NET Framework infrastructure and cannot be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridField.HeaderStyle">
       <summary>
@@ -4045,7 +4007,6 @@
       <summary>
         <para>This member supports the .NET Framework infrastructure and cannot be used directly from your code.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridField.Name">
       <summary>
@@ -4138,13 +4099,6 @@
       <param name="area">A <see cref="T:DevExpress.XtraPivotGrid.PivotArea"/> value that specifies the header area.</param>
       <returns>A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object that is the created field.</returns>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.AddDataSourceColumn(System.String,DevExpress.XtraPivotGrid.PivotArea,DevExpress.XtraPivotGrid.PivotGroupInterval)">
-      <summary />
-      <param name="columnName"></param>
-      <param name="area"></param>
-      <param name="groupInterval"></param>
-      <returns></returns>
-    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.AddField(DevExpress.Web.ASPxPivotGrid.PivotGridField)">
       <summary>
         <para>Adds the specified field to the end of the collection.</para>
@@ -4155,8 +4109,6 @@
       <summary>
         <para>This member supports the internal infrastructure and cannot be used directly from your code.</para>
       </summary>
-      <param name="clientID"></param>
-      <returns></returns>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridFieldCollection.Item(System.Int32)">
       <summary>
@@ -4600,7 +4552,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.CellsAreaStyle">
       <summary>
@@ -4612,13 +4563,11 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.CellsSCContentTableName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.CellStyle">
       <summary>
@@ -4630,7 +4579,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.ColumnAreaStyle">
       <summary>
@@ -4642,7 +4590,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.ColumnFieldValuesAreaStyle">
       <summary>
@@ -4654,13 +4601,11 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.ColumnSCContentTableName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.CustomizationFieldsCloseButtonStyle">
       <summary>
@@ -4672,7 +4617,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.CustomizationFieldsContentStyle">
       <summary>
@@ -4684,7 +4628,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.CustomizationFieldsHeaderStyle">
       <summary>
@@ -4696,7 +4639,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.CustomizationFieldsStyle">
       <summary>
@@ -4708,7 +4650,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.CustomTotalCellStyle">
       <summary>
@@ -4720,7 +4661,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.DataAreaStyle">
       <summary>
@@ -4732,13 +4672,11 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.EmptyAreaStyleName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.FieldValueGrandTotalStyle">
       <summary>
@@ -4750,7 +4688,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.FieldValueStyle">
       <summary>
@@ -4762,7 +4699,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.FieldValueTotalStyle">
       <summary>
@@ -4774,7 +4710,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.FilterAreaStyle">
       <summary>
@@ -4786,7 +4721,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.FilterButtonPanelStyle">
       <summary>
@@ -4798,7 +4732,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.FilterButtonStyle">
       <summary>
@@ -4810,7 +4743,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.FilterItemsAreaStyle">
       <summary>
@@ -4822,7 +4754,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.FilterItemStyle">
       <summary>
@@ -4834,7 +4765,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.FilterWindowStyle">
       <summary>
@@ -4846,7 +4776,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.GrandTotalCellStyle">
       <summary>
@@ -4858,7 +4787,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.HeaderStyle">
       <summary>
@@ -4870,37 +4798,31 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.HorizontalScrollBarEmptyCellStyle">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.HorizontalScrollBarEmptyCellStyleName">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.HorzScrollBarContainerCellStyleName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.HorzScrollBarRowAreaCellStyleName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.KPICellStyleName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.LoadingDiv">
       <summary>
@@ -4924,7 +4846,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.MenuStyle">
       <summary>
@@ -4936,13 +4857,11 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PivotTableContainerDivName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterBuilderButtonAreaStyle">
       <summary>
@@ -4954,7 +4873,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterBuilderCloseButtonStyle">
       <summary>
@@ -4966,7 +4884,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterBuilderHeaderStyle">
       <summary>
@@ -4978,7 +4895,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterBuilderMainAreaStyle">
       <summary>
@@ -4990,7 +4906,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterBuilderModalBackgroundStyle">
       <summary>
@@ -5002,7 +4917,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterPanelCheckBoxCellStyle">
       <summary>
@@ -5014,7 +4928,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterPanelClearButtonCellStyle">
       <summary>
@@ -5026,13 +4939,11 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterPanelContainerStyleName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterPanelExpressionCellStyle">
       <summary>
@@ -5044,7 +4955,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterPanelImageCellStyle">
       <summary>
@@ -5056,7 +4966,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterPanelLinkStyle">
       <summary>
@@ -5068,7 +4977,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.PrefilterPanelStyle">
       <summary>
@@ -5080,7 +4988,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.RowAreaStyle">
       <summary>
@@ -5092,7 +4999,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.RowFieldValuesAreaStyle">
       <summary>
@@ -5104,31 +5010,26 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.RowSCContentTableName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.ScrollBarEdgeCellStyleName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.ScrollBarsIntersectionEmptyCellStyle">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.ScrollBarsIntersectionEmptyCellStyleName">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.TotalCellStyle">
       <summary>
@@ -5140,31 +5041,26 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.VerticalScrollBarEmptyCellStyle">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.VerticalScrollBarEmptyCellStyleName">
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.VertScrollBarColumnAreaCellStyleName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="F:DevExpress.Web.ASPxPivotGrid.PivotGridStyles.VertScrollBarContainerCellStyleName">
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebFieldOptions">
       <summary>
@@ -5178,10 +5074,6 @@
       <param name="optionsChanged">A delegate that will receive change notifications.</param>
       <param name="viewBagOwner">An IViewBagOwner object that is used to initialize the created object.</param>
       <param name="objectPath">A string value that is used to initialize the created object.</param>
-    </member>
-    <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebFieldOptions.ShowInFilter">
-      <summary />
-      <value></value>
     </member>
     <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebFieldOptionsFilter">
       <summary>
@@ -5276,8 +5168,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization"/> class with specified settings.</para>
       </summary>
-      <param name="viewBagOwner"></param>
-      <param name="objectPath"></param>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsCustomization.AllowCustomizationWindowResizing">
       <summary>
@@ -5362,12 +5252,6 @@
         <para>Provides options which control data fields presentation in the ASPxPivotGrid control.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsDataField.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsDataField"/> class with the specified settings.</para>
-      </summary>
-      <param name="data">A PivotGridData object which contains the information required to initialize the created <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsDataField"/> object.</param>
-    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsDataField.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData,DevExpress.WebUtils.IViewBagOwner,System.String)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsDataField"/> class with the specified settings.</para>
@@ -5384,6 +5268,12 @@
       <param name="optionsChanged">A method that will handle the <see cref="E:DevExpress.XtraPivotGrid.PivotGridOptionsBase.OptionsChanged"/> event.</param>
       <param name="owner">An IViewBagOwner object used to initialize the created object.</param>
       <param name="objectPath">A string value used to initialize the created object.</param>
+    </member>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsDataField.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsDataField"/> class with the specified settings.</para>
+      </summary>
+      <param name="data">A PivotGridData object which contains the information required to initialize the created <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsDataField"/> object.</param>
     </member>
     <member name="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsFilter">
       <summary>
@@ -5518,8 +5408,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsPager"/> class with specified settings.</para>
       </summary>
-      <param name="viewBagOwner"></param>
-      <param name="objectPath"></param>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsPager.AlwaysShowPager">
       <summary>
@@ -5549,8 +5437,6 @@
       <summary>
         <para>For internal use only.</para>
       </summary>
-      <param name="isColumn"></param>
-      <returns></returns>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsPager.PageIndex">
       <summary>
@@ -5579,9 +5465,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView"/> class with specified settings.</para>
       </summary>
-      <param name="optionsChanged"></param>
-      <param name="viewBagOwner"></param>
-      <param name="objectPath"></param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.PivotGridWebOptionsView.Assign(DevExpress.Utils.Controls.BaseOptions)">
       <summary>
@@ -5693,13 +5576,11 @@
       <summary>
         <para>This property is not in effect for the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle"/> class.</para>
       </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle.SortingImageSpacing">
       <summary>
         <para>This property is not in effect for the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotHeaderStyle"/> class.</para>
       </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.Web.ASPxPivotGrid.PivotHtmlCellPreparedEventArgs">
       <summary>
@@ -5770,11 +5651,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotOlapQueryDataEventArgs"/> class with specified settings.</para>
       </summary>
-      <param name="query"></param>
-    </member>
-    <member name="P:DevExpress.Web.ASPxPivotGrid.PivotOlapQueryDataEventArgs.MDXQuery">
-      <summary />
-      <value></value>
     </member>
     <member name="T:DevExpress.Web.ASPxPivotGrid.PivotPopupMenuCreatedEventArgs">
       <summary>
@@ -5852,7 +5728,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotXlsExportOptions"/> class.</para>
       </summary>
-      <param name="mode"></param>
     </member>
     <member name="E:DevExpress.Web.ASPxPivotGrid.PivotXlsExportOptions.CustomizeCell">
       <summary>
@@ -5873,7 +5748,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotXlsxExportOptions"/> class.</para>
       </summary>
-      <param name="mode"></param>
     </member>
     <member name="E:DevExpress.Web.ASPxPivotGrid.PivotXlsxExportOptions.CustomizeCell">
       <summary>
@@ -5925,15 +5799,9 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.WebCustomExportCellEventArgs"/> class.</para>
       </summary>
-      <param name="brick"></param>
-      <param name="cellItem"></param>
-      <param name="appearance"></param>
-      <param name="data"></param>
       <param name="columnField">A column field.</param>
       <param name="rowField">A row field.</param>
       <param name="dataField">A data field.</param>
-      <param name="graphicsUnit"></param>
-      <param name="printer"></param>
       <param name="rect">A System.Drawing.Rectangle object.</param>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.WebCustomExportCellEventArgs.Appearance">
@@ -5969,10 +5837,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.WebCustomExportFieldValueEventArgs"/> class.</para>
       </summary>
-      <param name="brick"></param>
-      <param name="fieldValueItem"></param>
-      <param name="appearance"></param>
-      <param name="rect"></param>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.WebCustomExportFieldValueEventArgs.Appearance">
       <summary>
@@ -5996,9 +5860,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.WebCustomExportHeaderEventArgs"/> class.</para>
       </summary>
-      <param name="brick"></param>
-      <param name="fieldItem"></param>
-      <param name="appearance"></param>
       <param name="field">A <see cref="T:DevExpress.Web.ASPxPivotGrid.PivotGridField"/> object.</param>
       <param name="rect">A Sytem.Drawing.Rectangle object.</param>
     </member>
@@ -6029,7 +5890,6 @@
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.WebPivotGridOptionsPrint"/> class.</para>
       </summary>
-      <param name="optionsChanged"></param>
     </member>
     <member name="P:DevExpress.Web.ASPxPivotGrid.WebPivotGridOptionsPrint.PageSettings">
       <summary>
@@ -6042,47 +5902,25 @@
         <para>Defines the calculation that uses a custom string expression with window functions.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.WindowExpressionBinding.#ctor(DevExpress.Data.Filtering.CriteriaOperator,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.WindowExpressionBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="criteria"></param>
-      <param name="mode"></param>
-    </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.WindowExpressionBinding.#ctor(DevExpress.Data.Filtering.CriteriaOperator,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.XtraPivotGrid.CalculationDirection)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.WindowExpressionBinding"/> class with specified settings.</para>
       </summary>
-      <param name="criteria"></param>
-      <param name="mode"></param>
-      <param name="direction"></param>
     </member>
-    <member name="M:DevExpress.Web.ASPxPivotGrid.WindowExpressionBinding.#ctor(System.String,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria)">
+    <member name="M:DevExpress.Web.ASPxPivotGrid.WindowExpressionBinding.#ctor(DevExpress.Data.Filtering.CriteriaOperator,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.WindowExpressionBinding"/> class with specified settings.</para>
       </summary>
-      <param name="expression"></param>
-      <param name="mode"></param>
     </member>
     <member name="M:DevExpress.Web.ASPxPivotGrid.WindowExpressionBinding.#ctor(System.String,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.XtraPivotGrid.CalculationDirection)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.WindowExpressionBinding"/> class with specified settings.</para>
       </summary>
-      <param name="expression"></param>
-      <param name="mode"></param>
-      <param name="direction"></param>
     </member>
-    <member name="N:DevExpress.XtraPivotGrid.Data">
-      <summary />
-    </member>
-    <member name="T:DevExpress.XtraPivotGrid.Data.PivotGridWebDataExtensions">
-      <summary />
-    </member>
-    <member name="M:DevExpress.XtraPivotGrid.Data.PivotGridWebDataExtensions.GetFieldItem(DevExpress.Web.ASPxPivotGrid.Data.PivotGridWebData,DevExpress.XtraPivotGrid.PivotGridFieldBase)">
-      <summary />
-      <param name="data"></param>
-      <param name="field"></param>
-      <returns></returns>
+    <member name="M:DevExpress.Web.ASPxPivotGrid.WindowExpressionBinding.#ctor(System.String,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria)">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.Web.ASPxPivotGrid.WindowExpressionBinding"/> class with specified settings.</para>
+      </summary>
     </member>
   </members>
 </doc>

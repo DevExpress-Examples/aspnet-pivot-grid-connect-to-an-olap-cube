@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<doc xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
   <assembly>
     <name>DevExpress.Pdf.v22.1.Drawing</name>
   </assembly>
@@ -354,30 +354,6 @@
       </summary>
       <param name="field">An interactive form field that should be added.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.AddLinkToPage(System.Drawing.RectangleF,System.Int32)">
-      <summary>
-        <para>Adds a link that refers to the document page with the specified number.</para>
-      </summary>
-      <param name="linkArea">A page area (in world coordinate system) where you can add a link.</param>
-      <param name="pageNumber">The page number.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.AddLinkToPage(System.Drawing.RectangleF,System.Int32,System.Single)">
-      <summary>
-        <para>Adds a link that refers to the document page with the specified number and zoom factor.</para>
-      </summary>
-      <param name="linkArea">A page area (in the world coordinate system) where you can add a link.</param>
-      <param name="pageNumber">The target page number.</param>
-      <param name="zoom">A zoom factor by which the document is scaled after you click a link.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.AddLinkToPage(System.Drawing.RectangleF,System.Int32,System.Single,System.Single)">
-      <summary>
-        <para>Adds a link that refers to the document page with the specified number. Allows you to set a page point positioned at the top left corner of the document window.</para>
-      </summary>
-      <param name="linkArea">A page area (in the world coordinate system) where you can add a link.</param>
-      <param name="pageNumber">The page number.</param>
-      <param name="destinationX">The horizontal coordinate of a target page point (in the world coordinate system) that is positioned at the top left corner of the document window.</param>
-      <param name="destinationY">The vertical coordinate of a target page point (in the world coordinate system) that is positioned at the top left corner of the document window.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.AddLinkToPage(System.Drawing.RectangleF,System.Int32,System.Single,System.Single,System.Single)">
       <summary>
         <para>Adds a link that refers to the document page with the specified number. Allows you to set the page point positioned at the top left corner of the document window, and zoom factor.</para>
@@ -388,18 +364,36 @@
       <param name="destinationY">The vertical coordinate of a page point (in the world coordinate system) positioned at the top left corner of the document window.</param>
       <param name="zoom">The zoom factor by which the document is scaled after you click a link.</param>
     </member>
+    <member name="M:DevExpress.Pdf.PdfGraphics.AddLinkToPage(System.Drawing.RectangleF,System.Int32,System.Single,System.Single)">
+      <summary>
+        <para>Adds a link that refers to the document page with the specified number. Allows you to set a page point positioned at the top left corner of the document window.</para>
+      </summary>
+      <param name="linkArea">A page area (in the world coordinate system) where you can add a link.</param>
+      <param name="pageNumber">The page number.</param>
+      <param name="destinationX">The horizontal coordinate of a target page point (in the world coordinate system) that is positioned at the top left corner of the document window.</param>
+      <param name="destinationY">The vertical coordinate of a target page point (in the world coordinate system) that is positioned at the top left corner of the document window.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfGraphics.AddLinkToPage(System.Drawing.RectangleF,System.Int32,System.Single)">
+      <summary>
+        <para>Adds a link that refers to the document page with the specified number and zoom factor.</para>
+      </summary>
+      <param name="linkArea">A page area (in the world coordinate system) where you can add a link.</param>
+      <param name="pageNumber">The target page number.</param>
+      <param name="zoom">A zoom factor by which the document is scaled after you click a link.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfGraphics.AddLinkToPage(System.Drawing.RectangleF,System.Int32)">
+      <summary>
+        <para>Adds a link that refers to the document page with the specified number.</para>
+      </summary>
+      <param name="linkArea">A page area (in world coordinate system) where you can add a link.</param>
+      <param name="pageNumber">The page number.</param>
+    </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.AddLinkToUri(System.Drawing.RectangleF,System.Uri)">
       <summary>
         <para>Adds a link to a URI at the specified page rectangle.</para>
       </summary>
       <param name="linkArea">A page area (in the world coordinate system) where you can add a link.</param>
       <param name="uri">A <see cref="T:System.Uri"/> object that is the link URI.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.AddToPageBackground(DevExpress.Pdf.PdfPage)">
-      <summary>
-        <para>Adds graphics to a PDF page background.</para>
-      </summary>
-      <param name="page">A <see cref="T:DevExpress.Pdf.PdfPage"/> object that is the page in the document where graphics are drawn (measured in points - 1/72 of an inch).</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.AddToPageBackground(DevExpress.Pdf.PdfPage,System.Single,System.Single)">
       <summary>
@@ -409,9 +403,9 @@
       <param name="dpiX">A <see cref="T:System.Single"/> object that represents the value, in dots per inch, for the horizontal resolution.</param>
       <param name="dpiY">A <see cref="T:System.Single"/> object that represents the value, in dots per inch, for the vertical resolution.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.AddToPageForeground(DevExpress.Pdf.PdfPage)">
+    <member name="M:DevExpress.Pdf.PdfGraphics.AddToPageBackground(DevExpress.Pdf.PdfPage)">
       <summary>
-        <para>Adds graphics to a PDF page foreground.</para>
+        <para>Adds graphics to a PDF page background.</para>
       </summary>
       <param name="page">A <see cref="T:DevExpress.Pdf.PdfPage"/> object that is the page in the document where graphics are drawn (measured in points - 1/72 of an inch).</param>
     </member>
@@ -422,6 +416,12 @@
       <param name="page">A <see cref="T:DevExpress.Pdf.PdfPage"/> object that is the page in the document where graphics are drawn (measured in points - 1/72 of an inch).</param>
       <param name="dpiX">A <see cref="T:System.Single"/> object that represents the value, in dots per inch, for the horizontal resolution.</param>
       <param name="dpiY">A <see cref="T:System.Single"/> object that represents the value, in dots per inch, for the vertical resolution.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfGraphics.AddToPageForeground(DevExpress.Pdf.PdfPage)">
+      <summary>
+        <para>Adds graphics to a PDF page foreground.</para>
+      </summary>
+      <param name="page">A <see cref="T:DevExpress.Pdf.PdfPage"/> object that is the page in the document where graphics are drawn (measured in points - 1/72 of an inch).</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.ClearFormFields">
       <summary>
@@ -485,13 +485,6 @@
       <param name="image">An image to draw.</param>
       <param name="location">A point in world coordinate system where you can position an image.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.DrawImage(System.Drawing.Image,System.Drawing.RectangleF)">
-      <summary>
-        <para>Draws an image in the specified page rectangle. The image is scaled to fit this rectangle.</para>
-      </summary>
-      <param name="image">An image to draw.</param>
-      <param name="bounds">A page area in world coordinate system where you want to draw an image.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawImage(System.Drawing.Image,System.Drawing.RectangleF,System.Drawing.RectangleF,System.Drawing.GraphicsUnit)">
       <summary>
         <para>Draws the specified image part in a page rectangle.</para>
@@ -500,6 +493,13 @@
       <param name="destRect">A page rectangle in world coordinate system where you can draw an image. The image portion is scaled to fit the rectangle.</param>
       <param name="srcRect">A portion of the image to draw.</param>
       <param name="srcUnit">Indicates the measurement units used by the srcRect parameter.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfGraphics.DrawImage(System.Drawing.Image,System.Drawing.RectangleF)">
+      <summary>
+        <para>Draws an image in the specified page rectangle. The image is scaled to fit this rectangle.</para>
+      </summary>
+      <param name="image">An image to draw.</param>
+      <param name="bounds">A page area in world coordinate system where you want to draw an image.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawImage(System.IO.Stream,System.Drawing.PointF)">
       <summary>
@@ -559,6 +559,13 @@
       <param name="pen">A <see cref="T:System.Drawing.Pen"/> object that specifies the color, width, and style of the rectangle.</param>
       <param name="bounds">A <see cref="T:System.Drawing.RectangleF"/> structure that specifies a page area (in world coordinate system) where you can draw a rectangle.</param>
     </member>
+    <member name="M:DevExpress.Pdf.PdfGraphics.DrawString(System.String,System.Drawing.Font,System.Drawing.SolidBrush,System.Drawing.PointF,DevExpress.Pdf.PdfStringFormat)">
+      <param name="text">A text to draw.</param>
+      <param name="font">An object that defines font options.</param>
+      <param name="brush">An object that determines the color and texture of the drawn text.</param>
+      <param name="point">A point in the world coordinate system where you can position text.</param>
+      <param name="format">An object that specifies text formatting attributes.</param>
+    </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawString(System.String,System.Drawing.Font,System.Drawing.SolidBrush,System.Drawing.PointF)">
       <summary>
         <para>Draws text with the specified brush and font parameters at the specified page point.</para>
@@ -567,23 +574,6 @@
       <param name="font">An object that defines font options.</param>
       <param name="brush">An object that determines the color and texture of the drawn text.</param>
       <param name="point">A point in the world coordinate system where you can position text.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.DrawString(System.String,System.Drawing.Font,System.Drawing.SolidBrush,System.Drawing.PointF,DevExpress.Pdf.PdfStringFormat)">
-      <summary />
-      <param name="text">A text to draw.</param>
-      <param name="font">An object that defines font options.</param>
-      <param name="brush">An object that determines the color and texture of the drawn text.</param>
-      <param name="point">A point in the world coordinate system where you can position text.</param>
-      <param name="format">An object that specifies text formatting attributes.</param>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.DrawString(System.String,System.Drawing.Font,System.Drawing.SolidBrush,System.Drawing.RectangleF)">
-      <summary>
-        <para>Draws text with the specified brush and font parameters in the specified page rectangle.</para>
-      </summary>
-      <param name="text">A text to draw.</param>
-      <param name="font">A <see cref="T:System.Drawing.Font"/> object that defines the text format of the string.</param>
-      <param name="brush">A <see cref="T:System.Drawing.SolidBrush"/> object that determines the color and texture of the drawn text.</param>
-      <param name="layout">A page rectangle in the world coordinate system where you can draw text.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawString(System.String,System.Drawing.Font,System.Drawing.SolidBrush,System.Drawing.RectangleF,DevExpress.Pdf.PdfStringFormat)">
       <summary>
@@ -595,15 +585,14 @@
       <param name="layout">A page rectangle in the world coordinate system where you can draw text.</param>
       <param name="format">An object that specifies text formatting attributes.</param>
     </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.DrawString(System.String,System.Drawing.Font,System.Drawing.SolidBrush,System.Single,System.Single)">
+    <member name="M:DevExpress.Pdf.PdfGraphics.DrawString(System.String,System.Drawing.Font,System.Drawing.SolidBrush,System.Drawing.RectangleF)">
       <summary>
-        <para>Draws text with the specified brush and font parameters at the specified point on a page.</para>
+        <para>Draws text with the specified brush and font parameters in the specified page rectangle.</para>
       </summary>
       <param name="text">A text to draw.</param>
-      <param name="font">A <see cref="T:System.Drawing.Font"/> object that defines the text format.</param>
+      <param name="font">A <see cref="T:System.Drawing.Font"/> object that defines the text format of the string.</param>
       <param name="brush">A <see cref="T:System.Drawing.SolidBrush"/> object that determines the color and texture of the drawn text.</param>
-      <param name="x">The x-coordinate in the world coordinate system of a point where you can draw text.</param>
-      <param name="y">The y-coordinate in the world coordinate system of a point where you can draw text.</param>
+      <param name="layout">A page rectangle in the world coordinate system where you can draw text.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawString(System.String,System.Drawing.Font,System.Drawing.SolidBrush,System.Single,System.Single,DevExpress.Pdf.PdfStringFormat)">
       <summary>
@@ -615,6 +604,16 @@
       <param name="x">The x-coordinate in the world coordinate system of a point where you can draw text.</param>
       <param name="y">The y-coordinate in the world coordinate system of a point where you can draw text.</param>
       <param name="format">An object that specifies text formatting attributes.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfGraphics.DrawString(System.String,System.Drawing.Font,System.Drawing.SolidBrush,System.Single,System.Single)">
+      <summary>
+        <para>Draws text with the specified brush and font parameters at the specified point on a page.</para>
+      </summary>
+      <param name="text">A text to draw.</param>
+      <param name="font">A <see cref="T:System.Drawing.Font"/> object that defines the text format.</param>
+      <param name="brush">A <see cref="T:System.Drawing.SolidBrush"/> object that determines the color and texture of the drawn text.</param>
+      <param name="x">The x-coordinate in the world coordinate system of a point where you can draw text.</param>
+      <param name="y">The y-coordinate in the world coordinate system of a point where you can draw text.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.FillEllipse(System.Drawing.Brush,System.Drawing.RectangleF)">
       <summary>
@@ -656,23 +655,6 @@
       </summary>
       <value>Specifies the quality of images in the resulting PDF file.</value>
     </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font)">
-      <summary>
-        <para>Measures the specified string when drawn with specified font parameters.</para>
-      </summary>
-      <param name="text">A text to measure.</param>
-      <param name="font">An object that defines font parameters.</param>
-      <returns>The string’s measured size.</returns>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font,DevExpress.Pdf.PdfStringFormat)">
-      <summary>
-        <para>Measures the specified string when drawn with the specified font and text formatting parameters.</para>
-      </summary>
-      <param name="text">A text to measure.</param>
-      <param name="font">An object that contains font parameters.</param>
-      <param name="format">An object that contains text formatting parameters.</param>
-      <returns>The string’s measured size.</returns>
-    </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font,DevExpress.Pdf.PdfStringFormat,System.Single,System.Single)">
       <summary>
         <para>Measures the specified string when drawn with the specified font and format parameters, horizontal and vertical resolutions.</para>
@@ -684,35 +666,13 @@
       <param name="dpiY">The vertical resolution, in dots per inch. The default value is 96.</param>
       <returns>The string’s measured size.</returns>
     </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF)">
+    <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font,DevExpress.Pdf.PdfStringFormat)">
       <summary>
-        <para>Measures the specified string when drawn with the specified font settings.</para>
+        <para>Measures the specified string when drawn with the specified font and text formatting parameters.</para>
       </summary>
       <param name="text">A text to measure.</param>
       <param name="font">An object that contains font parameters.</param>
-      <param name="layoutSize">The maximum layout area for the text.</param>
-      <returns>The string’s measured size.</returns>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,DevExpress.Pdf.PdfStringFormat)">
-      <summary>
-        <para>Measures the specified string when drawn with the specified font, text layout size, and format.</para>
-      </summary>
-      <param name="text">A <see cref="T:System.String"/> to measure.</param>
-      <param name="font">An object that contains font parameters.</param>
-      <param name="layoutSize">Specifies the maximum layout area for the text.</param>
       <param name="format">An object that contains text formatting parameters.</param>
-      <returns>The string’s measured size.</returns>
-    </member>
-    <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,DevExpress.Pdf.PdfStringFormat,System.Single,System.Single)">
-      <summary>
-        <para>Measures the specified string when drawn with specified font and text formatting parameters. Allows you to specify text layout size, and horizontal and vertical resolutions.</para>
-      </summary>
-      <param name="text">A text to measure.</param>
-      <param name="font">An object that defines font parameters.</param>
-      <param name="layoutSize">The maximum layout area for the text.</param>
-      <param name="format">An object that defines text formatting parameters.</param>
-      <param name="dpiX">The horizontal resolution, in dots per inch. The default value is 96.</param>
-      <param name="dpiY">The vertical resolution, in dots per inch. The default value is 96.</param>
       <returns>The string’s measured size.</returns>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,DevExpress.Pdf.PdfStringFormat,System.Single,System.Single,System.Int32@,System.Int32@)">
@@ -727,6 +687,45 @@
       <param name="dpiY">The vertical resolution (in dots per inch). The default value is 96.</param>
       <param name="charactersFitted">The number of characters in the string.</param>
       <param name="linesFilled">The number of lines in the string.</param>
+      <returns>The string’s measured size.</returns>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,DevExpress.Pdf.PdfStringFormat,System.Single,System.Single)">
+      <summary>
+        <para>Measures the specified string when drawn with specified font and text formatting parameters. Allows you to specify text layout size, and horizontal and vertical resolutions.</para>
+      </summary>
+      <param name="text">A text to measure.</param>
+      <param name="font">An object that defines font parameters.</param>
+      <param name="layoutSize">The maximum layout area for the text.</param>
+      <param name="format">An object that defines text formatting parameters.</param>
+      <param name="dpiX">The horizontal resolution, in dots per inch. The default value is 96.</param>
+      <param name="dpiY">The vertical resolution, in dots per inch. The default value is 96.</param>
+      <returns>The string’s measured size.</returns>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,DevExpress.Pdf.PdfStringFormat)">
+      <summary>
+        <para>Measures the specified string when drawn with the specified font, text layout size, and format.</para>
+      </summary>
+      <param name="text">A <see cref="T:System.String"/> to measure.</param>
+      <param name="font">An object that contains font parameters.</param>
+      <param name="layoutSize">Specifies the maximum layout area for the text.</param>
+      <param name="format">An object that contains text formatting parameters.</param>
+      <returns>The string’s measured size.</returns>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF)">
+      <summary>
+        <para>Measures the specified string when drawn with the specified font settings.</para>
+      </summary>
+      <param name="text">A text to measure.</param>
+      <param name="font">An object that contains font parameters.</param>
+      <param name="layoutSize">The maximum layout area for the text.</param>
+      <returns>The string’s measured size.</returns>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfGraphics.MeasureString(System.String,System.Drawing.Font)">
+      <summary>
+        <para>Measures the specified string when drawn with specified font parameters.</para>
+      </summary>
+      <param name="text">A text to measure.</param>
+      <param name="font">An object that defines font parameters.</param>
       <returns>The string’s measured size.</returns>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.RestoreGraphicsState">
@@ -840,18 +839,18 @@
         <para>A base class for combo box and list box fields in PDF Graphics API.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.Pdf.PdfGraphicsAcroFormChoiceField.AddValue(System.String)">
-      <summary>
-        <para>Adds an item with the specified display value to a combo box or a list box field.</para>
-      </summary>
-      <param name="displayValue">A <see cref="T:System.String"/> that is a value to be added to combo box and list box.</param>
-    </member>
     <member name="M:DevExpress.Pdf.PdfGraphicsAcroFormChoiceField.AddValue(System.String,System.String)">
       <summary>
         <para>Adds an item with the specified display and export values to a combo box or a list box field.</para>
       </summary>
       <param name="displayValue">A value to be added to a combo box and list box.</param>
       <param name="exportValue">An export value.</param>
+    </member>
+    <member name="M:DevExpress.Pdf.PdfGraphicsAcroFormChoiceField.AddValue(System.String)">
+      <summary>
+        <para>Adds an item with the specified display value to a combo box or a list box field.</para>
+      </summary>
+      <param name="displayValue">A <see cref="T:System.String"/> that is a value to be added to combo box and list box.</param>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphicsAcroFormChoiceField.ClearSelection">
       <summary>
