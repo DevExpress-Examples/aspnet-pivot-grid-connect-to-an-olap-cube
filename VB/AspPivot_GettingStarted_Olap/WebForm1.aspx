@@ -1,6 +1,6 @@
 <%@ Page Language="VB" AutoEventWireup="true" CodeBehind="WebForm1.aspx.vb" Inherits="AspPivot_GettingStarted_Olap.WebForm1" %>
 
-<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v22.1, Version=22.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" 
+<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v22.1, Version=22.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" 
     Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dx" %>
 
 <!DOCTYPE html>
