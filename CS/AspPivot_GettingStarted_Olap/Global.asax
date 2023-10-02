@@ -1,1 +1,0 @@
-<%@ Application Codebehind="Global.asax.cs" Inherits="AspPivot_GettingStarted_Olap.Global_asax" Language="C#" %>
